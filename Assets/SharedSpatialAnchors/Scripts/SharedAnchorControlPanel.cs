@@ -250,7 +250,7 @@ public class SharedAnchorControlPanel : MonoBehaviour
 
     public void OnSpawnTwinTurbineSceneButtonPressed()
     {
-        SampleController.Instance.Log("OnSpawnCubeButtonPressed");
+        SampleController.Instance.Log("OnSpawnTwinTurbineSceneButtonPressed");
 
         SpawnTwinTurbineScene();
     }
