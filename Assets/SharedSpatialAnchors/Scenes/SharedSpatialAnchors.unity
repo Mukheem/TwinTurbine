@@ -1575,7 +1575,7 @@ PrefabInstance:
     - target: {fileID: 1161621203827536544, guid: bac340b17ae71864ab3a424b042a3ce7, type: 3}
       propertyPath: TwinTurbine_windTurbine
       value: 
-      objectReference: {fileID: 6487222074980921424, guid: 43e45c421bc19bf4182cbfb6f1131d26, type: 3}
+      objectReference: {fileID: 1335958607354298, guid: e89085b5b19a1c8498b078a99be21f8c, type: 3}
     - target: {fileID: 1161621203827536570, guid: bac340b17ae71864ab3a424b042a3ce7, type: 3}
       propertyPath: m_RootOrder
       value: 0

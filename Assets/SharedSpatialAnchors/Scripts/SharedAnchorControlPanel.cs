@@ -256,6 +256,7 @@ public class SharedAnchorControlPanel : MonoBehaviour
     }
     private void SpawnTwinTurbineScene()
     {
+        Debug.Log(spawnPoint.position);
         var networkedWindTurbine = PhotonPun.PhotonNetwork.Instantiate(TwinTurbine_windTurbine.name, spawnPoint.position, spawnPoint.rotation);
         var photonGrabbable = networkedWindTurbine.GetComponent<PhotonGrabbableObject>();
         photonGrabbable.TransferOwnershipToLocalPlayer();
