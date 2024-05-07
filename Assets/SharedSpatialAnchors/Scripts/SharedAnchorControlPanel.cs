@@ -62,6 +62,8 @@ public class SharedAnchorControlPanel : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI statusText;
 
+    [SerializeField]
+    private GameObject TwinTurbine_windTurbine;
     public TextMeshProUGUI StatusText
     {
         get { return statusText; }
@@ -244,5 +246,18 @@ public class SharedAnchorControlPanel : MonoBehaviour
         {
             SceneManager.LoadScene(0);
         }
+    }
+
+    public void OnSpawnTwinTurbineSceneButtonPressed()
+    {
+        SampleController.Instance.Log("OnSpawnCubeButtonPressed");
+
+        SpawnTwinTurbineScene();
+    }
+    private void SpawnTwinTurbineScene()
+    {
+        var networkedWindTurbine = PhotonPun.PhotonNetwork.Instantiate(TwinTurbine_windTurbine.name, spawnPoint.position, spawnPoint.rotation);
+        var photonGrabbable = networkedWindTurbine.GetComponent<PhotonGrabbableObject>();
+        photonGrabbable.TransferOwnershipToLocalPlayer();
     }
 }
