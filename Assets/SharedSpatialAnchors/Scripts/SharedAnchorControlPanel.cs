@@ -256,6 +256,7 @@ public class SharedAnchorControlPanel : MonoBehaviour
     }
     private void SpawnTwinTurbineScene()
     {
+        SampleController.Instance.Log("Trying to Spawn WT Object");
         Debug.Log(spawnPoint.position);
         var networkedWindTurbine = PhotonPun.PhotonNetwork.Instantiate(TwinTurbine_windTurbine.name, spawnPoint.position, spawnPoint.rotation);
         var photonGrabbable = networkedWindTurbine.GetComponent<PhotonGrabbableObject>();
