@@ -1,7 +1,14 @@
 # TwinTurbine-DCDC
  This is a group Academic Project for course DCDC
 
-![{Your App XR} logo](./docs/example-image.jpg)
+<!-- Place this file at the root of your Unity project.
+At the same level than the folders Assets/* -->
+
+information/ **MarkDown** reference is available here: <https://www.markdownguide.org/basic-syntax/>_
+
+---
+***
+_________________
 
 ## Introduction
 
