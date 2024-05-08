@@ -6,10 +6,6 @@ At the same level than the folders Assets/* -->
 
 information/ **MarkDown** reference is available here: <https://www.markdownguide.org/basic-syntax/>_
 
----
-***
-_________________
-
 ## Introduction
 
 [Project XR ] is an educational XR experience that lets you explore in 3D [...] . Learn about [...].
