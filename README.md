@@ -1,18 +1,13 @@
 # TwinTurbine-DCDC
- This is a group Academic Project for course DCDC
-
-<!-- Place this file at the root of your Unity project.
-At the same level than the folders Assets/* -->
+ This is a group Academic Project for DCDC course
 
 information/ **MarkDown** reference is available here: <https://www.markdownguide.org/basic-syntax/>_
 
 ## Introduction
 
-[Project XR ] is an educational XR experience that lets you explore in 3D [...] . Learn about [...].
+Welcome to [TwinTurbine], which is a digital twin project that lets you experience working with wind turbine in a mixed reality environment.
 
-The problem detected was...
-
-The proposed solution is valuable because...
+The proposed solution is valuable for remote monitoring and controlling, and improving turbine's performance.
 
 ## Design Process
 
