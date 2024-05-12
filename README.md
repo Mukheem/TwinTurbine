@@ -19,10 +19,15 @@ The design process includes ideation of concepts and interactions, testing of te
 After some brainstorming, we came up with some ideas for different stages:
 
 ![{Primary Prototype} ](./docs/images/example-image.jpg)
+<p align="center">
+<img src="docs/images/example-image.jpg" width="500" height="500" />
+<img src="Assets/Images/BsicIdea.png" data-canonical-src="Assets/Images/BsicIdea.png" width="500" height="500" />
+  </p>
 *Primary Prototype for phyysical turbine & virtual model*
 
 ![{Sketch} ](./docs/images/example-image.jpg)
 *Arduino sketch to rotate the Servo Motor *
+In this step, we first 
 
 ![{Connection} ](./docs/images/example-image.jpg)
 *Connecting Unity with Arduino*
