@@ -28,6 +28,7 @@ using PhotonRealtime = Photon.Realtime;
 
 public class SharedAnchorControlPanel : MonoBehaviour
 {
+
     [SerializeField]
     private Transform referencePoint;
 
