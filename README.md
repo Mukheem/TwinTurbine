@@ -17,7 +17,8 @@ The design process includes ideation of concepts and interactions, testing of te
 
 ### 2.1. Brainstorming:
 After some brainstorming, we came up with some idea for different stages
-![{Your App XR} logo](./docs/images/example-image.jpg)
+
+![{Primary Prototype} ](./docs/images/example-image.jpg)
 
 
 
