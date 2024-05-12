@@ -5,7 +5,7 @@ information/ **MarkDown** reference is available here: <https://www.markdownguid
 
 ## Introduction
 
-Welcome to <em>TwinTurbine</em>, which is a digital twin project that lets you experience working with wind turbine in a mixed reality environment.
+Welcome to **_TwinTurbine_**, which is a digital twin project that lets you experience working with wind turbine in a mixed reality environment.
 
 The proposed solution is valuable for remote monitoring and controlling, and improving turbine's performance.
 
