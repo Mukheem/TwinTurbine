@@ -1,6 +1,6 @@
 # TwinTurbine-DCDC
 This is a group Academic Project for **DCDC** course at Stockholm University, designed to experience a **digital twin** project in immersive technology.
-![{Your App XR} logo](./docs/example-image.jpg)
+<!--![{Your App XR} logo](./docs/example-image.jpg)-->
 
 <!--information/ **MarkDown** reference is available here: <https://www.markdownguide.org/basic-syntax/>_-->
 
@@ -17,7 +17,7 @@ The design process includes ideation of concepts and interactions, testing of te
 
 ### 2.1. Brainstorming:
 After some brainstorming, we came up with some idea for different stages
-![Prototype Brainstorming}](.docs/images/Prototype.jfif)
+![Prototype Brainstorming}](.docs/images/example-image.jpg)
 
 
 
