@@ -16,13 +16,16 @@ The proposed solution is valuable for remote monitoring and controlling, and imp
 The design process includes ideation of concepts and interactions, testing of technologies, creation of Unity scene, user testing, iteration, and demonstration. 
 
 ### 2.1. Brainstorming:
-After some brainstorming, we came up with some idea for different stages
+After some brainstorming, we came up with some ideas for different stages:
 
 ![{Primary Prototype} ](./docs/images/example-image.jpg)
 *Primary Prototype for phyysical turbine & virtual model*
 
+![{Sketch} ](./docs/images/example-image.jpg)
+*Arduino sketch to rotate the Servo Motor *
 
-
+![{Connection} ](./docs/images/example-image.jpg)
+*Connecting Unity with Arduino*
 
 
 - User Persona: A description of your target user, their needs, motivations, and pain points, and how your project addresses them.
