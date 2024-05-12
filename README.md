@@ -18,17 +18,10 @@ The design process includes ideation of concepts and interactions, testing of te
 ### 2.1. Brainstorming:
 After some brainstorming, we came up with some ideas for different stages:
 
+![Primary Prototype](https://github.com/Mukheem/TwinTurbine/assets/145973209/1fa3b512-4877-499b-8455-6ce96b0ce04c)
 
+*Primary Prototype for physical turbine & virtual model*
 
-
-![example-image](https://github.com/Mukheem/TwinTurbine/assets/145973209/5ea65376-d725-4620-82c0-022957a99fca)
-
-![{Primary Prototype} ](./docs/images/example-image.jpg)
-<p align="center">
-<img src="docs/images/example-image.jpg" width="500" height="500" />
-<img src="Assets/Images/BsicIdea.png" data-canonical-src="Assets/Images/BsicIdea.png" width="500" height="500" />
-  </p>
-*Primary Prototype for phyysical turbine & virtual model*
 
 ![{Sketch} ](./docs/images/example-image.jpg)
 *Arduino sketch to rotate the Servo Motor *
