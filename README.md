@@ -1,5 +1,5 @@
 # TwinTurbine-DCDC
-This is a group Academic Project for **DCDC** course at Stockholm University,designed to experience a **digital twin** project in immersive technology.
+This is a group Academic Project for **DCDC** course at Stockholm University, designed to experience a **digital twin** project in immersive technology.
 
 <!--information/ **MarkDown** reference is available here: <https://www.markdownguide.org/basic-syntax/>_-->
 
