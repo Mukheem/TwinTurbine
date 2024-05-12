@@ -18,6 +18,11 @@ The design process includes ideation of concepts and interactions, testing of te
 ### 2.1. Brainstorming:
 After some brainstorming, we came up with some ideas for different stages:
 
+
+
+
+![example-image](https://github.com/Mukheem/TwinTurbine/assets/145973209/5ea65376-d725-4620-82c0-022957a99fca)
+
 ![{Primary Prototype} ](./docs/images/example-image.jpg)
 <p align="center">
 <img src="docs/images/example-image.jpg" width="500" height="500" />
