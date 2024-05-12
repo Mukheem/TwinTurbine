@@ -18,21 +18,36 @@ The design process includes ideation of concepts and interactions, testing of te
 ### 2.1. Brainstorming:
 After some brainstorming, we came up with some ideas for different stages:
 
-![DTComponents](https://github.com/Mukheem/TwinTurbine/assets/145973209/03e1ef34-4b37-421a-b54a-28db34e8059b)
-*Digital Twin Components*
-![Primary Prototype](https://github.com/Mukheem/TwinTurbine/assets/145973209/7ca62bda-072b-40ea-a0ed-361c86724b81)
-*Primary Prototype for physical turbine & virtual model*
 In the first step, we discussed the physical and virtual entities, their connection, and the services and functions we wanted to implement.
 
-![Sketch](https://github.com/Mukheem/TwinTurbine/assets/145973209/b777cb85-2e86-4cd3-8317-d48586b27ba8)
-*Arduino sketch to rotate the Servo Motor *
-![Wind Turbine](https://github.com/Mukheem/TwinTurbine/assets/145973209/c1b97fd4-f495-4e54-8c17-a1d949cca986)
-*Servo motor and wind turbine*
-Then, we shared our ideas on how to rotate the servo motor from Arduino and which physical turbine is better to provide.
+<figure style="text-align:center">
+    <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/03e1ef34-4b37-421a-b54a-28db34e8059b" alt="DTComponents" style="max-width:100%;" height="auto">
+    <figcaption><i>Digital Twin Components</i></figcaption>
+</figure>
 
-![Communication](https://github.com/Mukheem/TwinTurbine/assets/145973209/d910c49e-2518-4181-8831-0987415b2977)
-*Connecting Unity with Arduino*
-*Finally, we focused on the way we want to make the connection between ESP32 and Unity*
+<figure style="text-align:center">
+    <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/7ca62bda-072b-40ea-a0ed-361c86724b81" alt="Primary Prototype" style="max-width:100%;" height="auto">
+    <figcaption><i>Primary Prototype for physical turbine & virtual model</i></figcaption>
+</figure>
+
+Then, we shared our ideas on how to rotate the servo motor from Arduino and which physical turbine is better to provide.
+<figure style="text-align:center">
+    <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/b777cb85-2e86-4cd3-8317-d48586b27ba8" alt="Sketch" style="max-width:100%;" height="auto">
+    <figcaption><i>Arduino sketch to rotate the Servo Motor</i></figcaption>
+</figure>
+
+<figure style="text-align:center">
+    <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/c1b97fd4-f495-4e54-8c17-a1d949cca986" alt="Wind Turbine" style="max-width:100%;" height="auto">
+    <figcaption><i>Servo motor and wind turbine</i></figcaption>
+</figure>
+
+Finally, we focused on the way we want to make the connection between ESP32 and Unity
+<figure style="text-align:center">
+    <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/d910c49e-2518-4181-8831-0987415b2977" alt="Communication" style="max-width:100%;" height="auto"></i>
+    <figcaption>Connecting Unity to Arduino</i></figcaption>
+</figure>
+
+
 
 - User Persona: A description of your target user, their needs, motivations, and pain points, and how your project addresses them.
 - User Journey: A visualization of how your user interacts with your project, from the initial trigger to the final outcome, and what emotions they experience along the way.
