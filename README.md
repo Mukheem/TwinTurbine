@@ -22,29 +22,30 @@ In the first step, we discussed the physical and virtual entities, their connect
 
 <figure style="text-align:center">
     <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/03e1ef34-4b37-421a-b54a-28db34e8059b" alt="DTComponents" style="max-width:100%;" height="auto">
-    <figcaption>Digital Twin Components</figcaption>
+    <figcaption><i>Digital Twin Components</i></figcaption>
 </figure>
 
 <figure style="text-align:center">
     <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/7ca62bda-072b-40ea-a0ed-361c86724b81" alt="Primary Prototype" style="max-width:100%;" height="auto">
-    <figcaption>Primary Prototype for physical turbine & virtual model</figcaption>
+    <figcaption><i>Primary Prototype for physical turbine & virtual model</i></figcaption>
 </figure>
 
 Then, we shared our ideas on how to rotate the servo motor from Arduino and which physical turbine is better to provide.
 <figure style="text-align:center">
     <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/b777cb85-2e86-4cd3-8317-d48586b27ba8" alt="Sketch" style="max-width:100%;" height="auto">
-    <figcaption>Arduino sketch to rotate the Servo Motor</figcaption>
+    <figcaption><i>Arduino sketch to rotate the Servo Motor</i></figcaption>
 </figure>
 
 <figure style="text-align:center">
     <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/c1b97fd4-f495-4e54-8c17-a1d949cca986" alt="Wind Turbine" style="max-width:100%;" height="auto">
-    <figcaption>Servo motor and wind turbine</figcaption>
+    <figcaption><i>Servo motor and wind turbine</i></figcaption>
 </figure>
 
 Finally, we focused on the way we want to make the connection between ESP32 and Unity
 <figure style="text-align:center">
-    <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/d910c49e-2518-4181-8831-0987415b2977" alt="Communication" style="max-width:100%;" height="auto">
-    <figcaption>Connecting Unit
+    <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/d910c49e-2518-4181-8831-0987415b2977" alt="Communication" style="max-width:100%;" height="auto"></i>
+    <figcaption>Connecting Unity to Arduino</i></figcaption>
+</figure>
 
 
 
