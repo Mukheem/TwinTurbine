@@ -49,7 +49,7 @@ After some brainstorming, we came up with some ideas for different stages:
 
 
 ### 2.2. User Persona:
--The Project's target users could be engineers and technicians who work with wind energy systems and Educational Institutions where the simulator can be used for training purposes. Moreover, the main target group is enterprises interested in immersive technology.
+- The Project's target users are engineers and technicians who work with wind energy systems and Educational Institutions where the simulator can be used for training purposes. Moreover, the main target group is enterprises interested in immersive technology.
 - User Persona: A description of your target user, their needs, motivations, and pain points, and how your project addresses them.
 - User Journey: A visualization of how your user interacts with your project, from the initial trigger to the final outcome, and what emotions they experience along the way.
 - Wireframes and Prototypes: A collection of sketches, mockups, or prototypes that show the layout, structure, and functionality of your project, and how you tested and iterated on them.
