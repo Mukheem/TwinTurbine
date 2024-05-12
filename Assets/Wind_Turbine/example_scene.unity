@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657785, g: 0.49641472, b: 0.57481855, a: 1}
+  m_IndirectSpecularColor: {r: 0.180284, g: 0.22571513, b: 0.3069244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -123,63 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &84713529
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6580231305279359784, guid: b8d375469b14d9e42838476fa59a9ceb, type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6580231305279359784, guid: b8d375469b14d9e42838476fa59a9ceb, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6580231305279359784, guid: b8d375469b14d9e42838476fa59a9ceb, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6580231305279359784, guid: b8d375469b14d9e42838476fa59a9ceb, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6580231305279359784, guid: b8d375469b14d9e42838476fa59a9ceb, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6580231305279359784, guid: b8d375469b14d9e42838476fa59a9ceb, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6580231305279359784, guid: b8d375469b14d9e42838476fa59a9ceb, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6580231305279359784, guid: b8d375469b14d9e42838476fa59a9ceb, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6580231305279359784, guid: b8d375469b14d9e42838476fa59a9ceb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6580231305279359784, guid: b8d375469b14d9e42838476fa59a9ceb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6580231305279359784, guid: b8d375469b14d9e42838476fa59a9ceb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6580231305279359788, guid: b8d375469b14d9e42838476fa59a9ceb, type: 3}
-      propertyPath: m_Name
-      value: Wind_Turbine_0001b
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b8d375469b14d9e42838476fa59a9ceb, type: 3}
 --- !u!1001 &345673699
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -237,63 +180,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7122c5b256acc994f90cc966f09841ac, type: 3}
---- !u!1001 &478550103
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4903464715393468674, guid: 49febec1c5c7f1f49a7d53d2436b8a47, type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4903464715393468674, guid: 49febec1c5c7f1f49a7d53d2436b8a47, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -68.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4903464715393468674, guid: 49febec1c5c7f1f49a7d53d2436b8a47, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4903464715393468674, guid: 49febec1c5c7f1f49a7d53d2436b8a47, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4903464715393468674, guid: 49febec1c5c7f1f49a7d53d2436b8a47, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4903464715393468674, guid: 49febec1c5c7f1f49a7d53d2436b8a47, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4903464715393468674, guid: 49febec1c5c7f1f49a7d53d2436b8a47, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4903464715393468674, guid: 49febec1c5c7f1f49a7d53d2436b8a47, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4903464715393468674, guid: 49febec1c5c7f1f49a7d53d2436b8a47, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4903464715393468674, guid: 49febec1c5c7f1f49a7d53d2436b8a47, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4903464715393468674, guid: 49febec1c5c7f1f49a7d53d2436b8a47, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4903464715393468678, guid: 49febec1c5c7f1f49a7d53d2436b8a47, type: 3}
-      propertyPath: m_Name
-      value: Wind_Turbine_0001c
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 49febec1c5c7f1f49a7d53d2436b8a47, type: 3}
 --- !u!1 &924766105
 GameObject:
   m_ObjectHideFlags: 0
@@ -374,6 +260,7 @@ Transform:
   m_LocalRotation: {x: 0.0068234312, y: 0.99040693, z: 0.05303937, w: -0.12741429}
   m_LocalPosition: {x: 41.97, y: 24.89, z: 108.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -483,6 +370,7 @@ Transform:
   m_LocalRotation: {x: 0.13677691, y: -0.8575301, z: 0.3998725, w: 0.29331943}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
