@@ -12,13 +12,13 @@ The proposed solution is valuable for remote monitoring and controlling, and imp
 
 ## 2. Design Process
 
-<!--Add evidence on the general overview of how you planned, designed, and developed your project, including the goals, challenges, and solutions._]-->
+<!--Evidence on the general overview of how you planned, designed, and developed your project, including the goals, challenges, and solutions._]-->
 The design process includes ideation of concepts and interactions, testing of technologies, creation of Unity scene, user testing, iteration, and demonstration. 
 
 ### 2.1. Brainstorming:
 After some brainstorming, we came up with some ideas for different stages:
 
-In the first step, we discussed the physical and virtual entities, their connection, and the services and functions we wanted to implement.
+- In the first step, we discussed the physical and virtual entities, their connection, and the services and functions we wanted to implement.
 
 <figure style="text-align:center">
     <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/03e1ef34-4b37-421a-b54a-28db34e8059b" alt="DTComponents" style="max-width:100%;" height="auto">
@@ -30,7 +30,7 @@ In the first step, we discussed the physical and virtual entities, their connect
     <figcaption><i>Primary Prototype for physical turbine & virtual model</i></figcaption>
 </figure>
 
-Then, we shared our ideas on how to rotate the servo motor from Arduino and which physical turbine is better to provide.
+- Then, we shared our ideas on how to rotate the servo motor from Arduino and which physical turbine is better to provide.
 <figure style="text-align:center">
     <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/b777cb85-2e86-4cd3-8317-d48586b27ba8" alt="Sketch" style="max-width:100%;" height="auto">
     <figcaption><i>Arduino sketch to rotate the Servo Motor</i></figcaption>
@@ -41,14 +41,15 @@ Then, we shared our ideas on how to rotate the servo motor from Arduino and whic
     <figcaption><i>Servo motor and wind turbine</i></figcaption>
 </figure>
 
-Finally, we focused on the way we want to make the connection between ESP32 and Unity
+- Finally, we focused on the way we want to make the connection between ESP32 and Unity
 <figure style="text-align:center">
     <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/d910c49e-2518-4181-8831-0987415b2977" alt="Communication" style="max-width:100%;" height="auto"></i>
-    <figcaption>Connecting Unity to Arduino</i></figcaption>
+    <figcaption><i>Connecting Unity to Arduino</i></figcaption>
 </figure>
 
 
-
+### 2.2. User Persona:
+-The Project's target users could be engineers and technicians who work with wind energy systems and Educational Institutions where the simulator can be used for training purposes. Moreover, the main target group is enterprises interested in immersive technology.
 - User Persona: A description of your target user, their needs, motivations, and pain points, and how your project addresses them.
 - User Journey: A visualization of how your user interacts with your project, from the initial trigger to the final outcome, and what emotions they experience along the way.
 - Wireframes and Prototypes: A collection of sketches, mockups, or prototypes that show the layout, structure, and functionality of your project, and how you tested and iterated on them.
