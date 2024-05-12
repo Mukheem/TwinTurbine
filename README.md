@@ -19,6 +19,7 @@ The design process includes ideation of concepts and interactions, testing of te
 After some brainstorming, we came up with some idea for different stages
 
 ![{Primary Prototype} ](./docs/images/example-image.jpg)
+*Primary Prototype for phyysical turbine & virtual model*
 
 
 
