@@ -18,11 +18,14 @@ The design process includes ideation of concepts and interactions, testing of te
 ### 2.1. Brainstorming:
 After some brainstorming, we came up with some ideas for different stages:
 
-![DTComponents](https://github.com/Mukheem/TwinTurbine/assets/145973209/03e1ef34-4b37-421a-b54a-28db34e8059b)
-*Digital Twin Components*
-![Primary Prototype](https://github.com/Mukheem/TwinTurbine/assets/145973209/7ca62bda-072b-40ea-a0ed-361c86724b81)
-*Primary Prototype for physical turbine & virtual model*
 In the first step, we discussed the physical and virtual entities, their connection, and the services and functions we wanted to implement.
+<img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/03e1ef34-4b37-421a-b54a-28db34e8059b" alt="DTComponents" width="300" height="200">
+*Digital Twin Components*
+
+<figure style="text-align:center">
+    <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/7ca62bda-072b-40ea-a0ed-361c86724b81" alt="Primary Prototype" style="max-width:100%;" height="auto">
+    <figcaption>Primary Prototype for physical turbine & virtual model</figcaption>
+</figure>
 
 ![Sketch](https://github.com/Mukheem/TwinTurbine/assets/145973209/b777cb85-2e86-4cd3-8317-d48586b27ba8)
 *Arduino sketch to rotate the Servo Motor *
