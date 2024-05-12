@@ -1,21 +1,21 @@
 # TwinTurbine-DCDC
- This is a group Academic Project for DCDC course
+This is a group Academic Project for **DCDC** course at Stockholm University, designed to experience a **digital twin** project in immersive technology.
 
-information/ **MarkDown** reference is available here: <https://www.markdownguide.org/basic-syntax/>_
+<!--information/ **MarkDown** reference is available here: <https://www.markdownguide.org/basic-syntax/>_-->
 
 ## Introduction
 
-Welcome to [TwinTurbine], which is a digital twin project that lets you experience working with wind turbine in a mixed reality environment.
+Welcome to **_TwinTurbine_**, which is a **digital twin** project that lets you experience working with wind turbine in a mixed reality environment.
 
 The proposed solution is valuable for remote monitoring and controlling, and improving turbine's performance.
 
 ## Design Process
 
-[_Add evidence on the general overview of how you planned, designed, and developed your project, including the goals, challenges, and solutions._]
+<!--Add evidence on the general overview of how you planned, designed, and developed your project, including the goals, challenges, and solutions._]-->
+The design process includes ideation of concepts and interactions, testing of technologies, creation of Unity scene, user testing, iteration, and demonstration. 
 
 For example:
 - Brainstorming: A screenshot of the whiteboard or post-it notes used to land the project's idea.
-- User Research: Pictures and summary of how you conducted user research, such as surveys, interviews, or observations, and what insights you gained from it.
 - User Persona: A description of your target user, their needs, motivations, and pain points, and how your project addresses them.
 - User Journey: A visualization of how your user interacts with your project, from the initial trigger to the final outcome, and what emotions they experience along the way.
 - Wireframes and Prototypes: A collection of sketches, mockups, or prototypes that show the layout, structure, and functionality of your project, and how you tested and iterated on them.
