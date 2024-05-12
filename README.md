@@ -30,7 +30,7 @@ In the first step, we discussed the physical and virtual entities, their connect
 *Servo motor and wind turbine*
 Then, we shared our ideas on how to rotate the servo motor from Arduino and which physical turbine is better to provide.
 
-![Communication](https://github.com/Mukheem/TwinTurbine/assets/145973209/d152ae12-2106-4fbe-9c4b-e0d1267866fc)
+![Communication](https://github.com/Mukheem/TwinTurbine/assets/145973209/d910c49e-2518-4181-8831-0987415b2977)
 *Connecting Unity with Arduino*
 *Finally, we focused on the way we want to make the connection between ESP32 and Unity*
 
