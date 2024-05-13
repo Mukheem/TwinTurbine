@@ -137,7 +137,11 @@ public class SharedAnchorControlPanel : MonoBehaviour
 
         // access the list of children with the OVRAnchorContainer component
         if (!room.TryGetComponent(out OVRAnchorContainer container))
+        {
+            SampleController.Instance.Log("No ROOM data FOUND.");
             return;
+        }
+           
 
         // use the component helper function to access all child anchors
         await container.FetchChildrenAsync(anchors);
