@@ -132,9 +132,15 @@ Some tips, tricks, and best practices for using [Your App XR} effectively:
 </figure>
 
 <figure style="text-align:center">
-    <img src="https://github.com/Mukheem/TwinTurbine/blob/main/Portfolio%26Poster/BBgTeamLogo.jpeg" alt="Communication" style="max-width:100%;" height="auto">
+    <img src="https://github.com/Mukheem/TwinTurbine/blob/main/Portfolio%26Poster/BBgTeamLogo.jpeg" alt="Communication" style="max-width:20%;" height="auto">
     <figcaption><i>"Team Logo" with black background</i></figcaption>
 </figure>
+
+<figure style="text-align:center">
+    <img src="https://github.com/Mukheem/TwinTurbine/blob/main/Portfolio%26Poster/WBgTeamLogo.jpeg" alt="Communication" style="max-width:20%;" height="auto">
+    <figcaption><i>"Team Logo" with white background</i></figcaption>
+</figure>
+
 
 
 
