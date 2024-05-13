@@ -140,6 +140,21 @@ Some tips, tricks, and best practices for using [Your App XR} effectively:
 - Tip 1
 - Tip 2
 
+## Draft Poster
+<figure style="text-align:center">
+    <img src="https://github.com/dalarna2022/TwinTurbine/blob/main/Portfolio%26Poster/Draft%20poster.jpeg" alt="Communication" style="max-width:100%;" height="auto">
+    <figcaption><i>Draft Poster</i></figcaption>
+</figure>
+
+<figure style="text-align:center">
+    <img src="https://github.com/dalarna2022/TwinTurbine/blob/main/Portfolio%26Poster/BBgTeamLogo.jpeg" alt="Communication" style="max-width:20%;" height="auto">
+    <figcaption><i>"Team Logo" with black background</i></figcaption>
+</figure>
+
+<figure style="text-align:center">
+    <img src="https://github.com/dalarna2022/TwinTurbine/blob/main/Portfolio%26Poster/WBgTeamLogo.jpeg" alt="Communication" style="max-width:20%;" height="auto">
+    <figcaption><i>"Team Logo" with white background</i></figcaption>
+</figure>
 
 ## References
 
