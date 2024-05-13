@@ -141,6 +141,37 @@ public class SharedAnchorControlPanel : MonoBehaviour
 
         // use the component helper function to access all child anchors
         await container.FetchChildrenAsync(anchors);
+
+        // Log the children anchors and their positions
+        foreach (var anchor in anchors)
+        {
+            // check that this anchor is the floor
+            if (!anchor.TryGetComponent(out OVRSemanticLabels labels) ||
+                !labels.Labels.Contains(OVRSceneManager.Classification.Table))
+            {
+                continue;
+            }
+
+            // enable locatable/tracking
+            if (!anchor.TryGetComponent(out OVRLocatable locatable))
+                continue;
+            await locatable.SetEnabledAsync(true);
+
+           
+            // get the floor dimensions
+            anchor.TryGetComponent(out OVRBounded3D bounded3D);
+            var size = bounded3D.BoundingBox.size;
+
+            SampleController.Instance.Log("Child Anchors Fetched."+ size);
+            SampleController.Instance.Log(anchors.Count.ToString());
+            SampleController.Instance.Log(anchors[0].ToString());
+            // If you want the position in local space relative to the room, use anchor.transform.localPosition
+
+            // only interested in the first floor anchor
+            break;
+
+            
+        }
     }
 
     public void OnCreateModeButtonPressed()
