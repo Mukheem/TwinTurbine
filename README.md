@@ -125,12 +125,6 @@ Some tips, tricks, and best practices for using [Your App XR} effectively:
 - Tip 1
 - Tip 2
 
-## Draft Poster
-<figure style="text-align:center">
-    <img src="https://github.com/Mukheem/TwinTurbine/blob/main/Portfolio%26Poster/Draft%20poster.jpeg" alt="Communication" style="max-width:100%;" height="auto">
-    <figcaption><i>Draft Poster</i></figcaption>
-</figure>
-
 ## References
 
 Acknowledge here the sources, references, or inspirations that you used for your project. Give credit to the original authors or creators of the materials that you used or adapted for your project (3D models, source code, audio effects, etc.)
