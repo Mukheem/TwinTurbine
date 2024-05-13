@@ -25,6 +25,7 @@ public class PrefabSpawnner : MonoBehaviour
             if (OVRInput.GetDown(OVRInput.Button.One))
             {
                 Instantiate(prefab, hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
+                this.gameObject.SetActive(false);
             }
         }
     }
