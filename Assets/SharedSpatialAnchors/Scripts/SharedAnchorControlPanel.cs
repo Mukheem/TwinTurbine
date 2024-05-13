@@ -25,6 +25,8 @@ using UnityEngine.UI;
 using TMPro;
 using PhotonPun = Photon.Pun;
 using PhotonRealtime = Photon.Realtime;
+using System.Threading.Tasks;
+using System.Linq;
 
 public class SharedAnchorControlPanel : MonoBehaviour
 {
@@ -93,7 +95,7 @@ public class SharedAnchorControlPanel : MonoBehaviour
 
     private bool _isCreateMode;
 
-    private void Start()
+    private async Task StartAsync()
     {
         transform.parent = referencePoint;
         transform.localPosition = Vector3.zero;
@@ -103,6 +105,16 @@ public class SharedAnchorControlPanel : MonoBehaviour
             renderStyleText.text = "Render: " + CoLocatedPassthroughManager.Instance.visualization.ToString();
         }
         ToggleRoomButtons(false);
+
+      
+
+        var anchors = new List<OVRAnchor>();
+        await OVRAnchor.FetchAnchorsAsync<OVRRoomLayout>(anchors);
+
+        // access anchor data by retrieving the components
+        var room = anchors.First();
+
+        SampleController.Instance.Log(room.ToString());
     }
 
     public void OnCreateModeButtonPressed()
