@@ -25,8 +25,9 @@ using UnityEngine.UI;
 using TMPro;
 using PhotonPun = Photon.Pun;
 using PhotonRealtime = Photon.Realtime;
-using System.Threading.Tasks;
 using System.Linq;
+using System;
+using System.Threading.Tasks;
 
 public class SharedAnchorControlPanel : MonoBehaviour
 {
@@ -95,7 +96,7 @@ public class SharedAnchorControlPanel : MonoBehaviour
 
     private bool _isCreateMode;
 
-    private async Task StartAsync()
+    private void Start()
     {
         transform.parent = referencePoint;
         transform.localPosition = Vector3.zero;
@@ -108,13 +109,37 @@ public class SharedAnchorControlPanel : MonoBehaviour
 
       
 
+       
+    }
+
+    public async Task roomDetails()
+    {
         var anchors = new List<OVRAnchor>();
         await OVRAnchor.FetchAnchorsAsync<OVRRoomLayout>(anchors);
 
+        // no rooms - call Space Setup or check Scene permission
+        if (anchors.Count == 0)
+            return;
+
+        SampleController.Instance.Log("Anchors Fetched.");
+        SampleController.Instance.Log(anchors.ToString());
         // access anchor data by retrieving the components
         var room = anchors.First();
 
-        SampleController.Instance.Log(room.ToString());
+        // access the ceiling, floor and walls with the OVRRoomLayout component
+        var roomLayout = room.GetComponent<OVRRoomLayout>();
+        if (roomLayout.TryGetRoomLayout(out Guid ceiling, out Guid floor, out Guid[] walls))
+        {
+            // use these guids to fetch the OVRAnchor object directly
+            await OVRAnchor.FetchAnchorsAsync(walls, anchors);
+        }
+
+        // access the list of children with the OVRAnchorContainer component
+        if (!room.TryGetComponent(out OVRAnchorContainer container))
+            return;
+
+        // use the component helper function to access all child anchors
+        await container.FetchChildrenAsync(anchors);
     }
 
     public void OnCreateModeButtonPressed()
@@ -156,7 +181,7 @@ public class SharedAnchorControlPanel : MonoBehaviour
     {
         SampleController.Instance.Log("OnSpawnCubeButtonPressed");
 
-        SpawnCube();
+        SpawnCubeAsync();
     }
 
     public void LogNext()
@@ -183,11 +208,13 @@ public class SharedAnchorControlPanel : MonoBehaviour
             pageText.text = SampleController.Instance.logText.pageToDisplay + "/" + SampleController.Instance.logText.textInfo.pageCount;
     }
 
-    private void SpawnCube()
+    private async Task SpawnCubeAsync()
     {
         var networkedCube = PhotonPun.PhotonNetwork.Instantiate(cubePrefab.name, spawnPoint.position, spawnPoint.rotation);
         var photonGrabbable = networkedCube.GetComponent<PhotonGrabbableObject>();
         photonGrabbable.TransferOwnershipToLocalPlayer();
+
+        await roomDetails();
     }
 
     public void ChangeUserPassthroughVisualization()
