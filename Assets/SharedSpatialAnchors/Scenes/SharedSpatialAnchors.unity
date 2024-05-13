@@ -4720,7 +4720,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 8661891273527454774, guid: 8754aa5f3d45cec4980f02029a881f7d, type: 3}
-  previewPrefab: {fileID: 8661891273527454774, guid: 8754aa5f3d45cec4980f02029a881f7d, type: 3}
+  previewPrefab: {fileID: 87966117356681799, guid: c0118078f34d6b34ea8d5afec2be7cff, type: 3}
 --- !u!4 &1232630264
 Transform:
   m_ObjectHideFlags: 0
