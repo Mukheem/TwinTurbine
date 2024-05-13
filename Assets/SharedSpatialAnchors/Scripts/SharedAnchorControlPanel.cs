@@ -260,7 +260,7 @@ public class SharedAnchorControlPanel : MonoBehaviour
         SampleController.Instance.Log("Trying to Spawn WT Object");
         SampleController.Instance.Log(spawnPoint.position.ToString());
         Debug.Log(spawnPoint.position);
-        var networkedWindTurbine = PhotonPun.PhotonNetwork.Instantiate(TwinTurbine_windTurbine.name, new Vector3(Camera.main.transform.position.x,0, Camera.main.transform.position.z-3), Quaternion.identity);
+        var networkedWindTurbine = PhotonPun.PhotonNetwork.Instantiate(TwinTurbine_windTurbine.name, new Vector3(Camera.main.transform.position.x,0, Camera.main.transform.position.z), Quaternion.identity);
         var photonGrabbable = networkedWindTurbine.GetComponent<PhotonGrabbableObject>();
         photonGrabbable.TransferOwnershipToLocalPlayer();
     }
