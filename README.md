@@ -22,8 +22,9 @@ After some brainstorming, we came up with some ideas for different stages:
 
 <figure style="text-align:center">
     <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/03e1ef34-4b37-421a-b54a-28db34e8059b" alt="DTComponents" style="max-width:100%;" height="auto">
-    <figcaption><i>Digital Twin Components</i></figcaption>
+    <figcaption style="padding-top: 10px;"><i>Digital Twin Components</i></figcaption>
 </figure>
+
 
 <figure style="text-align:center">
     <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/7ca62bda-072b-40ea-a0ed-361c86724b81" alt="Primary Prototype" style="max-width:100%;" height="auto">
@@ -32,18 +33,19 @@ After some brainstorming, we came up with some ideas for different stages:
 
 - Then, we shared our ideas on how to rotate the servo motor from Arduino and which physical turbine is better to provide.
 <figure style="text-align:center">
-    <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/b777cb85-2e86-4cd3-8317-d48586b27ba8" alt="Sketch" style="max-width:100%;" height="auto">
-    <figcaption><i>Arduino sketch to rotate the Servo Motor</i></figcaption>
+    <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/7ca62bda-072b-40ea-a0ed-361c86724b81" alt="Primary Prototype" style="max-width:100%;" height="auto">
+    <figcaption style="margin-top: 10px;"><i>Primary Prototype for physical turbine & virtual model</i></figcaption>
 </figure>
 
 <figure style="text-align:center">
     <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/c1b97fd4-f495-4e54-8c17-a1d949cca986" alt="Wind Turbine" style="max-width:100%;" height="auto">
-    <figcaption><i>Servo motor and wind turbine</i></figcaption>
+    <figcaption style="padding-top: 10px; margin-top: 10px;"><i>Servo motor and wind turbine</i></figcaption>
 </figure>
+
 
 - Finally, we focused on the way we want to make the connection between ESP32 and Unity
 <figure style="text-align:center">
-    <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/d910c49e-2518-4181-8831-0987415b2977" alt="Communication" style="max-width:100%;" height="auto"></i>
+    <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/d910c49e-2518-4181-8831-0987415b2977" alt="Communication" style="max-width:100%;" height="auto">
     <figcaption><i>Connecting Unity to Arduino</i></figcaption>
 </figure>
 
@@ -60,13 +62,14 @@ In the experience, a Physical Wind turbine would be emulated using a servo motor
 To understand how to rotate the physical wind turbine, the team members tried various strategies and tools to see which was more appropriate for our project.
 
 <figure style="text-align:center">
-    <img src="[https://github.com/Mukheem/TwinTurbine/assets/145973209/c1b97fd4-f495-4e54-8c17-a1d949cca986](https://github.com/Mukheem/TwinTurbine/assets/145973209/6a6b1403-d482-4827-930c-8abfaab56e2b)" alt="Physical Entity" style="max-width:100%;" height="auto">
-    <figcaption><i>Servo motor and arduino</i></figcaption>
+    <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/c1b97fd4-f495-4e54-8c17-a1d949cca986" alt="Physical Entity" style="max-width:100%;" height="auto">
+    <figcaption><i>Servo motor and Arduino</i></figcaption>
 </figure>
 
+
 <figure style="text-align:center">
-    <img src="[[https://github.com/Mukheem/TwinTurbine/assets/145973209/c1b97fd4-f495-4e54-8c17-a1d949cca986](https://github.com/Mukheem/TwinTurbine/assets/145973209/6a6b1403-d482-4827-930c-8abfaab56e2b)](https://github.com/Mukheem/TwinTurbine/assets/145973209/57fd27df-0c08-4e83-a617-794f8af02ede)" alt="Physical Turbine" style="max-width:100%;" height="auto">
-    <figcaption><i>Servo motor and arduino</i></figcaption>
+    <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/c1b97fd4-f495-4e54-8c17-a1d949cca986" alt="Physical Turbine" style="max-width:100%;" height="auto">
+    <figcaption><i>Servo motor and Arduino</i></figcaption>
 </figure>
 
 
