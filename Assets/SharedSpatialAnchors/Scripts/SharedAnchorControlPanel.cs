@@ -122,7 +122,8 @@ public class SharedAnchorControlPanel : MonoBehaviour
             return;
 
         SampleController.Instance.Log("Anchors Fetched.");
-        SampleController.Instance.Log(anchors.ToString());
+        SampleController.Instance.Log(anchors.Count.ToString());
+        SampleController.Instance.Log(anchors[0].ToString());
         // access anchor data by retrieving the components
         var room = anchors.First();
 
