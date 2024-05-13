@@ -217,7 +217,7 @@ public class SharedAnchorControlPanel : MonoBehaviour
     {
         SampleController.Instance.Log("OnSpawnCubeButtonPressed");
 
-        SpawnCubeAsync();
+        SpawnCube();
     }
 
     public void LogNext()
@@ -244,13 +244,13 @@ public class SharedAnchorControlPanel : MonoBehaviour
             pageText.text = SampleController.Instance.logText.pageToDisplay + "/" + SampleController.Instance.logText.textInfo.pageCount;
     }
 
-    private async void SpawnCubeAsync()
+    private void SpawnCube()
     {
         var networkedCube = PhotonPun.PhotonNetwork.Instantiate(cubePrefab.name, spawnPoint.position, spawnPoint.rotation);
         var photonGrabbable = networkedCube.GetComponent<PhotonGrabbableObject>();
         photonGrabbable.TransferOwnershipToLocalPlayer();
 
-        await roomDetails();
+        //await roomDetails();
     }
 
     public void ChangeUserPassthroughVisualization()
