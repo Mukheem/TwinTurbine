@@ -244,7 +244,7 @@ public class SharedAnchorControlPanel : MonoBehaviour
             pageText.text = SampleController.Instance.logText.pageToDisplay + "/" + SampleController.Instance.logText.textInfo.pageCount;
     }
 
-    private async Task SpawnCubeAsync()
+    private async void SpawnCubeAsync()
     {
         var networkedCube = PhotonPun.PhotonNetwork.Instantiate(cubePrefab.name, spawnPoint.position, spawnPoint.rotation);
         var photonGrabbable = networkedCube.GetComponent<PhotonGrabbableObject>();
