@@ -125,6 +125,8 @@ Some tips, tricks, and best practices for using [Your App XR} effectively:
 - Tip 1
 - Tip 2
 
+## Draft Poster
+
 
 ## References
 
