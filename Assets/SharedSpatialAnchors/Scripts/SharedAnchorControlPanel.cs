@@ -174,27 +174,29 @@ public class SharedAnchorControlPanel : MonoBehaviour
 
             if(worldPosition != null && worldRotation != null)
             {
+                SampleController.Instance.Log("POSITION" + pose.Position.ToString());
+                SampleController.Instance.Log("WORLDPOSITION"+worldPosition.ToString());
                 // If you want the position in local space relative to the room, use anchor.transform.localPosition
-                var networkedCube = PhotonPun.PhotonNetwork.Instantiate(cubePrefab.name, (Vector3)worldPosition, (Quaternion)worldRotation);
+                var networkedCube = PhotonPun.PhotonNetwork.Instantiate(cubePrefab.name, new Vector3(((Vector3)worldPosition).x,-2, ((Vector3)worldPosition).z), (Quaternion)worldRotation);
                 var photonGrabbable = networkedCube.GetComponent<PhotonGrabbableObject>();
                 // only interested in the first floor anchor
             }
-
+            break;
 
             // get the floor dimensions
-            anchor.TryGetComponent(out OVRBounded3D bounded3D);
-            var size = bounded3D.BoundingBox.size;
-            SampleController.Instance.Log(bounded3D.GetType().ToString());
-            SampleController.Instance.Log(bounded3D.BoundingBox.size.x.ToString());
-            SampleController.Instance.Log(bounded3D.BoundingBox.size.y.ToString());
-            SampleController.Instance.Log(bounded3D.BoundingBox.size.y.ToString());
+            /* anchor.TryGetComponent(out OVRBounded3D bounded3D);
+             var size = bounded3D.BoundingBox.size;
+             SampleController.Instance.Log(bounded3D.GetType().ToString());
+             SampleController.Instance.Log(bounded3D.BoundingBox.size.x.ToString());
+             SampleController.Instance.Log(bounded3D.BoundingBox.size.y.ToString());
+             SampleController.Instance.Log(bounded3D.BoundingBox.size.y.ToString());*/
             //// If you want the position in local space relative to the room, use anchor.transform.localPosition
             //var networkedCube = PhotonPun.PhotonNetwork.Instantiate(cubePrefab.name, new Vector3(bounded3D.BoundingBox.size.x, bounded3D.BoundingBox.size.y, bounded3D.BoundingBox.size.z), spawnPoint.rotation);
             //var photonGrabbable = networkedCube.GetComponent<PhotonGrabbableObject>();
             //// only interested in the first floor anchor
-            break;
 
-            
+
+
         }
     }
 
