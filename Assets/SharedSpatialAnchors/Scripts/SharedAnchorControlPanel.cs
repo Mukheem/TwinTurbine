@@ -146,32 +146,52 @@ public class SharedAnchorControlPanel : MonoBehaviour
         // use the component helper function to access all child anchors
         await container.FetchChildrenAsync(anchors);
 
+        SampleController.Instance.Log("Child Anchors Fetched.");
+        SampleController.Instance.Log(anchors.Count.ToString());
+        SampleController.Instance.Log(anchors[0].ToString());
+
         // Log the children anchors and their positions
         foreach (var anchor in anchors)
         {
-            // check that this anchor is the floor
+           
+            // check that this anchor is the Table
             if (!anchor.TryGetComponent(out OVRSemanticLabels labels) ||
                 !labels.Labels.Contains(OVRSceneManager.Classification.Table))
             {
                 continue;
             }
 
+            // If it's the Table!
             // enable locatable/tracking
             if (!anchor.TryGetComponent(out OVRLocatable locatable))
                 continue;
             await locatable.SetEnabledAsync(true);
 
-           
+            // localize the anchor
+            locatable.TryGetSceneAnchorPose(out OVRLocatable.TrackingSpacePose pose);
+            Vector3? worldPosition = pose.ComputeWorldPosition(Camera.main);
+            Quaternion? worldRotation = pose.ComputeWorldRotation(Camera.main);
+
+            if(worldPosition != null && worldRotation != null)
+            {
+                // If you want the position in local space relative to the room, use anchor.transform.localPosition
+                var networkedCube = PhotonPun.PhotonNetwork.Instantiate(cubePrefab.name, (Vector3)worldPosition, (Quaternion)worldRotation);
+                var photonGrabbable = networkedCube.GetComponent<PhotonGrabbableObject>();
+                // only interested in the first floor anchor
+            }
+
+
             // get the floor dimensions
             anchor.TryGetComponent(out OVRBounded3D bounded3D);
             var size = bounded3D.BoundingBox.size;
-
-            SampleController.Instance.Log("Child Anchors Fetched."+ size);
-            SampleController.Instance.Log(anchors.Count.ToString());
-            SampleController.Instance.Log(anchors[0].ToString());
-            // If you want the position in local space relative to the room, use anchor.transform.localPosition
-
-            // only interested in the first floor anchor
+            SampleController.Instance.Log(bounded3D.GetType().ToString());
+            SampleController.Instance.Log(bounded3D.BoundingBox.size.x.ToString());
+            SampleController.Instance.Log(bounded3D.BoundingBox.size.y.ToString());
+            SampleController.Instance.Log(bounded3D.BoundingBox.size.y.ToString());
+            //// If you want the position in local space relative to the room, use anchor.transform.localPosition
+            //var networkedCube = PhotonPun.PhotonNetwork.Instantiate(cubePrefab.name, new Vector3(bounded3D.BoundingBox.size.x, bounded3D.BoundingBox.size.y, bounded3D.BoundingBox.size.z), spawnPoint.rotation);
+            //var photonGrabbable = networkedCube.GetComponent<PhotonGrabbableObject>();
+            //// only interested in the first floor anchor
             break;
 
             
@@ -250,8 +270,10 @@ public class SharedAnchorControlPanel : MonoBehaviour
         var photonGrabbable = networkedCube.GetComponent<PhotonGrabbableObject>();
         photonGrabbable.TransferOwnershipToLocalPlayer();
 
-        //await roomDetails();
+        // Read room details
+        Task.Run(roomDetails);
     }
+
 
     public void ChangeUserPassthroughVisualization()
     {
