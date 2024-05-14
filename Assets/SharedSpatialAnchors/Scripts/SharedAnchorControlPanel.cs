@@ -177,7 +177,7 @@ public class SharedAnchorControlPanel : MonoBehaviour
                 SampleController.Instance.Log("POSITION" + pose.Position.ToString());
                 SampleController.Instance.Log("WORLDPOSITION"+worldPosition.ToString());
                 // If you want the position in local space relative to the room, use anchor.transform.localPosition
-                var networkedCube = PhotonPun.PhotonNetwork.Instantiate(cubePrefab.name, new Vector3(((Vector3)worldPosition).x,-2, ((Vector3)worldPosition).z), (Quaternion)worldRotation);
+                var networkedCube = PhotonPun.PhotonNetwork.Instantiate(cubePrefab.name, new Vector3(((Vector3)worldPosition).x,-0, ((Vector3)worldPosition).z), (Quaternion)worldRotation);
                 var photonGrabbable = networkedCube.GetComponent<PhotonGrabbableObject>();
                 // only interested in the first floor anchor
             }
