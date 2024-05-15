@@ -68,6 +68,9 @@ public class SharedAnchorControlPanel : MonoBehaviour
 
     [SerializeField]
     private GameObject TwinTurbine_windTurbine;
+
+    [SerializeField]
+    private GameObject TwinTurbine_menuItem;
     public TextMeshProUGUI StatusText
     {
         get { return statusText; }
@@ -106,10 +109,6 @@ public class SharedAnchorControlPanel : MonoBehaviour
             renderStyleText.text = "Render: " + CoLocatedPassthroughManager.Instance.visualization.ToString();
         }
         ToggleRoomButtons(false);
-
-      
-
-       
     }
 
     public async Task roomDetails()
@@ -150,14 +149,16 @@ public class SharedAnchorControlPanel : MonoBehaviour
         SampleController.Instance.Log(anchors.Count.ToString());
         SampleController.Instance.Log(anchors[0].ToString());
 
+        int i = 0;
         // Log the children anchors and their positions
         foreach (var anchor in anchors)
         {
            
             // check that this anchor is the Table
             if (anchor.TryGetComponent(out OVRSemanticLabels labels) &&
-                labels.Labels.Contains(OVRSceneManager.Classification.Table))
+                (labels.Labels.Contains(OVRSceneManager.Classification.Plant)) || labels.Labels.Contains(OVRSceneManager.Classification.Table)) 
             {
+
                 // If it's the Table!
                 // enable locatable/tracking
                 if (!anchor.TryGetComponent(out OVRLocatable locatable))
@@ -173,12 +174,26 @@ public class SharedAnchorControlPanel : MonoBehaviour
                 {
                     SampleController.Instance.Log("POSITION" + pose.Position.ToString());
                     SampleController.Instance.Log("WORLDPOSITION" + worldPosition.ToString());
-                    // If you want the position in local space relative to the room, use anchor.transform.localPosition
-                    var networkedCube = PhotonPun.PhotonNetwork.Instantiate(cubePrefab.name, new Vector3(((Vector3)worldPosition).x, -0, ((Vector3)worldPosition).z), (Quaternion)worldRotation);
-                    var photonGrabbable = networkedCube.GetComponent<PhotonGrabbableObject>();
-                    // only interested in the first floor anchor
+
+                    
+                    if (labels.Labels.Contains(OVRSceneManager.Classification.Table))
+                    {
+                         var networkedCube = PhotonPun.PhotonNetwork.Instantiate(TwinTurbine_windTurbine.name, new Vector3(((Vector3)worldPosition).x,-0,5f, ((Vector3)worldPosition).z), Quaternion.identity);
+                        var photonGrabbable = networkedCube.GetComponent<PhotonGrabbableObject>();
+                        i = i++;
+                    }
+
+                    if (labels.Labels.Contains(OVRSceneManager.Classification.Plant))
+                    {
+                        var networkedCube = PhotonPun.PhotonNetwork.Instantiate(TwinTurbine_menuItem.name, new Vector3(((Vector3)worldPosition).x, 1.3f, ((Vector3)worldPosition).z), Quaternion.identity);
+                        var photonGrabbable = networkedCube.GetComponent<PhotonGrabbableObject>();
+                        i = i++;
+                    }
+
+
                 }
-                break;
+                if (i == 2)
+                    break;
             }
             continue;
 
