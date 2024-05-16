@@ -25,6 +25,9 @@ using UnityEngine.UI;
 using TMPro;
 using PhotonPun = Photon.Pun;
 using PhotonRealtime = Photon.Realtime;
+using System.Linq;
+using System;
+using System.Threading.Tasks;
 
 public class SharedAnchorControlPanel : MonoBehaviour
 {
@@ -65,6 +68,9 @@ public class SharedAnchorControlPanel : MonoBehaviour
 
     [SerializeField]
     private GameObject TwinTurbine_windTurbine;
+
+    [SerializeField]
+    private GameObject TwinTurbine_menuItem;
     public TextMeshProUGUI StatusText
     {
         get { return statusText; }
@@ -103,6 +109,95 @@ public class SharedAnchorControlPanel : MonoBehaviour
             renderStyleText.text = "Render: " + CoLocatedPassthroughManager.Instance.visualization.ToString();
         }
         ToggleRoomButtons(false);
+    }
+
+    public async Task roomDetails()
+    {
+        var anchors = new List<OVRAnchor>();
+        await OVRAnchor.FetchAnchorsAsync<OVRRoomLayout>(anchors);
+
+        // no rooms - call Space Setup or check Scene permission
+        if (anchors.Count == 0)
+            return;
+
+        SampleController.Instance.Log("Anchors Fetched.");
+        SampleController.Instance.Log(anchors.Count.ToString());
+        SampleController.Instance.Log(anchors[0].ToString());
+        // access anchor data by retrieving the components
+        var room = anchors.First();
+
+        // access the ceiling, floor and walls with the OVRRoomLayout component
+        var roomLayout = room.GetComponent<OVRRoomLayout>();
+        if (roomLayout.TryGetRoomLayout(out Guid ceiling, out Guid floor, out Guid[] walls))
+        {
+            // use these guids to fetch the OVRAnchor object directly
+            await OVRAnchor.FetchAnchorsAsync(walls, anchors);
+        }
+
+        // access the list of children with the OVRAnchorContainer component
+        if (!room.TryGetComponent(out OVRAnchorContainer container))
+        {
+            SampleController.Instance.Log("No ROOM data FOUND.");
+            return;
+        }
+           
+
+        // use the component helper function to access all child anchors
+        await container.FetchChildrenAsync(anchors);
+
+        SampleController.Instance.Log("Child Anchors Fetched.");
+        SampleController.Instance.Log(anchors.Count.ToString());
+        SampleController.Instance.Log(anchors[0].ToString());
+
+        int i = 0;
+        // Log the children anchors and their positions
+        foreach (var anchor in anchors)
+        {
+           
+            // check that this anchor is the Table
+            if (anchor.TryGetComponent(out OVRSemanticLabels labels) &&
+                (labels.Labels.Contains(OVRSceneManager.Classification.Plant)) || labels.Labels.Contains(OVRSceneManager.Classification.Table)) 
+            {
+
+                // If it's the Table!
+                // enable locatable/tracking
+                if (!anchor.TryGetComponent(out OVRLocatable locatable))
+                    continue;
+                await locatable.SetEnabledAsync(true);
+
+                // localize the anchor
+                locatable.TryGetSceneAnchorPose(out OVRLocatable.TrackingSpacePose pose);
+                Vector3? worldPosition = pose.ComputeWorldPosition(Camera.main);
+                Quaternion? worldRotation = pose.ComputeWorldRotation(Camera.main);
+
+                if (worldPosition != null && worldRotation != null)
+                {
+                    SampleController.Instance.Log("POSITION" + pose.Position.ToString());
+                    SampleController.Instance.Log("WORLDPOSITION" + worldPosition.ToString());
+
+                    
+                    if (labels.Labels.Contains(OVRSceneManager.Classification.Table))
+                    {
+                         var networkedCube = PhotonPun.PhotonNetwork.Instantiate(TwinTurbine_windTurbine.name, new Vector3(((Vector3)worldPosition).x,-0,5f, ((Vector3)worldPosition).z), Quaternion.identity);
+                        var photonGrabbable = networkedCube.GetComponent<PhotonGrabbableObject>();
+                        i = i++;
+                    }
+
+                    if (labels.Labels.Contains(OVRSceneManager.Classification.Plant))
+                    {
+                        var networkedCube = PhotonPun.PhotonNetwork.Instantiate(TwinTurbine_menuItem.name, new Vector3(((Vector3)worldPosition).x, 1.3f, ((Vector3)worldPosition).z), Quaternion.identity);
+                        var photonGrabbable = networkedCube.GetComponent<PhotonGrabbableObject>();
+                        i = i++;
+                    }
+
+
+                }
+                if (i == 2)
+                    break;
+            }
+            continue;
+
+        }
     }
 
     public void OnCreateModeButtonPressed()
@@ -176,7 +271,11 @@ public class SharedAnchorControlPanel : MonoBehaviour
         var networkedCube = PhotonPun.PhotonNetwork.Instantiate(cubePrefab.name, spawnPoint.position, spawnPoint.rotation);
         var photonGrabbable = networkedCube.GetComponent<PhotonGrabbableObject>();
         photonGrabbable.TransferOwnershipToLocalPlayer();
+
+        // Read room details
+        Task.Run(roomDetails);
     }
+
 
     public void ChangeUserPassthroughVisualization()
     {
@@ -260,7 +359,7 @@ public class SharedAnchorControlPanel : MonoBehaviour
         SampleController.Instance.Log("Trying to Spawn WT Object");
         SampleController.Instance.Log(spawnPoint.position.ToString());
         Debug.Log(spawnPoint.position);
-        var networkedWindTurbine = PhotonPun.PhotonNetwork.Instantiate(TwinTurbine_windTurbine.name, new Vector3(Camera.main.transform.position.x,0, Camera.main.transform.position.z), Quaternion.identity);
+        var networkedWindTurbine = PhotonPun.PhotonNetwork.Instantiate(TwinTurbine_windTurbine.name, new Vector3(Camera.main.transform.position.x,0, Camera.main.transform.position.z-2), Quaternion.identity);
         var photonGrabbable = networkedWindTurbine.GetComponent<PhotonGrabbableObject>();
         photonGrabbable.TransferOwnershipToLocalPlayer();
     }
