@@ -68,6 +68,9 @@ public class SharedAnchorControlPanel : MonoBehaviour
 
     [SerializeField]
     private GameObject TwinTurbine_windTurbine;
+
+    [SerializeField]
+    private GameObject TwinTurbine_menuItem;
     public TextMeshProUGUI StatusText
     {
         get { return statusText; }
@@ -106,10 +109,6 @@ public class SharedAnchorControlPanel : MonoBehaviour
             renderStyleText.text = "Render: " + CoLocatedPassthroughManager.Instance.visualization.ToString();
         }
         ToggleRoomButtons(false);
-
-      
-
-       
     }
 
     public async Task roomDetails()
@@ -150,51 +149,54 @@ public class SharedAnchorControlPanel : MonoBehaviour
         SampleController.Instance.Log(anchors.Count.ToString());
         SampleController.Instance.Log(anchors[0].ToString());
 
+        int i = 0;
         // Log the children anchors and their positions
         foreach (var anchor in anchors)
         {
            
             // check that this anchor is the Table
-            if (!anchor.TryGetComponent(out OVRSemanticLabels labels) ||
-                !labels.Labels.Contains(OVRSceneManager.Classification.Table))
+            if (anchor.TryGetComponent(out OVRSemanticLabels labels) &&
+                (labels.Labels.Contains(OVRSceneManager.Classification.Plant)) || labels.Labels.Contains(OVRSceneManager.Classification.Table)) 
             {
-                continue;
+
+                // If it's the Table!
+                // enable locatable/tracking
+                if (!anchor.TryGetComponent(out OVRLocatable locatable))
+                    continue;
+                await locatable.SetEnabledAsync(true);
+
+                // localize the anchor
+                locatable.TryGetSceneAnchorPose(out OVRLocatable.TrackingSpacePose pose);
+                Vector3? worldPosition = pose.ComputeWorldPosition(Camera.main);
+                Quaternion? worldRotation = pose.ComputeWorldRotation(Camera.main);
+
+                if (worldPosition != null && worldRotation != null)
+                {
+                    SampleController.Instance.Log("POSITION" + pose.Position.ToString());
+                    SampleController.Instance.Log("WORLDPOSITION" + worldPosition.ToString());
+
+                    
+                    if (labels.Labels.Contains(OVRSceneManager.Classification.Table))
+                    {
+                         var networkedCube = PhotonPun.PhotonNetwork.Instantiate(TwinTurbine_windTurbine.name, new Vector3(((Vector3)worldPosition).x,-0,5f, ((Vector3)worldPosition).z), Quaternion.identity);
+                        var photonGrabbable = networkedCube.GetComponent<PhotonGrabbableObject>();
+                        i = i++;
+                    }
+
+                    if (labels.Labels.Contains(OVRSceneManager.Classification.Plant))
+                    {
+                        var networkedCube = PhotonPun.PhotonNetwork.Instantiate(TwinTurbine_menuItem.name, new Vector3(((Vector3)worldPosition).x, 1.3f, ((Vector3)worldPosition).z), Quaternion.identity);
+                        var photonGrabbable = networkedCube.GetComponent<PhotonGrabbableObject>();
+                        i = i++;
+                    }
+
+
+                }
+                if (i == 2)
+                    break;
             }
+            continue;
 
-            // If it's the Table!
-            // enable locatable/tracking
-            if (!anchor.TryGetComponent(out OVRLocatable locatable))
-                continue;
-            await locatable.SetEnabledAsync(true);
-
-            // localize the anchor
-            locatable.TryGetSceneAnchorPose(out OVRLocatable.TrackingSpacePose pose);
-            Vector3? worldPosition = pose.ComputeWorldPosition(Camera.main);
-            Quaternion? worldRotation = pose.ComputeWorldRotation(Camera.main);
-
-            if(worldPosition != null && worldRotation != null)
-            {
-                // If you want the position in local space relative to the room, use anchor.transform.localPosition
-                var networkedCube = PhotonPun.PhotonNetwork.Instantiate(cubePrefab.name, (Vector3)worldPosition, (Quaternion)worldRotation);
-                var photonGrabbable = networkedCube.GetComponent<PhotonGrabbableObject>();
-                // only interested in the first floor anchor
-            }
-
-
-            // get the floor dimensions
-            anchor.TryGetComponent(out OVRBounded3D bounded3D);
-            var size = bounded3D.BoundingBox.size;
-            SampleController.Instance.Log(bounded3D.GetType().ToString());
-            SampleController.Instance.Log(bounded3D.BoundingBox.size.x.ToString());
-            SampleController.Instance.Log(bounded3D.BoundingBox.size.y.ToString());
-            SampleController.Instance.Log(bounded3D.BoundingBox.size.y.ToString());
-            //// If you want the position in local space relative to the room, use anchor.transform.localPosition
-            //var networkedCube = PhotonPun.PhotonNetwork.Instantiate(cubePrefab.name, new Vector3(bounded3D.BoundingBox.size.x, bounded3D.BoundingBox.size.y, bounded3D.BoundingBox.size.z), spawnPoint.rotation);
-            //var photonGrabbable = networkedCube.GetComponent<PhotonGrabbableObject>();
-            //// only interested in the first floor anchor
-            break;
-
-            
         }
     }
 
