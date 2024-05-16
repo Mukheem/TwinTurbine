@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
 
@@ -32,11 +33,15 @@ public class ApiResponse
     public string geometry;
     public List<DataPerHour> timeSeries;
 }
-
+  
 
 public class API : MonoBehaviour
 {
-    public float latestWD;
+    public TextMeshProUGUI windDirValue;
+    public TextMeshProUGUI temperatureValue;
+    private float LatestT;
+    private float latestWD;
+    private string unit;
 
     void Start()
     {
@@ -68,30 +73,37 @@ public class API : MonoBehaviour
 
         DataPoint dataTurbine = JsonUtility.FromJson<DataPoint>(testJson);
 
-        Debug.Log(dataTurbine.name);
-        Debug.Log(dataTurbine.values[0]);
+        //Debug.Log(dataTurbine.name);
+        //Debug.Log(dataTurbine.values[0]);
     }
 
     public void ExtractDataFromJson(string json)
     {
         ApiResponse response = JsonUtility.FromJson<ApiResponse>(json);
-        Debug.Log("Api response worked!!!!");
+        //Debug.Log("Api response worked!!!!");
 
         //Access the latest hour
         DataPerHour timeResponse = response.timeSeries[0];
         List<DataPoint> dataPoints = timeResponse.parameters;
 
-        Debug.Log("Total number of data points: " + dataPoints.Count);
+        //Debug.Log("Total number of data points: " + dataPoints.Count);
 
-        // Find the value of WD in the latest hour
+        //Find the value of WD in the latest hour
         for (int i = 0; i < dataPoints.Count; i++)
         {
             DataPoint point = dataPoints[i];
+            if (point.name == "t")
+            {
+                LatestT = point.values[0];
+                unit = point.unit;
+                temperatureValue.SetText(LatestT.ToString()+ " "+ unit);
+            }
             if (point.name == "wd") 
             {
                 latestWD = point.values[0];
-                
+                windDirValue.SetText(latestWD.ToString());
             }
+
         }
     }
 }
