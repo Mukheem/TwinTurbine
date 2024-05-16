@@ -3626,6 +3626,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &912202276 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5963783328903625539, guid: b49f2be068ab7e74284fd7900d48ee67, type: 3}
+  m_PrefabInstance: {fileID: 5963783329142366567}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &947450794
 GameObject:
   m_ObjectHideFlags: 0
@@ -4095,6 +4106,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1038098150}
   m_CullTransparentMesh: 1
+--- !u!114 &1065765538 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5963783329049947077, guid: b49f2be068ab7e74284fd7900d48ee67, type: 3}
+  m_PrefabInstance: {fileID: 5963783329142366567}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1109088824
 GameObject:
   m_ObjectHideFlags: 0
@@ -9307,6 +9329,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5963783328903625539, guid: b49f2be068ab7e74284fd7900d48ee67, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5963783329065507781, guid: b49f2be068ab7e74284fd7900d48ee67, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5963783329065507781, guid: b49f2be068ab7e74284fd7900d48ee67, type: 3}
+      propertyPath: m_Color.b
+      value: 0.7254902
+      objectReference: {fileID: 0}
+    - target: {fileID: 5963783329065507781, guid: b49f2be068ab7e74284fd7900d48ee67, type: 3}
+      propertyPath: m_Color.g
+      value: 0.2901961
+      objectReference: {fileID: 0}
+    - target: {fileID: 5963783329065507781, guid: b49f2be068ab7e74284fd7900d48ee67, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5963783330193271202, guid: b49f2be068ab7e74284fd7900d48ee67, type: 3}
+      propertyPath: windDirValue
+      value: 
+      objectReference: {fileID: 1065765538}
+    - target: {fileID: 5963783330193271202, guid: b49f2be068ab7e74284fd7900d48ee67, type: 3}
+      propertyPath: temperatureValue
+      value: 
+      objectReference: {fileID: 912202276}
     - target: {fileID: 5963783330193271203, guid: b49f2be068ab7e74284fd7900d48ee67, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -9394,6 +9444,10 @@ PrefabInstance:
     - target: {fileID: 5963783330193271207, guid: b49f2be068ab7e74284fd7900d48ee67, type: 3}
       propertyPath: m_Name
       value: Curved Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 5963783330639515977, guid: b49f2be068ab7e74284fd7900d48ee67, type: 3}
+      propertyPath: m_text
+      value: Kista
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b49f2be068ab7e74284fd7900d48ee67, type: 3}
