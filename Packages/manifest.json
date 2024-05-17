@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.github-glitchenzo.nugetforunity": "https://github.com/GlitchEnzo/NuGetForUnity.git?path=/src/NuGetForUnity",
     "com.meta.xr.sdk.core": "63.0.0",
     "com.meta.xr.sdk.interaction": "63.0.0",
     "com.meta.xr.sdk.interaction.ovr": "63.0.0",
