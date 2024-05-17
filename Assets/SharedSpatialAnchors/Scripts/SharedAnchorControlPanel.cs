@@ -178,7 +178,7 @@ public class SharedAnchorControlPanel : MonoBehaviour
                     
                     if (labels.Labels.Contains(OVRSceneManager.Classification.Table))
                     {
-                         var networkedCube = PhotonPun.PhotonNetwork.Instantiate(TwinTurbine_windTurbine.name, new Vector3(((Vector3)worldPosition).x,-0,5f, ((Vector3)worldPosition).z), Quaternion.identity);
+                         var networkedCube = PhotonPun.PhotonNetwork.Instantiate(TwinTurbine_windTurbine.name, new Vector3(((Vector3)worldPosition).x,-0.5f, ((Vector3)worldPosition).z), Quaternion.identity);
                         var photonGrabbable = networkedCube.GetComponent<PhotonGrabbableObject>();
                         i = i++;
                     }
