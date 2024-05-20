@@ -48,9 +48,12 @@ public class API : MonoBehaviour
     {
         //TestFromJsonToData();
 
-        StartCoroutine(GetText());
     }
 
+    public void OnButtonClick()
+    {
+        StartCoroutine(GetText());
+    }
     IEnumerator GetText()
     {
         UnityWebRequest www = UnityWebRequest.Get("https://opendata-download-metanalys.smhi.se/api/category/mesan2g/version/1/geotype/point/lon/17.94/lat/59.40/data.json");
@@ -78,7 +81,7 @@ public class API : MonoBehaviour
         //Debug.Log(dataTurbine.values[0]);
     }
 
-    public void ExtractDataFromJson(string json)
+public void ExtractDataFromJson(string json)
     {
         ApiResponse response = JsonUtility.FromJson<ApiResponse>(json);
         //Debug.Log("Api response worked!!!!");
