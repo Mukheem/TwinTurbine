@@ -47,12 +47,17 @@ public class API : MonoBehaviour
     void Start()
     {
         //TestFromJsonToData();
-
     }
 
     public void OnButtonClick()
     {
         StartCoroutine(GetText());
+    }
+    public void EmergencyButtonClick()
+    {
+        loc.SetText("");
+        windDirValue.SetText("");
+        temperatureValue.SetText("");
     }
     IEnumerator GetText()
     {
