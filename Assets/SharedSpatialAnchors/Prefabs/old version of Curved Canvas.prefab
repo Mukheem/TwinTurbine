@@ -1156,7 +1156,7 @@ GameObject:
   - component: {fileID: 3308313476866517181}
   - component: {fileID: 7298568305695816314}
   m_Layer: 0
-  m_Name: Curved Canvas
+  m_Name: old version of Curved Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
