@@ -5,19 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Menu.unity
     guid: e26f81c2c09f1e3439e68ccaa68be16d
   - enabled: 1
     path: Assets/SharedSpatialAnchors/Scenes/SharedSpatialAnchors.unity
     guid: aa837f322991b3946908831c850aeb5e
-  - enabled: 1
+  - enabled: 0
     path: Assets/SceneSharing/Scenes/SharedSpatialAnchorsWithScene.unity
     guid: 54a9bc56340b898409d0a7bd0cca36d6
-  - enabled: 1
+  - enabled: 0
     path: Assets/CoLocation/Scenes/CoLocatedSafety.unity
     guid: 378da2a56579b4149af7ee73386acda7
-  - enabled: 1
+  - enabled: 0
     path: Assets/AnchorCaching/AnchorCaching.unity
     guid: 320ace6ee4a688c4f99a3478a150ecf5
   m_configObjects:
