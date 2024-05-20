@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44202876, g: 0.45022064, b: 0.47379425, a: 1}
+  m_IndirectSpecularColor: {r: 0.44202673, g: 0.4502241, b: 0.47379225, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -11613,7 +11613,6 @@ GameObject:
   - component: {fileID: 208793886}
   - component: {fileID: 208793885}
   - component: {fileID: 208793884}
-  - component: {fileID: 208793883}
   - component: {fileID: 208793888}
   m_Layer: 0
   m_Name: SprayBottle
@@ -11622,21 +11621,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &208793883
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 208793882}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bedaac29a943f844a7074b53c8bdf9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pointable: {fileID: 208793885}
-  _rigidbody: {fileID: 208793886}
-  _scaleMassWithSize: 1
 --- !u!114 &208793884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11788,6 +11772,9 @@ MonoBehaviour:
   _twoGrabTransformer: {fileID: 0}
   _targetTransform: {fileID: 0}
   _maxGrabPoints: 1
+  _rigidbody: {fileID: 208793886}
+  _kinematicWhileSelected: 1
+  _throwWhenUnselected: 1
 --- !u!54 &208793886
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13047,7 +13034,7 @@ MonoBehaviour:
   _data: {fileID: 0}
   _pointableElement: {fileID: 1410426252}
   _rigidbody: {fileID: 1410426253}
-  _physicsGrabbable: {fileID: 1410426255}
+  _physicsGrabbable: {fileID: 0}
   _resetGrabOnGrabsUpdated: 1
   _scoringModifier:
     _positionRotationWeight: 1
@@ -13116,7 +13103,7 @@ MonoBehaviour:
   _data: {fileID: 0}
   _pointableElement: {fileID: 1410426252}
   _rigidbody: {fileID: 1410426253}
-  _physicsGrabbable: {fileID: 1410426255}
+  _physicsGrabbable: {fileID: 0}
   _resetGrabOnGrabsUpdated: 1
   _slippiness: 0
   _supportedGrabTypes: 1
@@ -13609,7 +13596,7 @@ MonoBehaviour:
   _rigidbody: {fileID: 2102400544}
   _grabSource: {fileID: 0}
   _resetGrabOnGrabsUpdated: 1
-  _physicsGrabbable: {fileID: 2102400546}
+  _physicsGrabbable: {fileID: 0}
   _movementProvider: {fileID: 351552272}
 --- !u!1 &388432859
 GameObject:
@@ -15301,7 +15288,7 @@ MonoBehaviour:
   _useClosestPointAsGrabSource: 1
   _releaseDistance: 0
   _resetGrabOnGrabsUpdated: 1
-  _physicsGrabbable: {fileID: 1522858641}
+  _physicsGrabbable: {fileID: 0}
 --- !u!4 &644339907 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5635686429791142917, guid: 6d0daa33399ecd14bb5adf1b1ea21830,
@@ -16007,7 +15994,7 @@ MonoBehaviour:
   _data: {fileID: 0}
   _pointableElement: {fileID: 2102400543}
   _rigidbody: {fileID: 2102400544}
-  _physicsGrabbable: {fileID: 2102400546}
+  _physicsGrabbable: {fileID: 0}
   _resetGrabOnGrabsUpdated: 1
   _slippiness: 0
   _supportedGrabTypes: -1
@@ -16049,7 +16036,7 @@ MonoBehaviour:
   _data: {fileID: 0}
   _pointableElement: {fileID: 2102400543}
   _rigidbody: {fileID: 2102400544}
-  _physicsGrabbable: {fileID: 2102400546}
+  _physicsGrabbable: {fileID: 0}
   _resetGrabOnGrabsUpdated: 1
   _scoringModifier:
     _positionRotationWeight: 0.8
@@ -16685,6 +16672,9 @@ MonoBehaviour:
   _twoGrabTransformer: {fileID: 0}
   _targetTransform: {fileID: 0}
   _maxGrabPoints: 1
+  _rigidbody: {fileID: 0}
+  _kinematicWhileSelected: 1
+  _throwWhenUnselected: 1
 --- !u!114 &883578957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16949,7 +16939,7 @@ MonoBehaviour:
   _data: {fileID: 0}
   _pointableElement: {fileID: 883578956}
   _rigidbody: {fileID: 883578959}
-  _physicsGrabbable: {fileID: 208793883}
+  _physicsGrabbable: {fileID: 0}
   _resetGrabOnGrabsUpdated: 1
   _scoringModifier:
     _positionRotationWeight: 1
@@ -17844,7 +17834,7 @@ MonoBehaviour:
   _data: {fileID: 0}
   _pointableElement: {fileID: 208793885}
   _rigidbody: {fileID: 208793886}
-  _physicsGrabbable: {fileID: 208793883}
+  _physicsGrabbable: {fileID: 0}
   _resetGrabOnGrabsUpdated: 1
   _scoringModifier:
     _positionRotationWeight: 0
@@ -18497,7 +18487,7 @@ MonoBehaviour:
   _useClosestPointAsGrabSource: 1
   _releaseDistance: 0
   _resetGrabOnGrabsUpdated: 1
-  _physicsGrabbable: {fileID: 1979054146}
+  _physicsGrabbable: {fileID: 0}
 --- !u!1 &1135985713
 GameObject:
   m_ObjectHideFlags: 0
@@ -20057,7 +20047,7 @@ MonoBehaviour:
   _data: {fileID: 0}
   _pointableElement: {fileID: 208793885}
   _rigidbody: {fileID: 208793886}
-  _physicsGrabbable: {fileID: 208793883}
+  _physicsGrabbable: {fileID: 0}
   _resetGrabOnGrabsUpdated: 1
   _scoringModifier:
     _positionRotationWeight: 0
@@ -20425,7 +20415,6 @@ GameObject:
   - component: {fileID: 1410426253}
   - component: {fileID: 1410426252}
   - component: {fileID: 1410426251}
-  - component: {fileID: 1410426255}
   - component: {fileID: 1410426256}
   m_Layer: 0
   m_Name: Stone-HandToInteractable
@@ -20477,6 +20466,9 @@ MonoBehaviour:
   _twoGrabTransformer: {fileID: 0}
   _targetTransform: {fileID: 0}
   _maxGrabPoints: 1
+  _rigidbody: {fileID: 1410426253}
+  _kinematicWhileSelected: 1
+  _throwWhenUnselected: 1
 --- !u!54 &1410426253
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -20514,21 +20506,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1410426255
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1410426250}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bedaac29a943f844a7074b53c8bdf9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pointable: {fileID: 1410426252}
-  _rigidbody: {fileID: 1410426253}
-  _scaleMassWithSize: 0
 --- !u!114 &1410426256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20897,7 +20874,7 @@ MonoBehaviour:
   _data: {fileID: 0}
   _pointableElement: {fileID: 883578956}
   _rigidbody: {fileID: 883578959}
-  _physicsGrabbable: {fileID: 208793883}
+  _physicsGrabbable: {fileID: 0}
   _resetGrabOnGrabsUpdated: 1
   _scoringModifier:
     _positionRotationWeight: 1
@@ -21187,7 +21164,7 @@ MonoBehaviour:
   _data: {fileID: 0}
   _pointableElement: {fileID: 1410426252}
   _rigidbody: {fileID: 1410426253}
-  _physicsGrabbable: {fileID: 1410426255}
+  _physicsGrabbable: {fileID: 0}
   _resetGrabOnGrabsUpdated: 1
   _scoringModifier:
     _positionRotationWeight: 1
@@ -21256,7 +21233,7 @@ MonoBehaviour:
   _data: {fileID: 0}
   _pointableElement: {fileID: 1410426252}
   _rigidbody: {fileID: 1410426253}
-  _physicsGrabbable: {fileID: 1410426255}
+  _physicsGrabbable: {fileID: 0}
   _resetGrabOnGrabsUpdated: 1
   _slippiness: 0
   _supportedGrabTypes: 1
@@ -21380,18 +21357,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7cb4a09355f9dc244bfbcd2ac9208ef7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1522858641 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4352668662936965588, guid: 5b2febef9538fb34e972bb0070c107a5,
-    type: 3}
-  m_PrefabInstance: {fileID: 974987633}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bedaac29a943f844a7074b53c8bdf9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1522858642 stripped
@@ -22772,7 +22737,7 @@ MonoBehaviour:
   _data: {fileID: 0}
   _pointableElement: {fileID: 2102400543}
   _rigidbody: {fileID: 2102400544}
-  _physicsGrabbable: {fileID: 2102400546}
+  _physicsGrabbable: {fileID: 0}
   _resetGrabOnGrabsUpdated: 1
   _scoringModifier:
     _positionRotationWeight: 0.8
@@ -22816,7 +22781,7 @@ MonoBehaviour:
   _data: {fileID: 0}
   _pointableElement: {fileID: 2102400543}
   _rigidbody: {fileID: 2102400544}
-  _physicsGrabbable: {fileID: 2102400546}
+  _physicsGrabbable: {fileID: 0}
   _resetGrabOnGrabsUpdated: 1
   _slippiness: 0
   _supportedGrabTypes: -1
@@ -23886,19 +23851,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 76908128, guid: 6d0daa33399ecd14bb5adf1b1ea21830, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 76908128, guid: 6d0daa33399ecd14bb5adf1b1ea21830, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 76908128, guid: 6d0daa33399ecd14bb5adf1b1ea21830, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 115.5
       objectReference: {fileID: 0}
     - target: {fileID: 76908128, guid: 6d0daa33399ecd14bb5adf1b1ea21830, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -23.5
       objectReference: {fileID: 0}
     - target: {fileID: 186202752, guid: 6d0daa33399ecd14bb5adf1b1ea21830, type: 3}
       propertyPath: m_IsActive
@@ -24026,19 +23991,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 759883329, guid: 6d0daa33399ecd14bb5adf1b1ea21830, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 759883329, guid: 6d0daa33399ecd14bb5adf1b1ea21830, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 759883329, guid: 6d0daa33399ecd14bb5adf1b1ea21830, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 759883329, guid: 6d0daa33399ecd14bb5adf1b1ea21830, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -24
       objectReference: {fileID: 0}
     - target: {fileID: 896979721, guid: 6d0daa33399ecd14bb5adf1b1ea21830, type: 3}
       propertyPath: _toggleGroup
@@ -24202,19 +24167,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2067753181, guid: 6d0daa33399ecd14bb5adf1b1ea21830, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2067753181, guid: 6d0daa33399ecd14bb5adf1b1ea21830, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2067753181, guid: 6d0daa33399ecd14bb5adf1b1ea21830, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 209
       objectReference: {fileID: 0}
     - target: {fileID: 2067753181, guid: 6d0daa33399ecd14bb5adf1b1ea21830, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -23.5
       objectReference: {fileID: 0}
     - target: {fileID: 241355149624569808, guid: 6d0daa33399ecd14bb5adf1b1ea21830,
         type: 3}
@@ -25435,10 +25400,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TranslationOffset.y
       value: -0.044999998
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2839067640238982610, guid: 6d0daa33399ecd14bb5adf1b1ea21830,
         type: 3}
@@ -32291,7 +32252,7 @@ MonoBehaviour:
   _useClosestPointAsGrabSource: 0
   _releaseDistance: 0
   _resetGrabOnGrabsUpdated: 1
-  _physicsGrabbable: {fileID: 208793883}
+  _physicsGrabbable: {fileID: 0}
 --- !u!114 &1967407235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32349,7 +32310,7 @@ PrefabInstance:
     - target: {fileID: 617279256, guid: 25c090698b1b94e4d9a8f6d5494bdf31, type: 3}
       propertyPath: _physicsGrabbable
       value: 
-      objectReference: {fileID: 1979054146}
+      objectReference: {fileID: 0}
     - target: {fileID: 912468920, guid: 25c090698b1b94e4d9a8f6d5494bdf31, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -32357,7 +32318,7 @@ PrefabInstance:
     - target: {fileID: 912468922, guid: 25c090698b1b94e4d9a8f6d5494bdf31, type: 3}
       propertyPath: _physicsGrabbable
       value: 
-      objectReference: {fileID: 1979054146}
+      objectReference: {fileID: 0}
     - target: {fileID: 1723249865, guid: 25c090698b1b94e4d9a8f6d5494bdf31, type: 3}
       propertyPath: _interactables.Array.size
       value: 7
@@ -32373,12 +32334,17 @@ PrefabInstance:
     - target: {fileID: 1925666556, guid: 25c090698b1b94e4d9a8f6d5494bdf31, type: 3}
       propertyPath: _physicsGrabbable
       value: 
-      objectReference: {fileID: 1979054146}
+      objectReference: {fileID: 0}
+    - target: {fileID: 1551646519691236562, guid: 25c090698b1b94e4d9a8f6d5494bdf31,
+        type: 3}
+      propertyPath: _rigidbody
+      value: 
+      objectReference: {fileID: 1979054145}
     - target: {fileID: 1798685864391773425, guid: 25c090698b1b94e4d9a8f6d5494bdf31,
         type: 3}
       propertyPath: _physicsGrabbable
       value: 
-      objectReference: {fileID: 1979054146}
+      objectReference: {fileID: 0}
     - target: {fileID: 2709527602816250229, guid: 25c090698b1b94e4d9a8f6d5494bdf31,
         type: 3}
       propertyPath: m_IsActive
@@ -32393,7 +32359,7 @@ PrefabInstance:
         type: 3}
       propertyPath: _physicsGrabbable
       value: 
-      objectReference: {fileID: 1979054146}
+      objectReference: {fileID: 0}
     - target: {fileID: 3292654313950918604, guid: 25c090698b1b94e4d9a8f6d5494bdf31,
         type: 3}
       propertyPath: m_RootOrder
@@ -32463,7 +32429,7 @@ PrefabInstance:
         type: 3}
       propertyPath: _physicsGrabbable
       value: 
-      objectReference: {fileID: 1979054146}
+      objectReference: {fileID: 0}
     - target: {fileID: 8580307722448229154, guid: 25c090698b1b94e4d9a8f6d5494bdf31,
         type: 3}
       propertyPath: m_UseGravity
@@ -32501,21 +32467,6 @@ Rigidbody:
     type: 3}
   m_PrefabInstance: {fileID: 1979054142}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1979054146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1979054143}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bedaac29a943f844a7074b53c8bdf9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pointable: {fileID: 1979054144}
-  _rigidbody: {fileID: 1979054145}
-  _scaleMassWithSize: 1
 --- !u!114 &1979054149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34073,7 +34024,6 @@ GameObject:
   - component: {fileID: 2102400544}
   - component: {fileID: 2102400543}
   - component: {fileID: 2102400542}
-  - component: {fileID: 2102400546}
   - component: {fileID: 2102400547}
   - component: {fileID: 2102400548}
   m_Layer: 0
@@ -34126,6 +34076,9 @@ MonoBehaviour:
   _twoGrabTransformer: {fileID: 0}
   _targetTransform: {fileID: 0}
   _maxGrabPoints: 1
+  _rigidbody: {fileID: 2102400544}
+  _kinematicWhileSelected: 1
+  _throwWhenUnselected: 1
 --- !u!54 &2102400544
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -34163,21 +34116,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2102400546
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2102400541}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bedaac29a943f844a7074b53c8bdf9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pointable: {fileID: 2102400543}
-  _rigidbody: {fileID: 2102400544}
-  _scaleMassWithSize: 0
 --- !u!114 &2102400547
 MonoBehaviour:
   m_ObjectHideFlags: 0
