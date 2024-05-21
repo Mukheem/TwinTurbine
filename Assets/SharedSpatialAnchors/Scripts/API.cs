@@ -37,6 +37,7 @@ public class ApiResponse
 
 public class API : MonoBehaviour
 {
+    public TextMeshProUGUI voltageValue;
     public TextMeshProUGUI windDirValue;
     public TextMeshProUGUI temperatureValue;
     public TextMeshProUGUI loc;
@@ -105,6 +106,7 @@ public void ExtractDataFromJson(string json)
         for (int i = 0; i < dataPoints.Count; i++)
         {
             DataPoint point = dataPoints[i];
+            voltageValue.text = webSocketControllerScript.voltageValue.ToString();
             loc.SetText("Kista(Lat:59.4067  Long:17.9452)");
             if (point.name == "wd")
             {
