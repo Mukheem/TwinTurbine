@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028326, g: 0.22571333, b: 0.30692202, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -194,6 +194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c468066257183f4eb657f07381143b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  voltageValue: 0
 --- !u!4 &472077540
 Transform:
   m_ObjectHideFlags: 0
@@ -2679,7 +2680,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlanePrefab: {fileID: 1925634287}
   VolumePrefab: {fileID: 869333011}
-  PrefabOverrides: []
+  PrefabOverrides:
+  - Prefab: {fileID: 5971971822091892830, guid: b337b2908285b4cdabc680247ae83460, type: 3}
+    ClassificationLabel: FLOOR
+    _editorClassificationIndex: 0
+  - Prefab: {fileID: 5971971822091892830, guid: b337b2908285b4cdabc680247ae83460, type: 3}
+    ClassificationLabel: WALL_FACE
+    _editorClassificationIndex: 2
+  - Prefab: {fileID: 2817180811562222084, guid: 929c6dcdbf4c447b88bfec72438902ad, type: 3}
+    ClassificationLabel: TABLE
+    _editorClassificationIndex: 13
+  - Prefab: {fileID: 2817180811562222084, guid: 929c6dcdbf4c447b88bfec72438902ad, type: 3}
+    ClassificationLabel: PLANT
+    _editorClassificationIndex: 12
   ActiveRoomsOnly: 1
   VerboseLogging: 0
   MaxSceneAnchorUpdatesPerFrame: 3
