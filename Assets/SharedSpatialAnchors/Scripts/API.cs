@@ -49,7 +49,7 @@ public class API : MonoBehaviour
     void Start()
     {
         //TestFromJsonToData();
-        
+        EmergencyButtonClick();
     }
 
     public void OnButtonClick()
