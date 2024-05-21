@@ -39,6 +39,7 @@ public class API : MonoBehaviour
 {
     public TextMeshProUGUI windDirValue;
     public TextMeshProUGUI temperatureValue;
+    public TextMeshProUGUI loc;
     private float LatestT;
     private float latestWD;
     private string unit;
@@ -46,10 +47,18 @@ public class API : MonoBehaviour
     void Start()
     {
         //TestFromJsonToData();
-
-        StartCoroutine(GetText());
     }
 
+    public void OnButtonClick()
+    {
+        StartCoroutine(GetText());
+    }
+    public void EmergencyButtonClick()
+    {
+        loc.SetText("");
+        windDirValue.SetText("");
+        temperatureValue.SetText("");
+    }
     IEnumerator GetText()
     {
         UnityWebRequest www = UnityWebRequest.Get("https://opendata-download-metanalys.smhi.se/api/category/mesan2g/version/1/geotype/point/lon/17.94/lat/59.40/data.json");
@@ -77,7 +86,7 @@ public class API : MonoBehaviour
         //Debug.Log(dataTurbine.values[0]);
     }
 
-    public void ExtractDataFromJson(string json)
+public void ExtractDataFromJson(string json)
     {
         ApiResponse response = JsonUtility.FromJson<ApiResponse>(json);
         //Debug.Log("Api response worked!!!!");
@@ -92,18 +101,18 @@ public class API : MonoBehaviour
         for (int i = 0; i < dataPoints.Count; i++)
         {
             DataPoint point = dataPoints[i];
+            loc.SetText("Kista(Lat:59.4067  Long:17.9452)");
+            if (point.name == "wd")
+            {
+                latestWD = point.values[0];
+                windDirValue.SetText(latestWD.ToString());
+            }
             if (point.name == "t")
             {
                 LatestT = point.values[0];
                 unit = point.unit;
                 temperatureValue.SetText(LatestT.ToString()+ " "+ unit);
             }
-            if (point.name == "wd") 
-            {
-                latestWD = point.values[0];
-                windDirValue.SetText(latestWD.ToString());
-            }
-
         }
     }
 }

@@ -8,7 +8,7 @@ using WebSocketSharp;
 public class WebSocketController : MonoBehaviour
 {
 
-    String esp32IPAddress = "10.204.0.245";
+    String esp32IPAddress = "10.204.0.244";
     String esp32WebsocketPort = "81";
     // Websocket Service
     public WebSocket ws;
