@@ -71,6 +71,9 @@ public class SharedAnchorControlPanel : MonoBehaviour
 
     [SerializeField]
     private GameObject TwinTurbine_menuItem;
+
+    [SerializeField]
+    private GameObject TwinTurbine_voltageMenuItem;
     public TextMeshProUGUI StatusText
     {
         get { return statusText; }
@@ -189,6 +192,12 @@ public class SharedAnchorControlPanel : MonoBehaviour
                         SampleController.Instance.Log("Plant Found");
                         var networkedCube = PhotonPun.PhotonNetwork.Instantiate(TwinTurbine_menuItem.name, new Vector3(((Vector3)worldPosition).x, 1.3f, ((Vector3)worldPosition).z), Quaternion.identity);
                         var photonGrabbable = networkedCube.GetComponent<PhotonGrabbableObject>();
+
+
+                        
+                        networkedCube = PhotonPun.PhotonNetwork.Instantiate(TwinTurbine_voltageMenuItem.name, new Vector3(0, 1.3f, ((Vector3)worldPosition).z), Quaternion.identity);
+                        photonGrabbable = networkedCube.GetComponent<PhotonGrabbableObject>();
+
                         i = i++;
                     }
 

@@ -42,7 +42,7 @@ public class WebSocketController : MonoBehaviour
         };
         ws.OnMessage += (sender, e) =>
         {
-            Debug.Log("Received message: " + e.Data);
+           // Debug.Log("Received message: " + e.Data);
             if(e.Data.Equals("Start Narration", StringComparison.OrdinalIgnoreCase)){
                // narrationControllerScript.startNarration = true;
             }

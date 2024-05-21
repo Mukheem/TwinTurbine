@@ -43,10 +43,12 @@ public class API : MonoBehaviour
     private float LatestT;
     private float latestWD;
     private string unit;
-
+    private WebSocketController webSocketControllerScript;
+    public GameObject webSocketController;
     void Start()
     {
         //TestFromJsonToData();
+        webSocketControllerScript = webSocketController.GetComponent<WebSocketController>();
     }
 
     public void OnButtonClick()
@@ -55,9 +57,9 @@ public class API : MonoBehaviour
     }
     public void EmergencyButtonClick()
     {
-        loc.SetText("");
-        windDirValue.SetText("");
-        temperatureValue.SetText("");
+        loc.SetText("----");
+        windDirValue.SetText("----");
+        temperatureValue.SetText("----");
     }
     IEnumerator GetText()
     {
@@ -106,6 +108,7 @@ public void ExtractDataFromJson(string json)
             {
                 latestWD = point.values[0];
                 windDirValue.SetText(latestWD.ToString());
+                webSocketControllerScript.ws.Send(latestWD.ToString()+":take input");
             }
             if (point.name == "t")
             {
