@@ -43,16 +43,18 @@ public class API : MonoBehaviour
     private float LatestT;
     private float latestWD;
     private string unit;
-    private WebSocketController webSocketControllerScript;
     public GameObject webSocketController;
+    private WebSocketController webSocketControllerScript;
+   
     void Start()
     {
         //TestFromJsonToData();
-        webSocketControllerScript = webSocketController.GetComponent<WebSocketController>();
+        
     }
 
     public void OnButtonClick()
     {
+        webSocketControllerScript = webSocketController.GetComponent<WebSocketController>();
         StartCoroutine(GetText());
     }
     public void EmergencyButtonClick()
