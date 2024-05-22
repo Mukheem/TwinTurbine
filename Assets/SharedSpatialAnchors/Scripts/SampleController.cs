@@ -64,6 +64,8 @@ public class SampleController : MonoBehaviour
 
     private RayInteractor _rayInteractor;
 
+    public OVRPlugin.Vector3f anchorPosition;
+
     private void Awake()
     {
         if (Instance == null)
@@ -111,7 +113,9 @@ public class SampleController : MonoBehaviour
 
     public void PlaceAnchorAtRoot()
     {
-        Log("PlaceAnchorAtRoot: root: " + placementRoot.ToOVRPose().ToPosef());
+        Log("PlaceAnchorAtRoot: root: " + placementRoot.ToOVRPose().ToPosef().Position);
+        anchorPosition = placementRoot.ToOVRPose().ToPosef().Position;
+        Log("AnchorPosition:" + anchorPosition);
 
         colocationAnchor = Instantiate(anchorPrefab, placementRoot.position, placementRoot.rotation).GetComponent<SharedAnchor>();
 

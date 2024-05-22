@@ -115,6 +115,7 @@ public class SharedAnchorControlPanel : MonoBehaviour
 
     public async Task roomDetails()
     {
+        SampleController.Instance.Log("Inside RoomDetails Async Task - ()");
         var anchors = new List<OVRAnchor>();
         await OVRAnchor.FetchAnchorsAsync<OVRRoomLayout>(anchors);
 
@@ -272,7 +273,8 @@ public class SharedAnchorControlPanel : MonoBehaviour
 
     private void SpawnCube()
     {
-        var networkedCube = PhotonPun.PhotonNetwork.Instantiate(cubePrefab.name, spawnPoint.position, spawnPoint.rotation);
+        SampleController.Instance.Log("Inside Spawn Cube - ()"+ SampleController.Instance.anchorPosition);
+        var networkedCube = PhotonPun.PhotonNetwork.Instantiate(cubePrefab.name, spawnPoint.position, spawnPoint.rotation);// PhotonPun.PhotonNetwork.Instantiate(cubePrefab.name, new Vector3(0.5f,0.5f,0.5f), spawnPoint.rotation);
         var photonGrabbable = networkedCube.GetComponent<PhotonGrabbableObject>();
         photonGrabbable.TransferOwnershipToLocalPlayer();
 
@@ -363,8 +365,15 @@ public class SharedAnchorControlPanel : MonoBehaviour
         SampleController.Instance.Log("Trying to Spawn WT Object");
         SampleController.Instance.Log(spawnPoint.position.ToString());
         Debug.Log(spawnPoint.position);
-        var networkedWindTurbine = PhotonPun.PhotonNetwork.Instantiate(TwinTurbine_windTurbine.name, new Vector3(Camera.main.transform.position.x,0, Camera.main.transform.position.z-2), Quaternion.identity);
+        //var networkedWindTurbine = PhotonPun.PhotonNetwork.Instantiate(TwinTurbine_windTurbine.name, new Vector3(Camera.main.transform.position.x,0, Camera.main.transform.position.z-2), Quaternion.identity);
+        var networkedWindTurbine = PhotonPun.PhotonNetwork.Instantiate(TwinTurbine_windTurbine.name, new Vector3(0.0f, -0.2f, 0.5f), Quaternion.identity);
         var photonGrabbable = networkedWindTurbine.GetComponent<PhotonGrabbableObject>();
+        photonGrabbable.TransferOwnershipToLocalPlayer();
+
+
+        var networkedCube = PhotonPun.PhotonNetwork.Instantiate(TwinTurbine_menuItem.name, new Vector3(-1f,1f, 2f), Quaternion.identity);
+        photonGrabbable = networkedCube.GetComponent<PhotonGrabbableObject>();
+
         photonGrabbable.TransferOwnershipToLocalPlayer();
     }
 }
