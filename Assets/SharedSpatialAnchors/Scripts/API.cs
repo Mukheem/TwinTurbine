@@ -44,17 +44,19 @@ public class API : MonoBehaviour
     private float LatestT;
     private float latestWD;
     private string unit;
-    public GameObject webSocketController;
+    private GameObject webSocketController;
     private WebSocketController webSocketControllerScript;
    
     void Start()
     {
+       
         //TestFromJsonToData();
         EmergencyButtonClick();
     }
 
     public void OnButtonClick()
     {
+        webSocketController = GameObject.FindGameObjectWithTag("WebController");
         webSocketControllerScript = webSocketController.GetComponent<WebSocketController>();
         StartCoroutine(GetText());
     }
@@ -63,6 +65,7 @@ public class API : MonoBehaviour
         loc.SetText("----");
         windDirValue.SetText("----");
         temperatureValue.SetText("----");
+        voltageValue.SetText("----");
     }
     IEnumerator GetText()
     {

@@ -15,8 +15,8 @@ public class WebSocketController : MonoBehaviour
  
 
     // Serial Port to which Arduino is connected
-    SerialPort arduinoPort = new SerialPort("COM4", 115200);
-    public float voltageValue = 0.0f;
+    SerialPort arduinoPort = new SerialPort("COM4", 9600);
+    public String voltageValue = "0.0f";
 
     public void Start(){
         ConnectWithESP32();
@@ -43,9 +43,10 @@ public class WebSocketController : MonoBehaviour
         ws.OnMessage += (sender, e) =>
         {
             Debug.Log("Received message: " + e.Data);
-            voltageValue = float.Parse(e.Data.Split(':')[1]);
+            //Debug.Log();
+            voltageValue = e.Data.Split(':')[1].ToString();
+            Debug.Log(voltageValue);
             //Voltage:180.0
-            Debug.Log(e.Data.Split(':')[1]);
             if (e.Data.Equals("Start Narration", StringComparison.OrdinalIgnoreCase)){
                // narrationControllerScript.startNarration = true;
             }

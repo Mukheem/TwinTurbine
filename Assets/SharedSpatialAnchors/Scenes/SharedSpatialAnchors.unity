@@ -165,51 +165,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8607079646963991754, guid: bac340b17ae71864ab3a424b042a3ce7, type: 3}
   m_PrefabInstance: {fileID: 8607079647158505904}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &472077538
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 472077540}
-  - component: {fileID: 472077539}
-  m_Layer: 0
-  m_Name: WebSocketController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &472077539
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 472077538}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c468066257183f4eb657f07381143b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  voltageValue: 0
---- !u!4 &472077540
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 472077538}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.3785317, y: 1.3, z: -3.8689885}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &504459020 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2982998299359123673, guid: 60fa00281e83b294583adc31df520fbe, type: 3}
@@ -2506,6 +2461,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd8280e8c381fbd4bbcad4b7ee581c31, type: 3}
+--- !u!1001 &6512430749679280819
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6512430749609997905, guid: 4b2c20ae41a78ad49bb40fc151516b79, type: 3}
+      propertyPath: m_Name
+      value: WebSocketController
+      objectReference: {fileID: 0}
+    - target: {fileID: 6512430749609997911, guid: 4b2c20ae41a78ad49bb40fc151516b79, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6512430749609997911, guid: 4b2c20ae41a78ad49bb40fc151516b79, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.3785317
+      objectReference: {fileID: 0}
+    - target: {fileID: 6512430749609997911, guid: 4b2c20ae41a78ad49bb40fc151516b79, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6512430749609997911, guid: 4b2c20ae41a78ad49bb40fc151516b79, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.8689885
+      objectReference: {fileID: 0}
+    - target: {fileID: 6512430749609997911, guid: 4b2c20ae41a78ad49bb40fc151516b79, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6512430749609997911, guid: 4b2c20ae41a78ad49bb40fc151516b79, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6512430749609997911, guid: 4b2c20ae41a78ad49bb40fc151516b79, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6512430749609997911, guid: 4b2c20ae41a78ad49bb40fc151516b79, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6512430749609997911, guid: 4b2c20ae41a78ad49bb40fc151516b79, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6512430749609997911, guid: 4b2c20ae41a78ad49bb40fc151516b79, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6512430749609997911, guid: 4b2c20ae41a78ad49bb40fc151516b79, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4b2c20ae41a78ad49bb40fc151516b79, type: 3}
 --- !u!4 &7079690333416248134 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5414912244175512723, guid: 60fa00281e83b294583adc31df520fbe, type: 3}
