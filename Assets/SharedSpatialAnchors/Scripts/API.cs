@@ -46,12 +46,21 @@ public class API : MonoBehaviour
     private string unit;
     private GameObject webSocketController;
     private WebSocketController webSocketControllerScript;
-   
+    private bool isButtonPressed = false; // Boolean to keep voltage updated as long as the turbine is rotating
+
     void Start()
     {
        
         //TestFromJsonToData();
         EmergencyButtonClick();
+    }
+
+    private void Update()
+    {
+        if (isButtonPressed)
+        {
+            voltageValue.text = webSocketControllerScript.voltageValue.ToString();
+        }
     }
 
     public void OnButtonClick()
@@ -62,6 +71,7 @@ public class API : MonoBehaviour
     }
     public void EmergencyButtonClick()
     {
+        isButtonPressed = false;
         loc.SetText("----");
         windDirValue.SetText("----");
         temperatureValue.SetText("----");
@@ -96,6 +106,8 @@ public class API : MonoBehaviour
 
 public void ExtractDataFromJson(string json)
     {
+        isButtonPressed = true; // Boolean to keep voltage updated as long as the turbine is rotating
+
         ApiResponse response = JsonUtility.FromJson<ApiResponse>(json);
         //Debug.Log("Api response worked!!!!");
 
@@ -109,7 +121,7 @@ public void ExtractDataFromJson(string json)
         for (int i = 0; i < dataPoints.Count; i++)
         {
             DataPoint point = dataPoints[i];
-            voltageValue.text = webSocketControllerScript.voltageValue.ToString();
+            
             loc.SetText("Kista");
             if (point.name == "wd")
             {
