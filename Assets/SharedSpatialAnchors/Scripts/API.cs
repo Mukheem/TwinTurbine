@@ -110,7 +110,7 @@ public void ExtractDataFromJson(string json)
         {
             DataPoint point = dataPoints[i];
             voltageValue.text = webSocketControllerScript.voltageValue.ToString();
-            loc.SetText("Kista(Lat:59.4067  Long:17.9452)");
+            loc.SetText("Kista");
             if (point.name == "wd")
             {
                 latestWD = point.values[0];
