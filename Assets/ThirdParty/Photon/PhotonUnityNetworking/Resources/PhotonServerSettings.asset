@@ -49,6 +49,8 @@ MonoBehaviour:
   - SendSessionStart
   - CheckForLocalAnchors
   - OnColocatedAck
+  - RPC_EmergencyButtonClick
+  - RPC_GreenButtonClick
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

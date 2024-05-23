@@ -1,4 +1,5 @@
 using OVRSimpleJSON;
+using Photon.Pun;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -41,18 +42,23 @@ public class API : MonoBehaviour
     public TextMeshProUGUI windDirValue;
     public TextMeshProUGUI temperatureValue;
     public TextMeshProUGUI loc;
+    public TextMeshProUGUI windSpeedValue;
     private float LatestT;
     private float latestWD;
+    private float latestWS;
+    private String windDirectionInDirectionTerms;
     private string unit;
     private GameObject webSocketController;
     private WebSocketController webSocketControllerScript;
     private bool isButtonPressed = false; // Boolean to keep voltage updated as long as the turbine is rotating
-
+    PhotonView photonView;
     void Start()
     {
-       
+
         //TestFromJsonToData();
-        EmergencyButtonClick();
+        //EmergencyButtonClick();
+        photonView = PhotonView.Get(this);
+        photonView.RPC("RPC_EmergencyButtonClick", RpcTarget.All);
     }
 
     private void Update()
@@ -69,7 +75,9 @@ public class API : MonoBehaviour
         webSocketControllerScript = webSocketController.GetComponent<WebSocketController>();
         StartCoroutine(GetText());
     }
-    public void EmergencyButtonClick()
+
+    [PunRPC]
+    public void RPC_EmergencyButtonClick()
     {
         isButtonPressed = false;
         loc.SetText("----");
@@ -107,7 +115,7 @@ public class API : MonoBehaviour
 public void ExtractDataFromJson(string json)
     {
         isButtonPressed = true; // Boolean to keep voltage updated as long as the turbine is rotating
-
+        
         ApiResponse response = JsonUtility.FromJson<ApiResponse>(json);
         //Debug.Log("Api response worked!!!!");
 
@@ -122,19 +130,45 @@ public void ExtractDataFromJson(string json)
         {
             DataPoint point = dataPoints[i];
             
-            loc.SetText("Kista");
+            
             if (point.name == "wd")
             {
                 latestWD = point.values[0];
-                windDirValue.SetText(latestWD.ToString());
+                windDirectionInDirectionTerms = GetWindDirection(latestWD);
+                //windDirValue.SetText(latestWD.ToString());
                 webSocketControllerScript.ws.Send(latestWD.ToString()+":take input");
             }
             if (point.name == "t")
             {
                 LatestT = point.values[0];
                 unit = point.unit;
-                temperatureValue.SetText(LatestT.ToString()+ " "+ unit);
+                //temperatureValue.SetText(LatestT.ToString()+ " "+ unit);
+            }
+            if (point.name == "ws")
+            {
+                latestWS = point.values[0];
             }
         }
+
+        photonView.RPC("RPC_GreenButtonClick", RpcTarget.All,windDirectionInDirectionTerms,LatestT+" C","Kista",latestWS+" m/s");
+    }
+
+    [PunRPC]
+    public void RPC_GreenButtonClick(String windDirection,String locationTemperature,String location,String windSpeed)
+    {
+
+        windDirValue.SetText(windDirection);
+        temperatureValue.SetText(locationTemperature);
+        loc.SetText(location);
+        windSpeedValue.SetText(windSpeed);
+    }
+    public string GetWindDirection(float degrees)
+    {
+        // Ensure degrees are within the range 0 to 359
+        degrees = (degrees % 360 + 360) % 360;
+
+        string[] directions = { "N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW" };
+        int index = (int)Math.Floor((degrees + 11.25) / 22.5);
+        return directions[index];
     }
 }
