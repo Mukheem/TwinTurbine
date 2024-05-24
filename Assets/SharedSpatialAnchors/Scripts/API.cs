@@ -68,8 +68,9 @@ public class API : MonoBehaviour
     {
         if (isButtonPressed)
         {
-            Debug.Log("Inside Update");
-            voltageValue.text = webSocketControllerScript.voltageValue.ToString();
+            photonView = PhotonView.Get(this);
+            photonView.RPC("RPC_VoltageUpdate", RpcTarget.All, webSocketControllerScript.voltageValue.ToString());
+           
         }
     }
 
@@ -168,6 +169,12 @@ public void ExtractDataFromJson(string json)
         temperatureValue.SetText(locationTemperature);
         loc.SetText(location);
         windSpeedValue.SetText(windSpeed);
+    }
+    [PunRPC]
+    public void RPC_VoltageUpdate(String voltageGenerated)
+    {
+        Debug.Log("Voltge generated is - " + voltageGenerated);
+        voltageValue.text = voltageGenerated;
     }
     public string GetWindDirection(float degrees)
     {
