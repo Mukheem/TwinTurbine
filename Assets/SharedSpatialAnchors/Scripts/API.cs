@@ -52,6 +52,8 @@ public class API : MonoBehaviour
     private WebSocketController webSocketControllerScript;
     private bool isButtonPressed = false; // Boolean to keep voltage updated as long as the turbine is rotating
     PhotonView photonView;
+
+
     void Start()
     {
 
@@ -149,7 +151,7 @@ public void ExtractDataFromJson(string json)
                 latestWS = point.values[0];
             }
         }
-
+        photonView = PhotonView.Get(this);
         photonView.RPC("RPC_GreenButtonClick", RpcTarget.All,windDirectionInDirectionTerms,LatestT+" C","Kista",latestWS+" m/s");
     }
 
