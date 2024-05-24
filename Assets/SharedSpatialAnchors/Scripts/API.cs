@@ -50,7 +50,7 @@ public class API : MonoBehaviour
     private string unit;
     private GameObject webSocketController;
     private WebSocketController webSocketControllerScript;
-    private bool isButtonPressed = false; // Boolean to keep voltage updated as long as the turbine is rotating
+    public bool isButtonPressed = false; // Boolean to keep voltage updated as long as the turbine is rotating
     PhotonView photonView;
 
 
@@ -61,12 +61,14 @@ public class API : MonoBehaviour
         //EmergencyButtonClick();
         photonView = PhotonView.Get(this);
         photonView.RPC("RPC_EmergencyButtonClick", RpcTarget.All);
+
     }
 
-    private void Update()
+    void Update()
     {
         if (isButtonPressed)
         {
+            Debug.Log("Inside Update");
             voltageValue.text = webSocketControllerScript.voltageValue.ToString();
         }
     }
@@ -86,6 +88,7 @@ public class API : MonoBehaviour
         windDirValue.SetText("----");
         temperatureValue.SetText("----");
         voltageValue.SetText("----");
+        windSpeedValue.SetText("----");
     }
     IEnumerator GetText()
     {
@@ -101,6 +104,7 @@ public class API : MonoBehaviour
         {
             Debug.Log("Received data" + www.downloadHandler.text);
             ExtractDataFromJson(www.downloadHandler.text);
+            isButtonPressed = true; // Boolean to keep voltage updated as long as the turbine is rotating
         }
     }
 
@@ -116,7 +120,7 @@ public class API : MonoBehaviour
 
 public void ExtractDataFromJson(string json)
     {
-        isButtonPressed = true; // Boolean to keep voltage updated as long as the turbine is rotating
+        
         
         ApiResponse response = JsonUtility.FromJson<ApiResponse>(json);
         //Debug.Log("Api response worked!!!!");
@@ -149,6 +153,7 @@ public void ExtractDataFromJson(string json)
             if (point.name == "ws")
             {
                 latestWS = point.values[0];
+                Debug.Log("Latest WS is - "+latestWS);
             }
         }
         photonView = PhotonView.Get(this);
@@ -158,7 +163,7 @@ public void ExtractDataFromJson(string json)
     [PunRPC]
     public void RPC_GreenButtonClick(String windDirection,String locationTemperature,String location,String windSpeed)
     {
-
+        Debug.Log("Latest WS is - " + windSpeed);
         windDirValue.SetText(windDirection);
         temperatureValue.SetText(locationTemperature);
         loc.SetText(location);

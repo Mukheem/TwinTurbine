@@ -897,7 +897,6 @@ GameObject:
   - component: {fileID: 4890728644967733177}
   - component: {fileID: 4890728644967733180}
   - component: {fileID: 4890728644967733183}
-  - component: {fileID: 1392269622}
   m_Layer: 0
   m_Name: GUI
   m_TagString: Untagged
@@ -961,23 +960,6 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 1
   m_UseLocal: 1
---- !u!114 &1392269622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4890728644967733176}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7233e77bd50673459b9746b72155a35, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  voltageValue: {fileID: 4621530251273852237}
-  windDirValue: {fileID: 1160440966591220994}
-  temperatureValue: {fileID: 1160440967716077678}
-  loc: {fileID: 1160440966516636515}
-  windSpeedValue: {fileID: 515667116}
 --- !u!1001 &1988956797
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1282,8 +1264,16 @@ PrefabInstance:
       value: Voltage
       objectReference: {fileID: 0}
     - target: {fileID: 287564678110284341, guid: 1837e416a7f023e4b9de7c449006ca42, type: 3}
+      propertyPath: m_fontSize
+      value: 41.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 287564678110284341, guid: 1837e416a7f023e4b9de7c449006ca42, type: 3}
       propertyPath: m_fontStyle
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 287564678110284341, guid: 1837e416a7f023e4b9de7c449006ca42, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 41.3
       objectReference: {fileID: 0}
     - target: {fileID: 287564678239901344, guid: 1837e416a7f023e4b9de7c449006ca42, type: 3}
       propertyPath: m_Name
@@ -1389,6 +1379,18 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 287564678910356438, guid: 1837e416a7f023e4b9de7c449006ca42, type: 3}
+      propertyPath: m_fontSize
+      value: 36.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 287564678910356438, guid: 1837e416a7f023e4b9de7c449006ca42, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 36.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 287564679024842756, guid: 1837e416a7f023e4b9de7c449006ca42, type: 3}
+      propertyPath: m_fontSize
+      value: 50.1
+      objectReference: {fileID: 0}
     - target: {fileID: 287564679024842756, guid: 1837e416a7f023e4b9de7c449006ca42, type: 3}
       propertyPath: m_fontColor.b
       value: 0.94867706
@@ -1400,6 +1402,10 @@ PrefabInstance:
     - target: {fileID: 287564679024842756, guid: 1837e416a7f023e4b9de7c449006ca42, type: 3}
       propertyPath: m_fontColor.r
       value: 0.9483357
+      objectReference: {fileID: 0}
+    - target: {fileID: 287564679024842756, guid: 1837e416a7f023e4b9de7c449006ca42, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 50.1
       objectReference: {fileID: 0}
     - target: {fileID: 287564679024842756, guid: 1837e416a7f023e4b9de7c449006ca42, type: 3}
       propertyPath: m_fontColor32.rgba
@@ -1854,12 +1860,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6036491612173940094, guid: ebcaad662ef2ae14ca92fbcd7a67ee56, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6036491612173940094, guid: ebcaad662ef2ae14ca92fbcd7a67ee56, type: 3}
       propertyPath: voltageValue
       value: 
       objectReference: {fileID: 4621530251273852237}
+    - target: {fileID: 6036491612173940094, guid: ebcaad662ef2ae14ca92fbcd7a67ee56, type: 3}
+      propertyPath: windSpeedValue
+      value: 
+      objectReference: {fileID: 515667116}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebcaad662ef2ae14ca92fbcd7a67ee56, type: 3}
 --- !u!224 &1160440965881748806 stripped
@@ -1894,7 +1904,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 4890728645620921250}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1160440965950817989}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7233e77bd50673459b9746b72155a35, type: 3}
   m_Name: 
@@ -1904,28 +1914,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6036491612173940093, guid: ebcaad662ef2ae14ca92fbcd7a67ee56, type: 3}
   m_PrefabInstance: {fileID: 4890728645620921250}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1160440966516636515 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6036491611599734977, guid: ebcaad662ef2ae14ca92fbcd7a67ee56, type: 3}
-  m_PrefabInstance: {fileID: 4890728645620921250}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1160440966591220994 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6036491611539832480, guid: ebcaad662ef2ae14ca92fbcd7a67ee56, type: 3}
-  m_PrefabInstance: {fileID: 4890728645620921250}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &1160440967034714766 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6036491611111016748, guid: ebcaad662ef2ae14ca92fbcd7a67ee56, type: 3}
@@ -1936,17 +1924,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6036491610696200438, guid: ebcaad662ef2ae14ca92fbcd7a67ee56, type: 3}
   m_PrefabInstance: {fileID: 4890728645620921250}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1160440967716077678 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6036491610417066956, guid: ebcaad662ef2ae14ca92fbcd7a67ee56, type: 3}
-  m_PrefabInstance: {fileID: 4890728645620921250}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &8668022573833670448 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4293156750076656786, guid: ebcaad662ef2ae14ca92fbcd7a67ee56, type: 3}
