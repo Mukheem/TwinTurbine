@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Windturbine : MonoBehaviour
 {
-    float angle;
-    float speed;
+    public float  angle;
+    public float speed;
 
     // Start is called before the first frame update
     void Start()
