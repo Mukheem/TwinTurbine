@@ -1,6 +1,14 @@
 # TwinTurbine-DCDC
 This is a group Academic Project for **DCDC** course at Stockholm University, designed to experience a **digital twin** project in immersive technology.
-<!--![{Your App XR} logo](./docs/example-image.jpg)-->
+<figure style="text-align:center">
+    <img src="https://github.com/dalarna2022/TwinTurbine/blob/main/Portfolio%26Poster/BBgTeamLogo.jpeg" alt="Communication" style="max-width:20%;" height="auto">
+    <figcaption><i>"Team Logo" with black background</i></figcaption>
+</figure>
+
+<figure style="text-align:center">
+    <img src="https://github.com/dalarna2022/TwinTurbine/blob/main/Portfolio%26Poster/WBgTeamLogo.jpeg" alt="Communication" style="max-width:20%;" height="auto">
+    <figcaption><i>"Team Logo" with white background</i></figcaption>
+</figure>
 
 <!--information/ **MarkDown** reference is available here: <https://www.markdownguide.org/basic-syntax/>_-->
 
@@ -144,16 +152,6 @@ Some tips, tricks, and best practices for using [Your App XR} effectively:
 <figure style="text-align:center">
     <img src="https://github.com/dalarna2022/TwinTurbine/blob/main/Portfolio%26Poster/Draft%20poster.jpeg" alt="Communication" style="max-width:100%;" height="auto">
     <figcaption><i>Draft Poster</i></figcaption>
-</figure>
-
-<figure style="text-align:center">
-    <img src="https://github.com/dalarna2022/TwinTurbine/blob/main/Portfolio%26Poster/BBgTeamLogo.jpeg" alt="Communication" style="max-width:20%;" height="auto">
-    <figcaption><i>"Team Logo" with black background</i></figcaption>
-</figure>
-
-<figure style="text-align:center">
-    <img src="https://github.com/dalarna2022/TwinTurbine/blob/main/Portfolio%26Poster/WBgTeamLogo.jpeg" alt="Communication" style="max-width:20%;" height="auto">
-    <figcaption><i>"Team Logo" with white background</i></figcaption>
 </figure>
 
 ## References
