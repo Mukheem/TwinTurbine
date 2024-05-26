@@ -85,6 +85,12 @@ The leading target group includes Linkedin enterprises that are interested in im
 - Needs: Tools for remote monitoring, maintenance, and access to real-time feedback on turbine operations.
 - Goals: Enhance understanding of turbine performance through immersive simulations and monitor and manage the physical turbine within the virtual model for different sites by multiple users.
 
+### 2.3. Pre-User Journey:
+We prepared some initial stages beforehand to avoid requiring users to complete these extra steps. Initially, two team members wear headsets and observe the below menu, after pressing **Ancor Sharing Demo **  One team member creates a room that the other can join.
+The next stage involves spawning the avatar, turbine, and menus simultaneously using A.
+At this point, the user journey begins.
+
+
 ### 2.3. User Journey:
 <!--A visualization of how your user interacts with your project, from the initial trigger to the final outcome, and what emotions they experience along the way.-->
 In this experience, the one user at f
