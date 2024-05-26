@@ -21,11 +21,11 @@ DT is a model representing a virtual mirror for every physical object to simulat
   
 ### 1.2. Five-dimension DT modeling components: 
 The five-dimension DT model consists of five essential components. In this project, these components are outlined as follows:  
-  1. **Physical Entity**: Wind turbine, servo motor, and photoresistor sensor.
-  2. **Virtual Entity**: Virtual wind turbine as a simulator, a designed dashboard to control the wind turbine, and interactions to facilitate services.
-  3. **Services**: Remote monitoring, controlling, and improving the turbine's performance.
-  4. **Data**: The real-time data collected from physical entity,  simulations data from virtual entities, data from the services, and data about the environment.
-  5. **Connection** The continuous and robust connection between above components.
+1. **Physical Entity**: Wind turbine, servo motor, and photoresistor sensor.
+2. **Virtual Entity**: Virtual wind turbine as a simulator, a designed dashboard to control the wind turbine, and interactions to facilitate services.
+3. **Services**: Remote monitoring, controlling, and improving the turbine's performance.
+4. **Data**: The real-time data collected from physical entity,  simulations data from virtual entities, data from the services, and data about the environment.
+5. **Connection** The continuous and robust connection between above components.
  
 ### 1.3. The rationale behind this project:
 The proposed solution is valuable for effective remote monitoring, controlling, and improving the turbine's performance. Moreover, it offers an immersive learning experience for students and professionals to understand and interact hands-on with digital twin technology and wind turbine operations.
