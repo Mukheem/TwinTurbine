@@ -7,10 +7,11 @@ This is a group Academic Project for **DCDC** course at Stockholm University, de
 </figure>
 
 <p align="center">
-    <img src="https://github.com/dalarna2022/TwinTurbine/blob/main/Portfolio%26Poster/WBgTeamLogo.jpeg" alt="Communication" width="20%">
+    <img src="https://github.com/dalarna2022/TwinTurbine/blob/main/Portfolio%26Poster/WBgTeamLogo.jpeg" alt="Communication" width="12%">
     <br>
     <i>"Team Logo" with white background</i>
 </p>
+
 
 ## 1. Introduction
 
