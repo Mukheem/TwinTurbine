@@ -53,6 +53,8 @@ MonoBehaviour:
   - RPC_GreenButtonClick
   - RPC_VoltageUpdate
   - RPC_WT_Turn
+  - RPC_startAudioNarration1
+  - RPC_startAudioNarration2
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

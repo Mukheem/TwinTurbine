@@ -52,6 +52,8 @@ public class API : MonoBehaviour
     private WebSocketController webSocketControllerScript;
     public bool isButtonPressed = false; // Boolean to keep voltage updated as long as the turbine is rotating
     PhotonView photonView;
+    private GameObject avatar;
+    private AudioController audioControllerScript;
 
 
     void Start()
@@ -79,6 +81,11 @@ public class API : MonoBehaviour
         webSocketController = GameObject.FindGameObjectWithTag("WebController");
         webSocketControllerScript = webSocketController.GetComponent<WebSocketController>();
         StartCoroutine(GetText());
+
+        avatar = GameObject.FindGameObjectWithTag("Avatar");
+        audioControllerScript = avatar.GetComponent<AudioController>();
+        audioControllerScript.fn_call_AudioNarration2();
+
     }
 
     [PunRPC]
