@@ -40,10 +40,11 @@ After some brainstorming, we came up with some ideas for different stages:
 </figure>
 
 <p align="center">
-    <img src="https://github.com/dalarna2022/TwinTurbine/blob/main/Portfolio%26Poster/WBgTeamLogo.jpeg" alt="Communication" style="max-width:12%;" height="auto">
+    <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/3eac9f71-99c6-40f7-a458-84a681f37e00" alt="Brainstorming" style="max-width:12%;" height="auto">
     <br>
-    <i>"Team Logo" with white background</i>
+    <i>>Digital Twin Components</i>
 </p>
+
 
 
 <figure style="text-align:center">
