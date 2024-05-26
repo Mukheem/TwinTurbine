@@ -6,6 +6,12 @@ This is a group Academic Project for **DCDC** course at Stockholm University, de
     <figcaption><i>"Team Logo" with white background</i></figcaption>
 </figure>
 
+<p align="center">
+    <img src="https://github.com/dalarna2022/TwinTurbine/blob/main/Portfolio%26Poster/WBgTeamLogo.jpeg" alt="Communication" width="20%">
+    <br>
+    <i>"Team Logo" with white background</i>
+</p>
+
 ## 1. Introduction
 
 Welcome to **_TwinTurbine_**, which is a **digital twin** project that lets you experience working with a wind turbine in a mixed reality environment. Multiple users can observe and manage the operation of a wind turbine within a mixed-reality environment on remote sites.
