@@ -40,7 +40,7 @@ After some brainstorming, we came up with some ideas for different stages:
 </figure>
 
 <p align="center">
-    <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/03e1ef34-4b37-421a-b54a-28db34e8059b" alt="DT Components" style="max-width:40%;" height="auto">
+    <img src="![Brainstorming](https://github.com/Mukheem/TwinTurbine/assets/145973209/d1d5b7ae-d56e-4b5f-abcc-68c4cbea31b3)" alt="DT Components" style="max-width:40%;" height="auto">
     <br>
     <i>"Team Logo" with white background</i>
 </p>
