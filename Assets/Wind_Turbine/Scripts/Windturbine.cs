@@ -1,3 +1,4 @@
+using Photon.Pun;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,7 @@ public class Windturbine : MonoBehaviour
     public float speed;
     private API apiScript;
     private GameObject GUIdataGameObject;
+    PhotonView photonView;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,8 +22,18 @@ public class Windturbine : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       
+
+        photonView = PhotonView.Get(this);
+        photonView.RPC("RPC_WT_Turn", RpcTarget.All);
+    }
+
+    [PunRPC]
+    public void RPC_WT_Turn()
+    {
         Debug.Log("WIND SPEED FROM API SCRIPT:" + apiScript.latestWS);
         transform.localEulerAngles = new Vector3(0.0f, 0.0f, angle);
-        angle += Time.deltaTime * (apiScript.latestWS*10);
+        angle += Time.deltaTime * (apiScript.latestWS * 10);
+
     }
 }

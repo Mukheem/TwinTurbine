@@ -52,6 +52,7 @@ MonoBehaviour:
   - RPC_EmergencyButtonClick
   - RPC_GreenButtonClick
   - RPC_VoltageUpdate
+  - RPC_WT_Turn
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1
