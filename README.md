@@ -72,18 +72,18 @@ After some brainstorming, we came up with some ideas for different stages:
 ### 2.2. User Persona:
 The leading target group includes Linkedin enterprises that are interested in immersive technology. Moreover, other target users are engineers and technicians working with wind energy systems and educational institutions where the simulator can be used for training. The user persona details are as follows:
 
-  1. **LinkedIn Enterprises:**
-	- Industry: Various industries interested in immersive technology, such as renewable energy, manufacturing, and engineering.
-	- Company Size: Small to large enterprises active on LinkedIn.
-	- Needs: Comprehensive support and resources for successfully adopting and utilizing immersive technologies within their organizations.
-	- Goals: Improve operational efficiency and competitiveness by using immersive technologies for workforce training and skill development and integrate immersive technology solutions seamlessly into existing workflows and operations.
+1. **LinkedIn Enterprises:**
+- Industry: Various industries interested in immersive technology, such as renewable energy, manufacturing, and engineering.
+- Company Size: Small to large enterprises active on LinkedIn.
+- Needs: Comprehensive support and resources for successfully adopting and utilizing immersive technologies within their organizations.
+- Goals: Improve operational efficiency and competitiveness by using immersive technologies for workforce training and skill development and integrate immersive technology solutions seamlessly into existing workflows and operations.
 
-  2. **Engineers and Technicians:**	
-	+ Age: 25-50
-	+ Occupation: Wind energy engineers and maintenance technicians.
-	+ Skills: Familiarity with wind turbine operations, and experience with VR/AR environments.
-	+ Needs: Tools for remote monitoring, maintenance, and access to real-time feedback on turbine operations.
-	+ Goals: Enhance understanding of turbine performance through immersive simulations and monitor and manage the physical turbine within the virtual model for different sites by multiple users.
+2. **Engineers and Technicians:**	
+- Age: 25-50
+- Occupation: Wind energy engineers and maintenance technicians.
+- Skills: Familiarity with wind turbine operations, and experience with VR/AR environments.
+- Needs: Tools for remote monitoring, maintenance, and access to real-time feedback on turbine operations.
+- Goals: Enhance understanding of turbine performance through immersive simulations and monitor and manage the physical turbine within the virtual model for different sites by multiple users.
 
 ### 2.3. User Journey:
 <!--A visualization of how your user interacts with your project, from the initial trigger to the final outcome, and what emotions they experience along the way.-->
