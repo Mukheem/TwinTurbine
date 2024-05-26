@@ -72,7 +72,10 @@ public class SharedAnchorControlPanel : MonoBehaviour
     [SerializeField]
     private GameObject TwinTurbine_menuItem;
 
-  
+    [SerializeField]
+    private GameObject TwinTurbine_talkingAvatar;
+
+
     public TextMeshProUGUI StatusText
     {
         get { return statusText; }
@@ -198,7 +201,12 @@ public class SharedAnchorControlPanel : MonoBehaviour
 
                 }
                 if (i == 2)
+                {
+                    var networkedCube = PhotonPun.PhotonNetwork.Instantiate(TwinTurbine_talkingAvatar.name, new Vector3(((Vector3)worldPosition).x, 1.0f, ((Vector3)worldPosition).z), Quaternion.identity);
+                    var photonGrabbable = networkedCube.GetComponent<PhotonGrabbableObject>();
                     break;
+                }
+                    
             }
             continue;
 
@@ -375,5 +383,8 @@ public class SharedAnchorControlPanel : MonoBehaviour
         var photonGrabbableGui = networkedGUI.GetComponent<PhotonGrabbableObject>();
 
         photonGrabbableGui.TransferOwnershipToLocalPlayer();
+
+        var networkedAvatar = PhotonPun.PhotonNetwork.Instantiate(TwinTurbine_talkingAvatar.name, new Vector3(1f, 0f, 2f), Quaternion.identity);
+        var photonGrabbableAvatar = networkedAvatar.GetComponent<PhotonGrabbableObject>();
     }
 }

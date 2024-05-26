@@ -51,6 +51,7 @@ MonoBehaviour:
   - OnColocatedAck
   - RPC_EmergencyButtonClick
   - RPC_GreenButtonClick
+  - RPC_VoltageUpdate
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1
