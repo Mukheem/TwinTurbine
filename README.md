@@ -1,31 +1,38 @@
 # TwinTurbine-DCDC
 This is a group Academic Project for **DCDC** course at Stockholm University, designed to experience a **digital twin** project in immersive technology.
-<!--![{Your App XR} logo](./docs/example-image.jpg)-->
+<figure style="text-align:center">
+    <img src="https://github.com/dalarna2022/TwinTurbine/blob/main/Portfolio%26Poster/BBgTeamLogo.jpeg" alt="Communication" style="max-width:20%;" height="auto">
+    <figcaption><i>"Team Logo" with black background</i></figcaption>
+</figure>
+
+<figure style="text-align:center">
+    <img src="https://github.com/dalarna2022/TwinTurbine/blob/main/Portfolio%26Poster/WBgTeamLogo.jpeg" alt="Communication" style="max-width:20%;" height="auto">
+    <figcaption><i>"Team Logo" with white background</i></figcaption>
+</figure>
 
 <!--information/ **MarkDown** reference is available here: <https://www.markdownguide.org/basic-syntax/>_-->
 
 ## 1. Introduction
 
-Welcome to **_TwinTurbine_**, which is a **digital twin** project that lets you experience working with a wind turbine in a mixed reality environment.
+Welcome to **_TwinTurbine_**, which is a **digital twin** project that lets you experience working with a wind turbine in a mixed reality environment. Multiple users can observe and manage the operation of a wind turbine within a mixed-reality environment on remote sites.
 
 ### 1.1. **_Digital Twin (DT)_ description**
-DT is a model representing a virtual mirror for every physical object for monitoring, analyzing, optimizing, predicting, or extra. The physical and virtual parts interact with each other and remain synchronous.
+DT is a model representing a virtual mirror for every physical object to simulate their behaviors digitally. The virtual model can understand the state of the physical entities through sensors installed on the physical parts, so physical and virtual parts interact with each other and remain synchronous. Additionally, the physical objects would respond to the virtual simulation. This model can be used for monitoring, analyzing, optimizing, predicting, and more.
   
 ### 1.2. Five-dimension DT modeling components: 
 The five-dimension DT model consists of five essential components. In this project, these components are outlined as follows:  
-  1. **Physical Entity**: Wind turbine, servo motor, and required Sensors.
-  2. **Virtual Entity**: Virtual wind turbine as a simulator, a designed dashboard d to control the wind turbine, and interactions to facilitate services.
+  1. **Physical Entity**: Wind turbine, servo motor, and photoresistor sensor.
+  2. **Virtual Entity**: Virtual wind turbine as a simulator, a designed dashboard to control the wind turbine, and interactions to facilitate services.
   3. **Services**: Remote monitoring, controlling, and improving the turbine's performance.
-  4. **Data**: The real-time data collected from sensors,  simulations data from virtual entities, data from the services, and data about the environment.
-  5. **Connection**
+  4. **Data**: The real-time data collected from physical entity,  simulations data from virtual entities, data from the services, and data about the environment.
+  5. **Connection** The continuous and robust connection between above components.
  
-### 1.2. The rationale behind this project:
-The proposed solution is valuable for remote monitoring, controlling, and improving the turbine's performance.
+### 1.3. The rationale behind this project:
+The proposed solution is valuable for effective remote monitoring, controlling, and improving the turbine's performance. Moreover, it offers an immersive learning experience for students and professionals to understand and interact hands-on with digital twin technology and wind turbine operations.
 
 ## 2. Design Process
-
 <!--Evidence on the general overview of how you planned, designed, and developed your project, including the goals, challenges, and solutions._]-->
-The design process includes ideation of concepts and interactions, testing of technologies, creation of Unity scene, user testing, iteration, and demonstration. 
+This project aims to develop a digital twin of a wind turbine using immersive technologies, allowing multiple users to interact simultaneously. The design process includes brainstorming, interactions, testing different technologies, creating a Unity scene, creating a collaboration for multiple users, testing with users, solving the issues, making improvements, and showing the final project. 
 
 ### 2.1. Brainstorming:
 After some brainstorming, we came up with some ideas for different stages:
@@ -63,18 +70,34 @@ After some brainstorming, we came up with some ideas for different stages:
 
 
 ### 2.2. User Persona:
-The Project's target users are engineers and technicians working with wind energy systems and Educational Institutions where the simulator can be used for training. Moreover, the main target group is enterprises interested in immersive technology.
+The leading target group includes Linkedin enterprises that are interested in immersive technology. Moreover, other target users are engineers and technicians working with wind energy systems and educational institutions where the simulator can be used for training. The user persona details are as follows:
+
+  1. **LinkedIn Enterprises:**
+	+ Industry: Various industries interested in immersive technology, such as renewable energy, manufacturing, and engineering.
+	+ Company Size: Small to large enterprises active on LinkedIn.
+	+ Needs: Comprehensive support and resources for successfully adopting and utilizing immersive technologies within their organizations.
+	+ Goals: Improve operational efficiency and competitiveness by using immersive technologies for workforce training and skill development and integrate immersive technology solutions seamlessly into existing workflows and operations.
+
+  2. **Engineers and Technicians:**	
+	+ Age: 25-50
+	+ Occupation: Wind energy engineers and maintenance technicians.
+	+ Skills: Familiarity with wind turbine operations, and experience with VR/AR environments.
+	+ Needs: Tools for remote monitoring, maintenance, and access to real-time feedback on turbine operations.
+	+ Goals: Enhance understanding of turbine performance through immersive simulations and monitor and manage the physical turbine within the virtual model for different sites by multiple users.
 
 ### 2.3. User Journey:
 <!--A visualization of how your user interacts with your project, from the initial trigger to the final outcome, and what emotions they experience along the way.-->
-In the experience, a Physical Wind turbine would be emulated using a servo motor. Real-time data , including RPM of the wind turbine (represented by the servo motor) and the current generated by the turbine, are collected from the physical entity and transferred to the virtual environment for monitoring and visualization.
-
-### 2.4. Digital Twin:
+In this experience, the one user at f
 
 
-### 2.5. Wireframes and Prototypes:
+In this experience, the physical wind turbine is emulated using a servo motor. A photoresistor, which includes a light source, is integrated into the wind turbine. When the turbine operates, it generates light, and the photoresistor detects the light's voltage.Real-time data , including RPM of the wind turbine (represented by the servo motor) and the current generated by the turbine, are collected from the physical entity and transferred to the virtual environment for monitoring and visualization.
+
+### 2.4. Wireframes and Prototypes:
 <!-- A collection of sketches, mockups, or prototypes that show the layout, structure, and functionality of your project, and how you tested and iterated on them.-->
-To understand how to rotate the physical wind turbine, the team members tried various strategies and tools to see which was more appropriate for our project.
+Since this experience is in a mixed reality (MR) environment, it includes objects the user can interact with in the virtual and physical environment. Virtual entities act as simulators for physical entities, allowing for seamless interaction. Moreover, the experience is designed for multiple users, enabling them to visualize and modify settings while observing changes made by others. To understand which technologies would fulfill the experience, the team members tried various technologies and tools to see which works best for achieving the project's goals.
+
+#### 2.4.1 Organizning physical entities: 
+organizing tangible items is an important part in this project. To understand how to rotate the physical wind turbine, the team members tried various strategies and tools to see which was more appropriate for the project.
 
 <figure style="text-align:center">
     <img src="[https://github.com/Mukheem/TwinTurbine/assets/145973209/c1b97fd4-f495-4e54-8c17-a1d949cca986](https://github.com/Mukheem/TwinTurbine/assets/145973209/993ecd59-3dfb-4449-86f3-30509c640749)" alt="Physical Entity" style="max-width:100%;" height="auto">
@@ -86,6 +109,16 @@ To understand how to rotate the physical wind turbine, the team members tried va
     <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/c1b97fd4-f495-4e54-8c17-a1d949cca986" alt="Physical Turbine" style="max-width:100%;" height="auto">
     <figcaption><i>Testing physical entities</i></figcaption>
 </figure>
+
+
+#### 2.4.2 Sensors: 
+The experience includes sensors that can trigger a reaction in the experience. ESP installation using a light sensor was used to test how a button can be used. The light sensor was only used as a placeholder and instead, there will be a button used. The button will be created to instantiate objects in the virtual environment. 
+
+#### 2.3.4 3D Printing: 
+The team used a 3D printing prototype to set up the physical entity. The template is taken from the following creator: [ark19](https://www.thingiverse.com/ark19) and below are image showing its printed form.
+
+#### 2.4 Testing: 
+During the entire process, several tests were conducted to ensure the project's effectiveness. User testing was done to ensure that the voltage generated by the physical turbine or the variables gathered from XXX API were shown in the virtual model correctly for both users and whether users could use the start or emergency buttons to control the physical turbine and observe changes made by other contributors' simulations. Additionally, overall feedback on the experience has been checked to see if the User Interface (UI) is appropriately designed. Some notes were collected during participants' testing. Below are pictures from the testing phase:
 
 
 ## System description
@@ -146,16 +179,11 @@ Some tips, tricks, and best practices for using [Your App XR} effectively:
     <figcaption><i>Draft Poster</i></figcaption>
 </figure>
 
-<figure style="text-align:center">
-    <img src="https://github.com/dalarna2022/TwinTurbine/blob/main/Portfolio%26Poster/BBgTeamLogo.jpeg" alt="Communication" style="max-width:20%;" height="auto">
-    <figcaption><i>"Team Logo" with black background</i></figcaption>
-</figure>
+<<<<<<< HEAD
 
-<figure style="text-align:center">
-    <img src="https://github.com/dalarna2022/TwinTurbine/blob/main/Portfolio%26Poster/WBgTeamLogo.jpeg" alt="Communication" style="max-width:20%;" height="auto">
-    <figcaption><i>"Team Logo" with white background</i></figcaption>
-</figure>
 
+=======
+>>>>>>> f456fae95097232eece324078f3866b31fe13009
 ## References
 
 Acknowledge here the sources, references, or inspirations that you used for your project. Give credit to the original authors or creators of the materials that you used or adapted for your project (3D models, source code, audio effects, etc.)
