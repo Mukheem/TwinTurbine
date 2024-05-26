@@ -34,15 +34,10 @@ After some brainstorming, we came up with some ideas for different stages:
 
 - In the first step, we discussed the physical and virtual entities, their connection, and the services and functions we wanted to implement.
 
-<figure style="text-align:center">
-    <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/03e1ef34-4b37-421a-b54a-28db34e8059b" alt="DT Components" style="max-width:40%;" height="auto">
-    <figcaption style="padding-top: 10px;"><i>Digital Twin Components</i></figcaption>
-</figure>
-
 <p align="center">
     <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/3eac9f71-99c6-40f7-a458-84a681f37e00" alt="Brainstorming" style="max-width:12%;" height="auto">
     <br>
-    <i>>Digital Twin Components</i>
+    <i>Digital Twin Components</i>
 </p>
 
 
