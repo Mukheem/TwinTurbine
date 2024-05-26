@@ -44,7 +44,7 @@ public class API : MonoBehaviour
     public TextMeshProUGUI loc;
     public TextMeshProUGUI windSpeedValue;
     private float LatestT;
-    private float latestWD;
+    public float latestWD = 0.0f;
     public float latestWS;
     private String windDirectionInDirectionTerms;
     private string unit;
@@ -54,7 +54,7 @@ public class API : MonoBehaviour
     PhotonView photonView;
     private GameObject avatar;
     private AudioController audioControllerScript;
-
+    public bool turn_WT_on_Y_Axis = false;
 
     void Start()
     {
@@ -151,6 +151,7 @@ public void ExtractDataFromJson(string json)
                 windDirectionInDirectionTerms = GetWindDirection(latestWD);
                 //windDirValue.SetText(latestWD.ToString());
                 webSocketControllerScript.ws.Send(latestWD.ToString()+":take input");
+                Debug.Log(latestWD.ToString()+" - Degrees sent to ESP");
             }
             if (point.name == "t")
             {
@@ -176,6 +177,7 @@ public void ExtractDataFromJson(string json)
         temperatureValue.SetText(locationTemperature);
         loc.SetText(location);
         windSpeedValue.SetText(windSpeed);
+        turn_WT_on_Y_Axis = true; // flag set to true so that WT can rotate on it's Y axis.
     }
     [PunRPC]
     public void RPC_VoltageUpdate(String voltageGenerated)
