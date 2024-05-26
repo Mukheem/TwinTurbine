@@ -2759,6 +2759,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 382264866490105690, guid: a4966b3be785a2e4aaf3eb0c3ec8db1f, type: 3}
     - target: {fileID: 1161621203827536544, guid: bac340b17ae71864ab3a424b042a3ce7, type: 3}
+      propertyPath: TwinTurbine_talkingAvatar
+      value: 
+      objectReference: {fileID: 3128949758138181256, guid: 07763ca13338457409391f700224d64b, type: 3}
+    - target: {fileID: 1161621203827536544, guid: bac340b17ae71864ab3a424b042a3ce7, type: 3}
       propertyPath: TwinTurbine_voltageMenuItem
       value: 
       objectReference: {fileID: 287564678239901344, guid: 1837e416a7f023e4b9de7c449006ca42, type: 3}

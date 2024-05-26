@@ -382,9 +382,9 @@ public class SharedAnchorControlPanel : MonoBehaviour
         var networkedGUI = PhotonPun.PhotonNetwork.Instantiate(TwinTurbine_menuItem.name, new Vector3(-1f,1f, 2f), Quaternion.identity);
         var photonGrabbableGui = networkedGUI.GetComponent<PhotonGrabbableObject>();
 
-        photonGrabbableGui.TransferOwnershipToLocalPlayer();
+        //photonGrabbableGui.TransferOwnershipToLocalPlayer();
 
-        var networkedAvatar = PhotonPun.PhotonNetwork.Instantiate(TwinTurbine_talkingAvatar.name, new Vector3(1f, 0f, 2f), Quaternion.identity);
+        var networkedAvatar = PhotonPun.PhotonNetwork.Instantiate(TwinTurbine_talkingAvatar.name, new Vector3(1f, -0.2f, 1.15f), Quaternion.identity);
         var photonGrabbableAvatar = networkedAvatar.GetComponent<PhotonGrabbableObject>();
     }
 }
