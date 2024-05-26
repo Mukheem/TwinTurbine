@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5204658000653702064}
   m_Layer: 0
   m_Name: wind_turbine_0001_rotor
-  m_TagString: Untagged
+  m_TagString: WindTurbine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,6 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd8e0fba131aaac4caffc43785275be1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 0
 --- !u!1 &382264866490105690
 GameObject:
   m_ObjectHideFlags: 0

@@ -1758,6 +1758,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CanvasJsonData
       objectReference: {fileID: 0}
+    - target: {fileID: 6036491612173940071, guid: ebcaad662ef2ae14ca92fbcd7a67ee56, type: 3}
+      propertyPath: m_TagString
+      value: GUIData
+      objectReference: {fileID: 0}
     - target: {fileID: 6036491612173940088, guid: ebcaad662ef2ae14ca92fbcd7a67ee56, type: 3}
       propertyPath: m_Color.b
       value: 0

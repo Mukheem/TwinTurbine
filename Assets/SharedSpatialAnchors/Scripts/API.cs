@@ -45,7 +45,7 @@ public class API : MonoBehaviour
     public TextMeshProUGUI windSpeedValue;
     private float LatestT;
     private float latestWD;
-    private float latestWS;
+    public float latestWS;
     private String windDirectionInDirectionTerms;
     private string unit;
     private GameObject webSocketController;
