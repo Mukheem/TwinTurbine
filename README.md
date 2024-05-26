@@ -73,7 +73,7 @@ After some brainstorming, we came up with some ideas for different stages:
 The leading target group includes Linkedin enterprises that are interested in immersive technology. Moreover, other target users are engineers and technicians working with wind energy systems and educational institutions where the simulator can be used for training. The user persona details are as follows:
 
   1. **LinkedIn Enterprises:**
-	+ Industry: Various industries interested in immersive technology, such as renewable energy, manufacturing, and engineering.
+	\+ Industry: Various industries interested in immersive technology, such as renewable energy, manufacturing, and engineering.
 	+ Company Size: Small to large enterprises active on LinkedIn.
 	+ Needs: Comprehensive support and resources for successfully adopting and utilizing immersive technologies within their organizations.
 	+ Goals: Improve operational efficiency and competitiveness by using immersive technologies for workforce training and skill development and integrate immersive technology solutions seamlessly into existing workflows and operations.
