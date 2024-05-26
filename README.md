@@ -2,7 +2,7 @@
 This is a group Academic Project for **DCDC** course at Stockholm University, designed to experience a **digital twin** project in immersive technology.
 
 <p align="center">
-    <img src="https://github.com/dalarna2022/TwinTurbine/blob/main/Portfolio%26Poster/WBgTeamLogo.jpeg" alt="Communication" width="40%";" height="auto">
+    <img src="https://github.com/dalarna2022/TwinTurbine/blob/main/Portfolio%26Poster/WBgTeamLogo.jpeg" alt="Team Logo" width="40%";" height="auto">
     <br>
     <i>"Team Logo" with white background</i>
 </p>
@@ -19,8 +19,8 @@ The five-dimension DT model consists of five essential components. In this proje
 1. **Physical Entity**: Wind turbine, servo motor, and photoresistor sensor.
 2. **Virtual Entity**: Virtual wind turbine as a simulator, a designed dashboard to control the wind turbine, and interactions to facilitate services.
 3. **Services**: Remote monitoring, controlling, and improving the turbine's performance.
-4. **Data**: The real-time data collected from physical entity,  simulations data from virtual entities, data from the services, and data about the environment.
-5. **Connection** The continuous and robust connection between above components.
+4. **Data**: The real-time data collected from physical entities,  simulations data from virtual entities, data from the services, and data about the environment.
+5. **Connection** The continuous and robust connection between the above components.
  
 ### 1.3. The rationale behind this project:
 The proposed solution is valuable for effective remote monitoring, controlling, and improving the turbine's performance. Moreover, it offers an immersive learning experience for students and professionals to understand and interact hands-on with digital twin technology and wind turbine operations.
@@ -35,10 +35,15 @@ After some brainstorming, we came up with some ideas for different stages:
 - In the first step, we discussed the physical and virtual entities, their connection, and the services and functions we wanted to implement.
 
 <figure style="text-align:center">
-    <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/03e1ef34-4b37-421a-b54a-28db34e8059b" alt="DTComponents" style="max-width:100%;" height="auto">
+    <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/03e1ef34-4b37-421a-b54a-28db34e8059b" alt="DT Components" style="max-width:40%;" height="auto">
     <figcaption style="padding-top: 10px;"><i>Digital Twin Components</i></figcaption>
 </figure>
 
+<p align="center">
+    <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/03e1ef34-4b37-421a-b54a-28db34e8059b" alt="DT Components" style="max-width:40%;" height="auto">
+    <br>
+    <i>"Team Logo" with white background</i>
+</p>
 
 <figure style="text-align:center">
     <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/7ca62bda-072b-40ea-a0ed-361c86724b81" alt="Primary Prototype" style="max-width:100%;" height="auto">
