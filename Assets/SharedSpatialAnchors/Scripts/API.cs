@@ -72,6 +72,12 @@ public class API : MonoBehaviourPunCallbacks, IPunObservable
 
         windTurbineWithMap = GameObject.FindGameObjectWithTag("Wind_Turbine_withMap");
 
+        webSocketController = GameObject.FindGameObjectWithTag("WebController");
+        webSocketControllerScript = webSocketController.GetComponent<WebSocketController>();
+
+        avatar = GameObject.FindGameObjectWithTag("Avatar");
+        audioControllerScript = avatar.GetComponent<AudioController>();
+
     }
 
     void Update()
@@ -90,13 +96,10 @@ public class API : MonoBehaviourPunCallbacks, IPunObservable
 
     public void OnButtonClick()
     {
-        webSocketController = GameObject.FindGameObjectWithTag("WebController");
-        webSocketControllerScript = webSocketController.GetComponent<WebSocketController>();
+        
         webSocketControllerScript.ConnectWithESP32();
         StartCoroutine(GetText());
-
-        avatar = GameObject.FindGameObjectWithTag("Avatar");
-        audioControllerScript = avatar.GetComponent<AudioController>();
+        
         audioControllerScript.fn_call_AudioNarration2();
 
     }
