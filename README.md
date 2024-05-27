@@ -164,11 +164,10 @@ Requirements:
   Please be informed that the LED is the symbol of the physical wind turbine.
 
  <p align="center">
-    <img src="1360" alt="Sketch" src="https://github.com/Mukheem/TwinTurbine/assets/145973209/0d94660f-1e1b-459c-b79c-ba7d867a834d" alt="Circuit Board" style="max-width:12%;" height="auto">
+    <img src="1360" alt="Sketch" src="https://github.com/Mukheem/TwinTurbine/assets/145973209/eb509178-3073-45ef-8773-60967e5f8caf" alt="Circuit Board" style="max-width:12%;" height="auto">
     <br>
-    <iCircuit Board</i>
+    <i>Circuit Board</i>
 </p>
-
 
 
 ## Usage
