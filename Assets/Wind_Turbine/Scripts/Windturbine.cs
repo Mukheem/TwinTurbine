@@ -46,7 +46,7 @@ public class Windturbine : MonoBehaviour
     [PunRPC]
     public void RPC_WT_Turn()
     {
-        Debug.Log("WIND SPEED FROM API SCRIPT:" + apiScript.latestWS);
+        //Debug.Log("WIND SPEED FROM API SCRIPT:" + apiScript.latestWS);
         transform.localEulerAngles = new Vector3(0.0f, 0.0f, angle);
         angle += Time.deltaTime * (apiScript.latestWS * 10); // as the value we are fetching could not turn the blades completely, Multiplying the value we are fetching from API by 10.
 

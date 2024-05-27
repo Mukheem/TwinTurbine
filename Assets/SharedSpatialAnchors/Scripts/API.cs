@@ -206,7 +206,7 @@ public void ExtractDataFromJson(string json)
     [PunRPC]
     public void RPC_VoltageUpdate(String voltageGenerated)
     {
-        Debug.Log("Voltge generated is - " + voltageGenerated);
+        //Debug.Log("Voltge generated is - " + voltageGenerated);
         voltageValue.text = voltageGenerated;
     }
     public string GetWindDirection(float degrees)
