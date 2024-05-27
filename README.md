@@ -169,25 +169,27 @@ Requirements:
     <i>Circuit Board</i>
 </p>
 
+### Arduino Code
+You can find the Arduino Code in the following file: sketch_VoltageUnity
+[Esp32_Client_test.ino](TangibleSketches/ESP32/ESP32_sketch_copy_20240512144341/sketch_VoltageUnity.ino)
+
+### Server 
+We have a Photon server enabling collaboration between multiple users. It is accessible from the following site address:
+https://dashboard.photonengine.com/
 
 ## Usage
+To use WindTurbine and interact with its features, follow the guidelines below:
+- Ensure that both users are wearing their Meta Oculus Quest headsets and are ready to enter the virtual environment.
+- You can move around by walking in the environment.
+- Both controllers should be used in WindTurbine.
+- Select "Create (UserA)/Join(UserB) the Room" within the menu interface. Use your controller to point at the option and press the corresponding button to select it (typically the "A" button).
+- Select "Create new anchor & share it (UserA)/Align to the anchor (UserB)" to set the scene and all assets in the same location.
+- Pay attention to the narrations.
+- Press the virtual environment's green (start) button to activate the turbine.
+- Press the red (emergency) button to reset the turbine values immediately and shut the turbine rotation.
+- Visualize real-time data such as wind speed, direction, temperature, and turbine-generated voltage displayed on the GUI within the virtual environment.
 
-[_Usage section showing how to use your project and interact with its features. You can use examples, screenshots, gifs, or videos to demonstrate the user interface, controls, and feedback of your project. You can also provide tips, tricks, or best practices for using your project effectively._]
 
-To use [Your App XR} and interact with its features, follow the guidelines below:
-
-- To move around, use the touchpad or the joystick on your controller, or swipe on your phone screen.
-- To select ...a planet or a moon, point at it with your controller or your phone, or gaze at it with your headset.
-- To zoom in or out, use the trigger or the button on your controller, or pinch on your phone screen.
-- To access the information panel, press...
-- To use voice commands, say "OK" followed by one of the following phrases:
-  - "Show me [X]" - to show X element
-  - "Close window Y" - to close window Y
-  
-Some tips, tricks, and best practices for using [Your App XR} effectively:
-
-- Tip 1
-- Tip 2
 
 ## Draft Poster
 <figure style="text-align:center">
@@ -205,5 +207,13 @@ Some tips, tricks, and best practices for using [Your App XR} effectively:
 Acknowledge here the sources, references, or inspirations that you used for your project. Give credit to the original authors or creators of the materials that you used or adapted for your project (3D models, source code, audio effects, etc.)
 
 ## Contributors
+Masoomeh Advand
+<br/> bagherifard.zeinab@gmail.com
+<br/> [LinkedIn](https://www.linkedin.com/in/noak-petersson/)
 
-The authors of the project, contact information, and links to their websites or portfolios.
+Mina Maddahi 
+<br/> mima4938@student.su.se
+
+Zeinab Bagheri Fard
+<br/> bagherifard.zeinab@gmail.com
+<br/> [LinkedIn]([https://www.linkedin.com/in/noak-petersson/](https://www.linkedin.com/in/zeinab-bagherifard))
