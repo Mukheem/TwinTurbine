@@ -141,20 +141,35 @@ Watch the demo video or try the live version.
 Link: <https://extralitylab.dsv.su.se/>
 
 ## Installation
-
-[_Installation process to build and run your project. Use code blocks, tables, or lists to show the commands, steps, or requirements the chosen platform. Mention any dependencies or libraries that your project uses and how to install them._]
-
-To install and run [Your app] on your platform or device, follow the instructions below:
-
-| Platform | Device | Requirements | Commands |
-| -------- | ------ | ------------ | -------- |
-| Windows  | Meta Quest   | Unity 2022.3 or higher, Arduino | `git clone https://github.com/user/repo.git`<br>`cd project-xr`<br>`open MainScene.unity`<br>`Build and Run` |
-| Android  | Phone  | Android 19 or higher, ARCore 1.18 or higher | `git clone https://github.com/user/repo.git`<br>`cd solar-system-xr`<br>`open SolarSystemXR.unity`<br>`switch platform to Android`<br>`build and run` |
+To install and run WindTurbine on your platform or device, follow the instructions below:
+- The experience is possible using Meta Oculus Quest 3 or Pro
+- Unity version 2021.3.32f1
 
 You also need to install the following dependencies or libraries for your project:
+- Oculus XR Plugin
+- XR Interaction Toolkit
+- A NuGet Package Manager for Unity: https://github.com/GlitchEnzo/NuGetForUnity.git?path=/src/NuGetForUnity
 
-- Library A - a Unity plugin for building VR and AR experiences
-- Library B - a C# wrapper for speech recognition and synthesis
+
+## Circuit Board
+Please follow the following circuit board representation to setup the physical buttons. 
+Requirements: 
+- ESP32-S2 ThingPlus Sparkfun
+- Arduino Uno
+- Breadboards
+- Photoresistor
+- Servo motor
+- Jumper wires
+- Transistor
+  Please be informed that the LED is the symbol of the physical wind turbine.
+
+ <p align="center">
+    <img src="1360" alt="Sketch" src="https://github.com/Mukheem/TwinTurbine/assets/145973209/0d94660f-1e1b-459c-b79c-ba7d867a834d" alt="Circuit Board" style="max-width:12%;" height="auto">
+    <br>
+    <iCircuit Board</i>
+</p>
+
+
 
 ## Usage
 
