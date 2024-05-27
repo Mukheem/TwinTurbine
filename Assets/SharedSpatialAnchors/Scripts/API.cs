@@ -71,13 +71,38 @@ public class API : MonoBehaviourPunCallbacks, IPunObservable
         photonView.RPC("RPC_EmergencyButtonClick", RpcTarget.All);
 
         windTurbineWithMap = GameObject.FindGameObjectWithTag("Wind_Turbine_withMap");
-
         webSocketController = GameObject.FindGameObjectWithTag("WebController");
         webSocketControllerScript = webSocketController.GetComponent<WebSocketController>();
-
         avatar = GameObject.FindGameObjectWithTag("Avatar");
         audioControllerScript = avatar.GetComponent<AudioController>();
 
+        if (windTurbineWithMap != null)
+        {
+            // Do something with myObject
+            Debug.Log("GameObject exists: " + windTurbineWithMap.name);
+        }
+        if (webSocketController != null)
+        {
+            // Do something with myObject
+            Debug.Log("GameObject exists: " + webSocketController.name);
+        }
+        if (webSocketControllerScript != null)
+        {
+            // Do something with myObject
+            Debug.Log("GameObject exists: " + webSocketControllerScript.name);
+        }
+        if (avatar != null)
+        {
+            // Do something with myObject
+            Debug.Log("GameObject exists: " + avatar.name);
+        }
+        if (audioControllerScript != null)
+        {
+            // Do something with myObject
+            Debug.Log("GameObject exists: " + audioControllerScript.name);
+        }
+        windTurbineController = windTurbineWithMap.transform.GetChild(0).gameObject;
+        windTurbineControllerScript = windTurbineController.GetComponent<Windturbine>();
     }
 
     void Update()
@@ -185,8 +210,7 @@ public void ExtractDataFromJson(string json)
                 Debug.Log("Latest WS is - "+latestWS);
             }
         }
-        windTurbineController = windTurbineWithMap.transform.GetChild(0).gameObject;
-        windTurbineControllerScript = windTurbineController.GetComponent<Windturbine>();
+       
         photonView = PhotonView.Get(this);
         photonView.RPC("RPC_GreenButtonClick", RpcTarget.All,windDirectionInDirectionTerms,LatestT+" C","Kista",latestWS+" m/s",true);
     }
