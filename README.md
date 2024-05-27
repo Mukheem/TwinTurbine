@@ -141,6 +141,8 @@ The team used a 3D printing prototype to set up the physical entity. The templat
 
 ####Complete
 
+[Download the 3MF file](https://github.com/your-username/your-repo/blob/main/path/to/yourfile.3mf)
+
 #### 2.5 Graphical User Interface (GUI): 
 - Initially, we designed a single GUI to display all variables together in one single GUI:
 <p align="center">
