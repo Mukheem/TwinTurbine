@@ -8,6 +8,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
 using WebSocketSharp;
+using System.Linq;
 //https://github.com/GlitchEnzo/NuGetForUnity
 // Creating the data structure according to the expected Json
 [Serializable]
@@ -58,6 +59,10 @@ public class API : MonoBehaviour
     [PunRPC]
     public bool turn_WT_on_Y_Axis = false;
 
+    public GameObject windTurbineWithMap;
+    private GameObject windTurbineController;
+    private Windturbine windTurbineControllerScript;
+
     void Start()
     {
 
@@ -65,6 +70,8 @@ public class API : MonoBehaviour
         //EmergencyButtonClick();
         photonView = PhotonView.Get(this);
         photonView.RPC("RPC_EmergencyButtonClick", RpcTarget.All);
+
+        windTurbineWithMap = GameObject.FindGameObjectWithTag("Wind_Turbine_withMap");
 
     }
 
@@ -189,6 +196,12 @@ public void ExtractDataFromJson(string json)
         loc.SetText(location);
         windSpeedValue.SetText(windSpeed);
         turn_WT_on_Y_Axis = turn_WT_on_Y_Axis_val; // flag set to true so that WT can rotate on it's Y axis.
+
+
+
+        windTurbineController = windTurbineWithMap.transform.GetChild(0).gameObject;
+        windTurbineControllerScript = windTurbineController.GetComponent<Windturbine>();
+        windTurbineControllerScript.WT_TurnOnIts_Y_Axis();
     }
     [PunRPC]
     public void RPC_VoltageUpdate(String voltageGenerated)

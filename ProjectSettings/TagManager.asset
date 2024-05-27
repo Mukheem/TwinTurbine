@@ -9,6 +9,7 @@ TagManager:
   - GUIData
   - Avatar
   - map
+  - Wind_Turbine_withMap
   layers:
   - Default
   - TransparentFX

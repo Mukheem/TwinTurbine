@@ -162,7 +162,7 @@ GameObject:
   - component: {fileID: 2935496554514557820}
   m_Layer: 0
   m_Name: Wind_Turbine_withMap
-  m_TagString: Untagged
+  m_TagString: Wind_Turbine_withMap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
