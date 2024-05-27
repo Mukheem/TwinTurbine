@@ -58,9 +58,7 @@ public class API : MonoBehaviourPunCallbacks, IPunObservable
     private AudioController audioControllerScript;
     public bool turn_WT_on_Y_Axis = false;
 
-    public GameObject windTurbineWithMap;
-    private GameObject windTurbineController;
-    private Windturbine windTurbineControllerScript;
+  
 
     void Start()
     {
@@ -70,8 +68,7 @@ public class API : MonoBehaviourPunCallbacks, IPunObservable
         photonView = PhotonView.Get(this);
         photonView.RPC("RPC_EmergencyButtonClick", RpcTarget.All);
 
-        windTurbineWithMap = GameObject.FindGameObjectWithTag("Wind_Turbine_withMap");
-
+        
     }
 
     void Update()
@@ -182,8 +179,6 @@ public void ExtractDataFromJson(string json)
                 Debug.Log("Latest WS is - "+latestWS);
             }
         }
-        windTurbineController = windTurbineWithMap.transform.GetChild(0).gameObject;
-        windTurbineControllerScript = windTurbineController.GetComponent<Windturbine>();
         photonView = PhotonView.Get(this);
         photonView.RPC("RPC_GreenButtonClick", RpcTarget.All,windDirectionInDirectionTerms,LatestT+" C","Kista",latestWS+" m/s",true);
     }
@@ -201,7 +196,7 @@ public void ExtractDataFromJson(string json)
 
         Debug.Log("Flag value to turn the Y Axis:" + turn_WT_on_Y_Axis);
         
-        windTurbineControllerScript.WT_TurnOnIts_Y_Axis();
+        //windTurbineControllerScript.WT_TurnOnIts_Y_Axis();
     }
     [PunRPC]
     public void RPC_VoltageUpdate(String voltageGenerated)
