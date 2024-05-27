@@ -207,6 +207,10 @@ To use WindTurbine and interact with its features, follow the guidelines below:
 Acknowledge here the sources, references, or inspirations that you used for your project. Give credit to the original authors or creators of the materials that you used or adapted for your project (3D models, source code, audio effects, etc.)
 
 ## Contributors
+Abdul Mukheem Shaik
+<br/> bagherifard.zeinab@gmail.com
+<br/> [LinkedIn](https://www.linkedin.com/in/abdul-mukheem-shaik?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
+
 Masoomeh Advand
 <br/> bagherifard.zeinab@gmail.com
 <br/> [LinkedIn](https://www.linkedin.com/in/noak-petersson/)
@@ -216,4 +220,4 @@ Mina Maddahi
 
 Zeinab Bagheri Fard
 <br/> bagherifard.zeinab@gmail.com
-<br/> [LinkedIn](https://www.linkedin.com/in/zeinab-bagherifard/)
+<br/> [LinkedIn](https://www.linkedin.com/in/zeinab-bagherifard-b6458b272/)
