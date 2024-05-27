@@ -61,8 +61,6 @@ After some brainstorming, we came up with some ideas for different stages:
 </p>
 
 
-Cpmmm
-
 
 
 ### 2.2. User Persona:
@@ -77,16 +75,27 @@ The leading target group includes Linkedin enterprises that are interested in im
 2. **Engineers and Technicians:**	
 - Age: 25-50
 - Occupation: Wind energy engineers and maintenance technicians.
-- Skills: Familiarity with wind turbine operations, and experience with VR/AR environments.
+- Skills: Familiarity with wind turbine operations and experience with VR/AR environments.
 - Needs: Tools for remote monitoring, maintenance, and access to real-time feedback on turbine operations.
 - Goals: Enhance understanding of turbine performance through immersive simulations and monitor and manage the physical turbine within the virtual model for different sites by multiple users.
 
 ### 2.3. Pre-User Journey:
-We prepared some initial stages beforehand to avoid requiring users to complete these extra steps. Initially, two team members wear headsets and observe the below menu; after pressing **Ancor Sharing Demo**, One team member creates a room that the other can join.
-![Ancor](https://github.com/Mukheem/TwinTurbine/assets/145973209/33cfc2d0-28da-4895-85d7-320921657762)
-<img width="667" alt="CP Menu" src="https://github.com/Mukheem/TwinTurbine/assets/145973209/2d828883-0fc0-4d6a-907a-3a2c1006b401">
+We prepared some initial stages beforehand to avoid requiring users to complete these extra steps. Initially, two team members wear headsets and observe the below menu; after pressing **Anchor Sharing Demo**, One team member creates a room that the other can join.
 
-The next stage involves spawning the avatar, turbine, and menus simultaneously using **Create New Anchor**and **Sharing Anchor**; after that, the other member can **Align member**, which allows them to observe the virtual objects in the same place and the collaboration would be enabled.
+<p align="center">
+    <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/52db79a8-0086-426b-ba05-bd0457223f8a" alt="Anchor Sharing Demo" style="max-width:12%;" height="auto">
+    <br>
+    <i>Anchor Sharing Demo</i>
+</p>
+
+
+<p align="center">
+    <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/377f490c-b36b-4a3e-897c-dc083e62ab73" alt="Creating Room" style="max-width:12%;" height="auto">
+    <br>
+    <i>Creating Room</i>
+</p>
+
+The next stage involves spawning the avatar, turbine, and menus simultaneously using **Create New Anchor**and **Sharing Anchor**; after that, the other member can **Align Anchor**, which allows them to observe the virtual objects in the same place and the collaboration would be enabled.
 At this point, the user journey begins.
 
 
