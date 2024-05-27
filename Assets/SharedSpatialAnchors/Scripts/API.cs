@@ -55,6 +55,7 @@ public class API : MonoBehaviour
     PhotonView photonView;
     private GameObject avatar;
     private AudioController audioControllerScript;
+    [PunRPC]
     public bool turn_WT_on_Y_Axis = false;
 
     void Start()
@@ -176,18 +177,18 @@ public void ExtractDataFromJson(string json)
             }
         }
         photonView = PhotonView.Get(this);
-        photonView.RPC("RPC_GreenButtonClick", RpcTarget.All,windDirectionInDirectionTerms,LatestT+" C","Kista",latestWS+" m/s");
+        photonView.RPC("RPC_GreenButtonClick", RpcTarget.All,windDirectionInDirectionTerms,LatestT+" C","Kista",latestWS+" m/s",true);
     }
 
     [PunRPC]
-    public void RPC_GreenButtonClick(String windDirection,String locationTemperature,String location,String windSpeed)
+    public void RPC_GreenButtonClick(String windDirection,String locationTemperature,String location,String windSpeed,bool turn_WT_on_Y_Axis_val)
     {
         Debug.Log("Latest WS is - " + windSpeed);
         windDirValue.SetText(windDirection);
         temperatureValue.SetText(locationTemperature);
         loc.SetText(location);
         windSpeedValue.SetText(windSpeed);
-        turn_WT_on_Y_Axis = true; // flag set to true so that WT can rotate on it's Y axis.
+        turn_WT_on_Y_Axis = turn_WT_on_Y_Axis_val; // flag set to true so that WT can rotate on it's Y axis.
     }
     [PunRPC]
     public void RPC_VoltageUpdate(String voltageGenerated)
