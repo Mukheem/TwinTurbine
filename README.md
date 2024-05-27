@@ -41,16 +41,25 @@ After some brainstorming, we came up with some ideas for different stages:
 </p>
 
 <p align="center">
-    <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/f3a21469-3eeb-4d80-88a2-3b411f554682">
+    <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/f3a21469-3eeb-4d80-88a2-3b411f554682" alt="Primary Prototype for physical turbine & virtual model" style="max-width:12%;" height="auto">
     <br>
     <i>Primary Prototype for physical turbine & virtual model</i>
 </p>
 
 
-<figure style="text-align:center">
-    <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/c1b97fd4-f495-4e54-8c17-a1d949cca986" alt="Wind Turbine" style="max-width:100%;" height="auto">
-    <figcaption style="padding-top: 10px; margin-top: 10px;"><i>Servo motor and wind turbine</i></figcaption>
-</figure>
+<p align="center">
+    <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/fa257692-f7d2-404d-9e8d-6e579506210e" alt="SVM and wind turbine" style="max-width:12%;" height="auto">
+    <br>
+    <i>Servo motor and wind turbine</i>
+</p>
+
+completed
+
+<p align="center">
+    <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/f3a21469-3eeb-4d80-88a2-3b411f554682">
+    <br>
+    <i>Primary Prototype for physical turbine & virtual model</i>
+</p>
 
 
 - Finally, we focused on the way we want to make the connection between ESP32 and Unity
