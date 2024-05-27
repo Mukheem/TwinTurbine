@@ -40,18 +40,12 @@ After some brainstorming, we came up with some ideas for different stages:
     <i>Digital Twin Components</i>
 </p>
 
+<p align="center">
+    <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/f3a21469-3eeb-4d80-88a2-3b411f554682">
+    <br>
+    <i>Primary Prototype for physical turbine & virtual model</i>
+</p>
 
-
-<figure style="text-align:center">
-    <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/7ca62bda-072b-40ea-a0ed-361c86724b81" alt="Primary Prototype" style="max-width:100%;" height="auto">
-    <figcaption><i>Primary Prototype for physical turbine & virtual model</i></figcaption>
-</figure>
-
-- Then, we shared our ideas on how to rotate the servo motor from Arduino and which physical turbine is better to provide.
-<figure style="text-align:center">
-    <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/7ca62bda-072b-40ea-a0ed-361c86724b81" alt="Primary Prototype" style="max-width:100%;" height="auto">
-    <figcaption style="margin-top: 10px;"><i>Primary Prototype for physical turbine & virtual model</i></figcaption>
-</figure>
 
 <figure style="text-align:center">
     <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/c1b97fd4-f495-4e54-8c17-a1d949cca986" alt="Wind Turbine" style="max-width:100%;" height="auto">
