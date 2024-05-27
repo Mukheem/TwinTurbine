@@ -197,14 +197,15 @@ To use WindTurbine and interact with its features, follow the guidelines below:
     <figcaption><i>Draft Poster</i></figcaption>
 </figure>
 
-<<<<<<< HEAD
 
+<p align="center">
+    <img src="https://github.com/dalarna2022/TwinTurbine/blob/main/Portfolio%26Poster/Draft%20poster.jpeg" alt="Poster" style="max-width:20%;" height="auto">
+    <br>
+    <i>Poster</i>
+</p>
 
-=======
->>>>>>> f456fae95097232eece324078f3866b31fe13009
 ## References
 
-Acknowledge here the sources, references, or inspirations that you used for your project. Give credit to the original authors or creators of the materials that you used or adapted for your project (3D models, source code, audio effects, etc.)
 
 ## Contributors
 Abdul Mukheem Shaik
