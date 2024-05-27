@@ -38,7 +38,7 @@ public class ApiResponse
 }
   
 
-public class API : MonoBehaviour
+public class API : MonoBehaviourPunCallbacks, IPunObservable
 {
     public TextMeshProUGUI voltageValue;
     public TextMeshProUGUI windDirValue;
@@ -217,5 +217,18 @@ public void ExtractDataFromJson(string json)
         string[] directions = { "N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW" };
         int index = (int)Math.Floor((degrees + 11.25) / 22.5);
         return directions[index];
+    }
+   
+
+    void IPunObservable.OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if (stream.IsWriting)
+        {
+            stream.SendNext(turn_WT_on_Y_Axis);
+        }
+        else
+        {
+            turn_WT_on_Y_Axis = (bool)stream.ReceiveNext();
+        }
     }
 }
