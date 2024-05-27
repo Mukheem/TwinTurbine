@@ -192,14 +192,8 @@ To use WindTurbine and interact with its features, follow the guidelines below:
 
 
 ## Draft Poster
-<figure style="text-align:center">
-    <img src="https://github.com/dalarna2022/TwinTurbine/blob/main/Portfolio%26Poster/Draft%20poster.jpeg" alt="Communication" style="max-width:100%;" height="auto">
-    <figcaption><i>Draft Poster</i></figcaption>
-</figure>
-
-
 <p align="center">
-    <img src="https://github.com/dalarna2022/TwinTurbine/blob/main/Portfolio%26Poster/Draft%20poster.jpeg" alt="Poster" style="max-width:20%;" height="auto">
+    <img src="https://github.com/dalarna2022/TwinTurbine/blob/main/Portfolio%26Poster/Draft%20poster.jpeg" alt="Poster" style="max-width:10%;" height="auto">
     <br>
     <i>Poster</i>
 </p>
