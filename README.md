@@ -138,10 +138,13 @@ Real-time data, including the **wind direction**, **temperature**, and **wind sp
 
 #### 2.3.4 3D Printing: 
 The team used a 3D printing prototype to set up the physical entity. The template has been created in **Fusion 360** App, and the template is provided below.
+<p align="center">
+    <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/b018dd51-b98a-4405-b659-f78bf3902b92" alt="WT3D" style="max-width:12%;" height="auto">
+    <br>
+    <i>WT 3D printing prototype </i>
+</p>
 
-####Complete
 
-[Download the 3MF file](https://github.com/your-username/your-repo/blob/main/path/to/yourfile.3mf)
 
 #### 2.5 Graphical User Interface (GUI): 
 - Initially, we designed a single GUI to display all variables together in one single GUI:
