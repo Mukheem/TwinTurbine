@@ -47,12 +47,6 @@ After some brainstorming, we came up with some ideas for different stages:
 </p>
 
 
-<p align="center">
-    <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/fa257692-f7d2-404d-9e8d-6e579506210e" alt="SVM and wind turbine" style="max-width:12%;" height="auto">
-    <br>
-    <i>Servo motor and wind turbine</i>
-</p>
-
 - Finally, we focused on the way we want to make the connection between ESP32 and Unity
 <p align="center">
     <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/02ff04c7-eef5-45a5-9264-c03f95653dda" alt="Connecting Unity to Arduino" style="max-width:12%;" height="auto">
@@ -111,20 +105,14 @@ In this experience, the physical wind turbine is emulated using a servo motor. A
 <!-- A collection of sketches, mockups, or prototypes that show the layout, structure, and functionality of your project, and how you tested and iterated on them.-->
 Since this experience is in a mixed reality (MR) environment, it includes objects the user can interact with in the virtual and physical environment. Virtual entities act as simulators for physical entities, allowing for seamless interaction. Moreover, the experience is designed for multiple users, enabling them to visualize and modify settings while observing changes made by others. To understand which technologies would fulfill the experience, the team members tried various technologies and tools to see which works best for achieving the project's goals.
 
-#### 2.4.1 Organizning physical entities: 
-organizing tangible items is an important part in this project. To understand how to rotate the physical wind turbine, the team members tried various strategies and tools to see which was more appropriate for the project.
+#### 2.4.1 Organizing physical entities: 
+organizing tangible items is an important part of this project. To understand how to rotate the physical wind turbine, the team members tried various strategies and tools to see which was more appropriate for the project.
 
-<figure style="text-align:center">
-    <img src="[https://github.com/Mukheem/TwinTurbine/assets/145973209/c1b97fd4-f495-4e54-8c17-a1d949cca986](https://github.com/Mukheem/TwinTurbine/assets/145973209/993ecd59-3dfb-4449-86f3-30509c640749)" alt="Physical Entity" style="max-width:100%;" height="auto">
-    <figcaption><i>Servo motor and Arduino</i></figcaption>
-</figure>
-
-
-<figure style="text-align:center">
-    <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/c1b97fd4-f495-4e54-8c17-a1d949cca986" alt="Physical Turbine" style="max-width:100%;" height="auto">
-    <figcaption><i>Testing physical entities</i></figcaption>
-</figure>
-
+<p align="center">
+    <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/fa257692-f7d2-404d-9e8d-6e579506210e" alt="SVM and wind turbine" style="max-width:12%;" height="auto">
+    <br>
+    <i>Servo motor and wind turbine</i>
+</p>
 
 #### 2.4.2 Sensors: 
 The experience includes sensors that can trigger a reaction in the experience. ESP installation using a light sensor was used to test how a button can be used. The light sensor was only used as a placeholder and instead, there will be a button used. The button will be created to instantiate objects in the virtual environment. 
