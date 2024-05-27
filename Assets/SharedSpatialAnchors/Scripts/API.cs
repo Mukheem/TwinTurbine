@@ -56,7 +56,6 @@ public class API : MonoBehaviourPunCallbacks, IPunObservable
     PhotonView photonView;
     private GameObject avatar;
     private AudioController audioControllerScript;
-    [PunRPC]
     public bool turn_WT_on_Y_Axis = false;
 
     public GameObject windTurbineWithMap;
