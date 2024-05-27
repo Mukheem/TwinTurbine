@@ -124,7 +124,7 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 5762830989053361383}
   - {fileID: 5326010102002042226}
-  sceneViewId: 4
+  sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
 --- !u!114 &5762830989053361383
@@ -418,7 +418,7 @@ MonoBehaviour:
   - {fileID: 6433795997240961375}
   - {fileID: 7309076934599776581}
   - {fileID: 5643319099722428757}
-  sceneViewId: 5
+  sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
 --- !u!114 &6433795997240961375
@@ -507,7 +507,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -9180565859901777493, guid: 8754aa5f3d45cec4980f02029a881f7d, type: 3}
       propertyPath: sceneViewId
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -9180565859901777493, guid: 8754aa5f3d45cec4980f02029a881f7d, type: 3}
       propertyPath: Synchronization

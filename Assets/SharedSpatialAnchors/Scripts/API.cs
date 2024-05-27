@@ -70,39 +70,7 @@ public class API : MonoBehaviourPunCallbacks, IPunObservable
         photonView = PhotonView.Get(this);
         photonView.RPC("RPC_EmergencyButtonClick", RpcTarget.All);
 
-        windTurbineWithMap = GameObject.FindGameObjectWithTag("Wind_Turbine_withMap");
-        webSocketController = GameObject.FindGameObjectWithTag("WebController");
-        webSocketControllerScript = webSocketController.GetComponent<WebSocketController>();
-        avatar = GameObject.FindGameObjectWithTag("Avatar");
-        audioControllerScript = avatar.GetComponent<AudioController>();
-
-        if (windTurbineWithMap != null)
-        {
-            // Do something with myObject
-            Debug.Log("GameObject exists: " + windTurbineWithMap.name);
-        }
-        if (webSocketController != null)
-        {
-            // Do something with myObject
-            Debug.Log("GameObject exists: " + webSocketController.name);
-        }
-        if (webSocketControllerScript != null)
-        {
-            // Do something with myObject
-            Debug.Log("GameObject exists: " + webSocketControllerScript.name);
-        }
-        if (avatar != null)
-        {
-            // Do something with myObject
-            Debug.Log("GameObject exists: " + avatar.name);
-        }
-        if (audioControllerScript != null)
-        {
-            // Do something with myObject
-            Debug.Log("GameObject exists: " + audioControllerScript.name);
-        }
-        windTurbineController = windTurbineWithMap.transform.GetChild(0).gameObject;
-        windTurbineControllerScript = windTurbineController.GetComponent<Windturbine>();
+        
     }
 
     void Update()
@@ -218,6 +186,17 @@ public void ExtractDataFromJson(string json)
     [PunRPC]
     public void RPC_GreenButtonClick(String windDirection,String locationTemperature,String location,String windSpeed,bool turn_WT_on_Y_Axis_val)
     {
+        windTurbineWithMap = GameObject.FindGameObjectWithTag("Wind_Turbine_withMap");
+        webSocketController = GameObject.FindGameObjectWithTag("WebController");
+        webSocketControllerScript = webSocketController.GetComponent<WebSocketController>();
+        avatar = GameObject.FindGameObjectWithTag("Avatar");
+        audioControllerScript = avatar.GetComponent<AudioController>();
+
+
+        windTurbineController = windTurbineWithMap.transform.GetChild(0).gameObject;
+        windTurbineControllerScript = windTurbineController.GetComponent<Windturbine>();
+
+
         Debug.Log("Latest WS is - " + windSpeed);
         windDirValue.SetText(windDirection);
         temperatureValue.SetText(locationTemperature);

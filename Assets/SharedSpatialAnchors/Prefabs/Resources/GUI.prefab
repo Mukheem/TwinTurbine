@@ -941,7 +941,7 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 4890728644967733183}
-  sceneViewId: 8
+  sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
 --- !u!114 &4890728644967733183
@@ -1249,7 +1249,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -4586353448955332270, guid: 1837e416a7f023e4b9de7c449006ca42, type: 3}
       propertyPath: sceneViewId
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4586353448955332270, guid: 1837e416a7f023e4b9de7c449006ca42, type: 3}
       propertyPath: ObservedComponents.Array.size
@@ -1468,7 +1468,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -4740409285023748802, guid: ebcaad662ef2ae14ca92fbcd7a67ee56, type: 3}
       propertyPath: sceneViewId
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4740409285023748802, guid: ebcaad662ef2ae14ca92fbcd7a67ee56, type: 3}
       propertyPath: ObservedComponents.Array.size
