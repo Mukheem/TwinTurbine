@@ -90,7 +90,7 @@ We prepared some initial stages beforehand to avoid requiring users to complete 
 
 
 <p align="center">
-    <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/377f490c-b36b-4a3e-897c-dc083e62ab73" alt="Creating Room" style="max-width:12%;" height="auto">
+    <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/377f490c-b36b-4a3e-897c-dc083e62ab73" alt="Creating Room" style="max-width:8%;" height="auto">
     <br>
     <i>Creating Room</i>
 </p>
