@@ -53,20 +53,16 @@ After some brainstorming, we came up with some ideas for different stages:
     <i>Servo motor and wind turbine</i>
 </p>
 
-completed
-
+- Finally, we focused on the way we want to make the connection between ESP32 and Unity
 <p align="center">
-    <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/f3a21469-3eeb-4d80-88a2-3b411f554682">
+    <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/02ff04c7-eef5-45a5-9264-c03f95653dda" alt="Connecting Unity to Arduino" style="max-width:12%;" height="auto">
     <br>
-    <i>Primary Prototype for physical turbine & virtual model</i>
+    <i>Connecting Unity to Arduino</i>
 </p>
 
 
-- Finally, we focused on the way we want to make the connection between ESP32 and Unity
-<figure style="text-align:center">
-    <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/d910c49e-2518-4181-8831-0987415b2977" alt="Communication" style="max-width:100%;" height="auto">
-    <figcaption><i>Connecting Unity to Arduino</i></figcaption>
-</figure>
+Cpmmm
+
 
 
 ### 2.2. User Persona:
