@@ -7,6 +7,7 @@ using System.Security.Cryptography;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
+using WebSocketSharp;
 //https://github.com/GlitchEnzo/NuGetForUnity
 // Creating the data structure according to the expected Json
 [Serializable]
@@ -70,6 +71,10 @@ public class API : MonoBehaviour
     {
         if (isButtonPressed)
         {
+            if (webSocketControllerScript.ws.ReadyState != WebSocketState.Open)
+            {
+                webSocketControllerScript.ws.Connect();
+            }
             photonView = PhotonView.Get(this);
             photonView.RPC("RPC_VoltageUpdate", RpcTarget.All, webSocketControllerScript.voltageValue.ToString());
            
@@ -80,6 +85,7 @@ public class API : MonoBehaviour
     {
         webSocketController = GameObject.FindGameObjectWithTag("WebController");
         webSocketControllerScript = webSocketController.GetComponent<WebSocketController>();
+        webSocketControllerScript.ConnectWithESP32();
         StartCoroutine(GetText());
 
         avatar = GameObject.FindGameObjectWithTag("Avatar");
@@ -150,6 +156,10 @@ public void ExtractDataFromJson(string json)
                 latestWD = point.values[0];
                 windDirectionInDirectionTerms = GetWindDirection(latestWD);
                 //windDirValue.SetText(latestWD.ToString());
+                if (webSocketControllerScript.ws.ReadyState != WebSocketState.Open)
+                {
+                    webSocketControllerScript.ws.Connect();
+                }
                 webSocketControllerScript.ws.Send(latestWD.ToString()+":take input");
                 Debug.Log(latestWD.ToString()+" - Degrees sent to ESP");
             }
