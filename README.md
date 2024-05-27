@@ -216,4 +216,4 @@ Mina Maddahi
 
 Zeinab Bagheri Fard
 <br/> bagherifard.zeinab@gmail.com
-<br/> [LinkedIn]([https://www.linkedin.com/in/zeinab-bagherifard/])
+<br/> [LinkedIn](https://www.linkedin.com/in/zeinab-bagherifard/)
