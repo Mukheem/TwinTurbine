@@ -182,6 +182,8 @@ public void ExtractDataFromJson(string json)
                 Debug.Log("Latest WS is - "+latestWS);
             }
         }
+        windTurbineController = windTurbineWithMap.transform.GetChild(0).gameObject;
+        windTurbineControllerScript = windTurbineController.GetComponent<Windturbine>();
         photonView = PhotonView.Get(this);
         photonView.RPC("RPC_GreenButtonClick", RpcTarget.All,windDirectionInDirectionTerms,LatestT+" C","Kista",latestWS+" m/s",true);
     }
@@ -196,11 +198,10 @@ public void ExtractDataFromJson(string json)
         windSpeedValue.SetText(windSpeed);
         turn_WT_on_Y_Axis = turn_WT_on_Y_Axis_val; // flag set to true so that WT can rotate on it's Y axis.
 
-        /*
 
-        windTurbineController = windTurbineWithMap.transform.GetChild(0).gameObject;
-        windTurbineControllerScript = windTurbineController.GetComponent<Windturbine>();
-        windTurbineControllerScript.WT_TurnOnIts_Y_Axis();*/
+        Debug.Log("Flag value to turn the Y Axis:" + turn_WT_on_Y_Axis);
+        
+        windTurbineControllerScript.WT_TurnOnIts_Y_Axis();
     }
     [PunRPC]
     public void RPC_VoltageUpdate(String voltageGenerated)
