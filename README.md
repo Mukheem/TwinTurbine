@@ -9,42 +9,39 @@ This is a group Academic Project for **DCDC** course at Stockholm University, de
 
 
 ## 1. Introduction
-
-Welcome to **_TwinTurbine_**, which is a **digital twin** project that lets you experience working with a wind turbine in a mixed reality environment. Multiple users can observe and manage the operation of a wind turbine within a mixed-reality environment on remote sites.
+Welcome to **_TwinTurbine_**, which is a **digital twin** project that lets you experience working with a wind turbine in a mixed reality (MR) environment. MR supports multi-user collaboration, allowing multiple users to observe and manage the operation of a wind turbine from remote sites. By utilizing MR, users can visualize the wind turbine and its real-time data in a 3D environment, receive immediate feedback, and interact with the physical turbine during the experience. 
 
 ### 1.1. **_Digital Twin (DT)_ description**
-DT is a model representing a virtual mirror for every physical object to simulate their behaviors digitally. The virtual model can understand the state of the physical entities through sensors installed on the physical parts, so physical and virtual parts interact with each other and remain synchronous. Additionally, the physical objects would respond to the virtual simulation. This model can be used for monitoring, analyzing, optimizing, predicting, and more.
+A DT is a model representing a virtual mirror for every physical object to simulate their behaviors digitally. The virtual model can understand the state of the physical entities through sensors installed on the physical parts, allowing physical and virtual parts to interact and remain synchronous. Additionally, physical objects respond to the virtual simulation. This model can be used for monitoring, analyzing, optimizing, predicting, and more.
   
 ### 1.2. Five-dimension DT modeling components: 
-The five-dimension DT model consists of five essential components. In this project, these components are outlined as follows:  
-1. **Physical Entity**: Wind turbine, servo motor, and photoresistor sensor.
-2. **Virtual Entity**: Virtual wind turbine as a simulator, a designed dashboard to control the wind turbine, and interactions to facilitate services.
-3. **Services**: Remote monitoring, controlling, and improving the turbine's performance.
-4. **Data**: The real-time data collected from physical entities,  simulations data from virtual entities, data from the services, and data about the environment.
-5. **Connection** The continuous and robust connection between the above components.
- 
+The five-dimension DT model consists of five essential components that work together to create a comprehensive and interactive system. In TwinTurbine, these components are outlined as follows:  
+1. **Physical Entity**: This includes the physical assets and hardware involved in the project, including the wind turbine, servo motor, and photoresistor sensor.  The physical entity generates a voltage for us, enabling real-time data for TwinTurbine. 
+2. **Virtual Entity**: This part is the TwinTurbine visualized in a 3D environment. It includes a virtual wind turbine and a designed dashboard to observe the real-time data, control the wind turbine, and interact to facilitate services.
+3. **Services**: These are the functionalities provided by TwinTurbine, such as remote monitoring and controlling. TwinTurbine services enable users to observe data collected from the physical entities and API.
+4. **Data**: Data encompasses all the information collected and used by the system. This includes real-time voltage generated from physical turbines and data gathered from API (Swedish Meteorological and Hydrological Institute (**SMHI**)), namely the wind direction and temperature of the location.
+5. **Connection** There is a continuous and robust connection between the above components and between the users and the system. Physical and virtual entities are connected by data to provide services, completing the circle.
+
 ### 1.3. The rationale behind this project:
 The proposed solution is valuable for effective remote monitoring, controlling, and improving the turbine's performance. Moreover, it offers an immersive learning experience for students and professionals to understand and interact hands-on with digital twin technology and wind turbine operations.
 
 ## 2. Design Process
-<!--Evidence on the general overview of how you planned, designed, and developed your project, including the goals, challenges, and solutions._]-->
-This project aims to develop a digital twin of a wind turbine using immersive technologies, allowing multiple users to interact simultaneously. The design process includes brainstorming, interactions, testing different technologies, creating a Unity scene, creating a collaboration for multiple users, testing with users, solving the issues, making improvements, and showing the final project. 
+This project aims to develop a digital twin of a wind turbine in MR, allowing multiple users to interact simultaneously and immersively. The design process includes brainstorming, interactions, testing different technologies, creating a Unity scene, creating a collaboration for various users, testing with users, solving the issues, making improvements, and showing the final project. 
 
 ### 2.1. Brainstorming:
-After some brainstorming, we came up with some ideas for different stages:
+During some brainstorming, we came up with some ideas for different stages:
 
 - In the first step, we discussed the physical and virtual entities, their connection, and the services and functions we wanted to implement.
-
 <p align="center">
-    <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/3eac9f71-99c6-40f7-a458-84a681f37e00" alt="Brainstorming" style="max-width:12%;" height="auto">
+    <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/3eac9f71-99c6-40f7-a458-84a681f37e00" alt="TwinTurbine Components" style="max-width:12%;" height="auto">
     <br>
-    <i>Digital Twin Components</i>
+    <i>TwinTurbine Components</i>
 </p>
 
 <p align="center">
-    <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/f3a21469-3eeb-4d80-88a2-3b411f554682" alt="Primary Prototype for physical turbine & virtual model" style="max-width:12%;" height="auto">
+    <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/f3a21469-3eeb-4d80-88a2-3b411f554682" alt="Primary Sketch" style="max-width:12%;" height="auto">
     <br>
-    <i>Primary Prototype for physical turbine & virtual model</i>
+    <i>Primary Sketch</i>
 </p>
   
 - Finally, we focused on the way we want to make the connection between ESP32 and Unity
