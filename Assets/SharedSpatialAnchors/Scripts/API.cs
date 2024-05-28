@@ -105,13 +105,15 @@ public class API : MonoBehaviourPunCallbacks, IPunObservable
     [PunRPC]
     public void RPC_EmergencyButtonClick(bool isButtonPressedVal, float latestWS_val)
     {
-        isButtonPressed = false;
-        webSocketControllerScript.ws.Close();
+        isButtonPressed = isButtonPressedVal;
+        latestWD = latestWS_val;
+        
         loc.SetText("----");
         windDirValue.SetText("----");
         temperatureValue.SetText("----");
         voltageValue.SetText("----");
         windSpeedValue.SetText("----");
+        
     }
     IEnumerator GetText()
     {

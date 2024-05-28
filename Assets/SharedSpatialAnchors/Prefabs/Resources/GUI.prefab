@@ -1472,16 +1472,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -4740409285023748802, guid: ebcaad662ef2ae14ca92fbcd7a67ee56, type: 3}
       propertyPath: ObservedComponents.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -4740409285023748802, guid: ebcaad662ef2ae14ca92fbcd7a67ee56, type: 3}
       propertyPath: ObservedComponents.Array.data[0]
       value: 
-      objectReference: {fileID: 4890728645620921254}
+      objectReference: {fileID: 1160440965950818012}
     - target: {fileID: -4740409285023748802, guid: ebcaad662ef2ae14ca92fbcd7a67ee56, type: 3}
       propertyPath: ObservedComponents.Array.data[1]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 4890728645620921254}
     - target: {fileID: 4293156748659161770, guid: ebcaad662ef2ae14ca92fbcd7a67ee56, type: 3}
       propertyPath: m_LocalPosition.y
       value: -132.3
@@ -1532,7 +1532,7 @@ PrefabInstance:
       objectReference: {fileID: 1160440965950818012}
     - target: {fileID: 4293156749170067433, guid: ebcaad662ef2ae14ca92fbcd7a67ee56, type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: RPC_EmergencyButtonClick
+      value: emergencyButtonClick
       objectReference: {fileID: 0}
     - target: {fileID: 4293156749170067433, guid: ebcaad662ef2ae14ca92fbcd7a67ee56, type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
