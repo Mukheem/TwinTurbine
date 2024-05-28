@@ -95,7 +95,7 @@ public class API : MonoBehaviourPunCallbacks, IPunObservable
         avatar = GameObject.FindGameObjectWithTag("Avatar");
         audioControllerScript = avatar.GetComponent<AudioController>();
         audioControllerScript.fn_call_AudioNarration2();
-
+        Debug.Log("Button is Clicked");
     }
 
     [PunRPC]
