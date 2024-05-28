@@ -14,16 +14,18 @@ public class Windturbine : MonoBehaviour
     public float startRotationY = 0f;
     public float endRotationY;
 
-    
+    private void OnEnable()
+    {
+        GUIdataGameObject = GameObject.FindGameObjectWithTag("GUIData");
+        apiScript = GUIdataGameObject.GetComponent<API>();
+    }
 
     // Start is called before the first frame update
     void Start()
     {
         angle = Random.Range(0.0f, 120.0f);    
         speed = Random.Range(75.0f, 86.0f);
-        GUIdataGameObject = GameObject.FindGameObjectWithTag("GUIData");
-        apiScript = GUIdataGameObject.GetComponent<API>();
-
+       
         //THis condition is to detach the map with the Wind turbine after Instantiating. This helps the map stick to the ground when the turbine rotates.
         GameObject.FindGameObjectWithTag("map").transform.SetParent(null); ;
         
@@ -65,6 +67,7 @@ public class Windturbine : MonoBehaviour
     {
         Debug.Log("Rotate On it's Y-Axis");
         endRotationY = apiScript.latestWD;
+        Debug.Log("endRotationY - Rotate On it's Y-Axis ----"+ endRotationY);
         StartCoroutine(RotateObject(startRotationY, endRotationY, 3.5f));
     }
 
