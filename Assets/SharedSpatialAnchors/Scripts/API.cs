@@ -8,7 +8,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
 using WebSocketSharp;
-using System.Linq;
+
 //https://github.com/GlitchEnzo/NuGetForUnity
 // Creating the data structure according to the expected Json
 [Serializable]
@@ -186,6 +186,8 @@ public void ExtractDataFromJson(string json)
     [PunRPC]
     public void RPC_GreenButtonClick(String windDirection,String locationTemperature,String location,String windSpeed,bool turn_WT_on_Y_Axis_val)
     {
+        latestWD = float.Parse(windDirection);
+        latestWS = float.Parse(windSpeed);
         Debug.Log("Latest WS is - " + windSpeed);
         windDirValue.SetText(windDirection);
         temperatureValue.SetText(locationTemperature);
