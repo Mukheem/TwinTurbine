@@ -87,15 +87,19 @@ public class API : MonoBehaviourPunCallbacks, IPunObservable
 
     public void OnButtonClick()
     {
-        webSocketController = GameObject.FindGameObjectWithTag("WebController");
-        webSocketControllerScript = webSocketController.GetComponent<WebSocketController>();
-        webSocketControllerScript.ConnectWithESP32();
-        StartCoroutine(GetText());
+        if (!isButtonPressed)
+        {
+            webSocketController = GameObject.FindGameObjectWithTag("WebController");
+            webSocketControllerScript = webSocketController.GetComponent<WebSocketController>();
+            webSocketControllerScript.ConnectWithESP32();
+            StartCoroutine(GetText());
 
-        avatar = GameObject.FindGameObjectWithTag("Avatar");
-        audioControllerScript = avatar.GetComponent<AudioController>();
-        audioControllerScript.fn_call_AudioNarration2();
-        Debug.Log("Button is Clicked");
+            avatar = GameObject.FindGameObjectWithTag("Avatar");
+            audioControllerScript = avatar.GetComponent<AudioController>();
+            audioControllerScript.fn_call_AudioNarration2();
+            Debug.Log("Button is Clicked");
+        }
+        
     }
     public void emergencyButtonClick()
     {

@@ -10,6 +10,8 @@ TagManager:
   - Avatar
   - map
   - Wind_Turbine_withMap
+  - StartButton
+  - EmergencyButton
   layers:
   - Default
   - TransparentFX
