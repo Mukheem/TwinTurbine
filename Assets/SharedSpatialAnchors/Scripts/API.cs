@@ -47,7 +47,7 @@ public class API : MonoBehaviourPunCallbacks, IPunObservable
     public TextMeshProUGUI windSpeedValue;
     private float LatestT;
     public float latestWD = 0.0f;
-    public float latestWS;
+    public float latestWS = 0.01f;
     private String windDirectionInDirectionTerms;
     private string unit;
     private GameObject webSocketController;
@@ -220,10 +220,12 @@ public void ExtractDataFromJson(string json)
         if (stream.IsWriting)
         {
             stream.SendNext(turn_WT_on_Y_Axis);
+            stream.SendNext(isButtonPressed);
         }
         else
         {
             turn_WT_on_Y_Axis = (bool)stream.ReceiveNext();
+            isButtonPressed = (bool)stream.ReceiveNext();
         }
     }
 }
