@@ -1532,7 +1532,7 @@ PrefabInstance:
       objectReference: {fileID: 1160440965950818012}
     - target: {fileID: 4293156749170067433, guid: ebcaad662ef2ae14ca92fbcd7a67ee56, type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: RPC_EmergencyButtonClick
+      value: emergencyButtonClick
       objectReference: {fileID: 0}
     - target: {fileID: 4293156749170067433, guid: ebcaad662ef2ae14ca92fbcd7a67ee56, type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName

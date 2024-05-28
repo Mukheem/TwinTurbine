@@ -37,11 +37,13 @@ public class Windturbine : MonoBehaviour
         photonView = PhotonView.Get(this);
         photonView.RPC("RPC_WT_Turn", RpcTarget.All);
 
-        if(apiScript.turn_WT_on_Y_Axis)
+        if(apiScript.turn_WT_on_Y_Axis) //From Base class
         {
+            Debug.Log("FLAG IS TRUE");
             WT_TurnOnIts_Y_Axis();
             apiScript.turn_WT_on_Y_Axis = false;
         }
+       
     }
 
     // Method to turn the 'Turbine blades' as per the SPEED of wind that is fetched from API
@@ -72,6 +74,7 @@ public class Windturbine : MonoBehaviour
     // Method to turn the 'Turbine' on its Y axis as per the DIRECTION of wind that is fetched from API
     IEnumerator RotateObject(float startAngle, float endAngle, float duration)
     {
+        Debug.Log("Rotate On it's Y-Axis- COROUTINE");
         yield return new WaitForSeconds(2f);
         float timeElapsed = 0f;
         Quaternion startRotation = Quaternion.Euler(0, startAngle, 0);

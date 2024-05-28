@@ -8,7 +8,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
 using WebSocketSharp;
-using System.Linq;
+
 //https://github.com/GlitchEnzo/NuGetForUnity
 // Creating the data structure according to the expected Json
 [Serializable]
@@ -47,7 +47,7 @@ public class API : MonoBehaviourPunCallbacks, IPunObservable
     public TextMeshProUGUI windSpeedValue;
     private float LatestT;
     public float latestWD = 0.0f;
-    public float latestWS;
+    public float latestWS = 0.01f;
     private String windDirectionInDirectionTerms;
     private string unit;
     private GameObject webSocketController;
@@ -58,9 +58,7 @@ public class API : MonoBehaviourPunCallbacks, IPunObservable
     private AudioController audioControllerScript;
     public bool turn_WT_on_Y_Axis = false;
 
-    public GameObject windTurbineWithMap;
-    private GameObject windTurbineController;
-    private Windturbine windTurbineControllerScript;
+  
 
     void Start()
     {
@@ -68,7 +66,7 @@ public class API : MonoBehaviourPunCallbacks, IPunObservable
         //TestFromJsonToData();
         //EmergencyButtonClick();
         photonView = PhotonView.Get(this);
-        photonView.RPC("RPC_EmergencyButtonClick", RpcTarget.All);
+        photonView.RPC("RPC_EmergencyButtonClick", RpcTarget.All,false,0.0f);
 
         
     }
@@ -89,23 +87,33 @@ public class API : MonoBehaviourPunCallbacks, IPunObservable
 
     public void OnButtonClick()
     {
-        
+        webSocketController = GameObject.FindGameObjectWithTag("WebController");
+        webSocketControllerScript = webSocketController.GetComponent<WebSocketController>();
         webSocketControllerScript.ConnectWithESP32();
         StartCoroutine(GetText());
-        
+
+        avatar = GameObject.FindGameObjectWithTag("Avatar");
+        audioControllerScript = avatar.GetComponent<AudioController>();
         audioControllerScript.fn_call_AudioNarration2();
-
+        Debug.Log("Button is Clicked");
     }
-
-    [PunRPC]
-    public void RPC_EmergencyButtonClick()
+    public void emergencyButtonClick()
     {
-        isButtonPressed = false;
+        photonView = PhotonView.Get(this);
+        photonView.RPC("RPC_EmergencyButtonClick", RpcTarget.All, false, 0.0f);
+    }
+    [PunRPC]
+    public void RPC_EmergencyButtonClick(bool isButtonPressedVal, float latestWS_val)
+    {
+        isButtonPressed = isButtonPressedVal;
+        latestWS = latestWS_val;
+        
         loc.SetText("----");
         windDirValue.SetText("----");
         temperatureValue.SetText("----");
         voltageValue.SetText("----");
         windSpeedValue.SetText("----");
+        
     }
     IEnumerator GetText()
     {
@@ -178,36 +186,22 @@ public void ExtractDataFromJson(string json)
                 Debug.Log("Latest WS is - "+latestWS);
             }
         }
-       
         photonView = PhotonView.Get(this);
-        photonView.RPC("RPC_GreenButtonClick", RpcTarget.All,windDirectionInDirectionTerms,LatestT+" C","Kista",latestWS+" m/s",true);
+        photonView.RPC("RPC_GreenButtonClick", RpcTarget.All,windDirectionInDirectionTerms,LatestT+" C","Kista",latestWS+" m/s",true,latestWD,latestWS);
     }
 
     [PunRPC]
-    public void RPC_GreenButtonClick(String windDirection,String locationTemperature,String location,String windSpeed,bool turn_WT_on_Y_Axis_val)
+    public void RPC_GreenButtonClick(String windDirection,String locationTemperature,String location,String windSpeed,bool turn_WT_on_Y_Axis_val,float latestWD_val, float latestWS_val)
     {
-        windTurbineWithMap = GameObject.FindGameObjectWithTag("Wind_Turbine_withMap");
-        webSocketController = GameObject.FindGameObjectWithTag("WebController");
-        webSocketControllerScript = webSocketController.GetComponent<WebSocketController>();
-        avatar = GameObject.FindGameObjectWithTag("Avatar");
-        audioControllerScript = avatar.GetComponent<AudioController>();
-
-
-        windTurbineController = windTurbineWithMap.transform.GetChild(0).gameObject;
-        windTurbineControllerScript = windTurbineController.GetComponent<Windturbine>();
-
-
-        Debug.Log("Latest WS is - " + windSpeed);
+        
+        latestWD = latestWD_val; // Just for RPC purposes
+        latestWS = latestWS_val; // Just for RPC purposes
         windDirValue.SetText(windDirection);
         temperatureValue.SetText(locationTemperature);
         loc.SetText(location);
         windSpeedValue.SetText(windSpeed);
         turn_WT_on_Y_Axis = turn_WT_on_Y_Axis_val; // flag set to true so that WT can rotate on it's Y axis.
-
-
-        Debug.Log("Flag value to turn the Y Axis:" + turn_WT_on_Y_Axis);
         
-        windTurbineControllerScript.WT_TurnOnIts_Y_Axis();
     }
     [PunRPC]
     public void RPC_VoltageUpdate(String voltageGenerated)
@@ -231,10 +225,12 @@ public void ExtractDataFromJson(string json)
         if (stream.IsWriting)
         {
             stream.SendNext(turn_WT_on_Y_Axis);
+            stream.SendNext(isButtonPressed);
         }
         else
         {
             turn_WT_on_Y_Axis = (bool)stream.ReceiveNext();
+            isButtonPressed = (bool)stream.ReceiveNext();
         }
     }
 }
