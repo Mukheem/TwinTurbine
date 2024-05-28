@@ -106,7 +106,7 @@ public class API : MonoBehaviourPunCallbacks, IPunObservable
     public void RPC_EmergencyButtonClick(bool isButtonPressedVal, float latestWS_val)
     {
         isButtonPressed = isButtonPressedVal;
-        latestWD = latestWS_val;
+        latestWS = latestWS_val;
         
         loc.SetText("----");
         windDirValue.SetText("----");
