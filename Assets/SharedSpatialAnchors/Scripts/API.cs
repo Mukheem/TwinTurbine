@@ -68,13 +68,22 @@ public class API : MonoBehaviourPunCallbacks, IPunObservable
         photonView = PhotonView.Get(this);
         photonView.RPC("RPC_EmergencyButtonClick", RpcTarget.All,false,0.0f);
 
-        
+
+        avatar = GameObject.FindGameObjectWithTag("Avatar");
+        audioControllerScript = avatar.GetComponent<AudioController>();
+
+
+        // Turning on both the buttons on GUI when something is playing
+        transform.GetChild(1).gameObject.SetActive(false);
+        transform.GetChild(3).gameObject.SetActive(false);
     }
 
     void Update()
     {
         if (isButtonPressed)
         {
+            webSocketController = GameObject.FindGameObjectWithTag("WebController");
+            webSocketControllerScript = webSocketController.GetComponent<WebSocketController>();
             if (webSocketControllerScript.ws.ReadyState != WebSocketState.Open)
             {
                 webSocketControllerScript.ws.Connect();
@@ -83,19 +92,32 @@ public class API : MonoBehaviourPunCallbacks, IPunObservable
             photonView.RPC("RPC_VoltageUpdate", RpcTarget.All, webSocketControllerScript.voltageValue.ToString());
            
         }
+
+        if (audioControllerScript.audioSource.isActiveAndEnabled && !audioControllerScript.audioSource.isPlaying)
+        {
+            // Turning off both the buttons on GUI when something is playing
+            transform.GetChild(1).gameObject.SetActive(true);
+            transform.GetChild(3).gameObject.SetActive(true);
+        }
+       
     }
 
     public void OnButtonClick()
     {
-        webSocketController = GameObject.FindGameObjectWithTag("WebController");
-        webSocketControllerScript = webSocketController.GetComponent<WebSocketController>();
-        webSocketControllerScript.ConnectWithESP32();
-        StartCoroutine(GetText());
+        if (!isButtonPressed)
+        {
+            webSocketController = GameObject.FindGameObjectWithTag("WebController");
+            webSocketControllerScript = webSocketController.GetComponent<WebSocketController>();
+            webSocketControllerScript.ConnectWithESP32();
+            StartCoroutine(GetText());
 
-        avatar = GameObject.FindGameObjectWithTag("Avatar");
-        audioControllerScript = avatar.GetComponent<AudioController>();
-        audioControllerScript.fn_call_AudioNarration2();
-        Debug.Log("Button is Clicked");
+            
+            audioControllerScript.fn_call_AudioNarration2();
+            Debug.Log("Button is Clicked");
+            transform.GetChild(1).gameObject.SetActive(false);
+            transform.GetChild(3).gameObject.SetActive(false);
+        }
+        
     }
     public void emergencyButtonClick()
     {
@@ -129,7 +151,7 @@ public class API : MonoBehaviourPunCallbacks, IPunObservable
         {
             Debug.Log("Received data" + www.downloadHandler.text);
             ExtractDataFromJson(www.downloadHandler.text);
-            isButtonPressed = true; // Boolean to keep voltage updated as long as the turbine is rotating
+           
         }
     }
 
@@ -187,13 +209,13 @@ public void ExtractDataFromJson(string json)
             }
         }
         photonView = PhotonView.Get(this);
-        photonView.RPC("RPC_GreenButtonClick", RpcTarget.All,windDirectionInDirectionTerms,LatestT+" C","Kista",latestWS+" m/s",true,latestWD,latestWS);
+        photonView.RPC("RPC_GreenButtonClick", RpcTarget.All,windDirectionInDirectionTerms,LatestT+" C","Kista",latestWS+" m/s",true,latestWD,latestWS, true);
     }
 
     [PunRPC]
-    public void RPC_GreenButtonClick(String windDirection,String locationTemperature,String location,String windSpeed,bool turn_WT_on_Y_Axis_val,float latestWD_val, float latestWS_val)
+    public void RPC_GreenButtonClick(String windDirection,String locationTemperature,String location,String windSpeed,bool turn_WT_on_Y_Axis_val,float latestWD_val, float latestWS_val,bool isButtonPressed_val)
     {
-        
+        isButtonPressed = isButtonPressed_val;
         latestWD = latestWD_val; // Just for RPC purposes
         latestWS = latestWS_val; // Just for RPC purposes
         windDirValue.SetText(windDirection);

@@ -1119,6 +1119,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7516989854395125640, guid: d2d6934a666a18d46b8b7a3864dc9f63, type: 3}
+      propertyPath: m_TagString
+      value: SB
+      objectReference: {fileID: 0}
     - target: {fileID: 7516989854707263118, guid: d2d6934a666a18d46b8b7a3864dc9f63, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.89236
@@ -1482,6 +1486,10 @@ PrefabInstance:
       propertyPath: ObservedComponents.Array.data[1]
       value: 
       objectReference: {fileID: 4890728645620921254}
+    - target: {fileID: 4293156748659161764, guid: ebcaad662ef2ae14ca92fbcd7a67ee56, type: 3}
+      propertyPath: m_TagString
+      value: EB
+      objectReference: {fileID: 0}
     - target: {fileID: 4293156748659161770, guid: ebcaad662ef2ae14ca92fbcd7a67ee56, type: 3}
       propertyPath: m_LocalPosition.y
       value: -132.3
