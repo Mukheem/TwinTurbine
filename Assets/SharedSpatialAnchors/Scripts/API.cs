@@ -68,13 +68,22 @@ public class API : MonoBehaviourPunCallbacks, IPunObservable
         photonView = PhotonView.Get(this);
         photonView.RPC("RPC_EmergencyButtonClick", RpcTarget.All,false,0.0f);
 
-        
+
+        avatar = GameObject.FindGameObjectWithTag("Avatar");
+        audioControllerScript = avatar.GetComponent<AudioController>();
+
+
+        // Turning on both the buttons on GUI when something is playing
+        transform.GetChild(1).gameObject.SetActive(false);
+        transform.GetChild(3).gameObject.SetActive(false);
     }
 
     void Update()
     {
         if (isButtonPressed)
         {
+            webSocketController = GameObject.FindGameObjectWithTag("WebController");
+            webSocketControllerScript = webSocketController.GetComponent<WebSocketController>();
             if (webSocketControllerScript.ws.ReadyState != WebSocketState.Open)
             {
                 webSocketControllerScript.ws.Connect();
@@ -83,6 +92,14 @@ public class API : MonoBehaviourPunCallbacks, IPunObservable
             photonView.RPC("RPC_VoltageUpdate", RpcTarget.All, webSocketControllerScript.voltageValue.ToString());
            
         }
+
+        if (audioControllerScript.audioSource.isActiveAndEnabled && !audioControllerScript.audioSource.isPlaying)
+        {
+            // Turning off both the buttons on GUI when something is playing
+            transform.GetChild(1).gameObject.SetActive(true);
+            transform.GetChild(3).gameObject.SetActive(true);
+        }
+       
     }
 
     public void OnButtonClick()
@@ -94,10 +111,11 @@ public class API : MonoBehaviourPunCallbacks, IPunObservable
             webSocketControllerScript.ConnectWithESP32();
             StartCoroutine(GetText());
 
-            avatar = GameObject.FindGameObjectWithTag("Avatar");
-            audioControllerScript = avatar.GetComponent<AudioController>();
+            
             audioControllerScript.fn_call_AudioNarration2();
             Debug.Log("Button is Clicked");
+            transform.GetChild(1).gameObject.SetActive(false);
+            transform.GetChild(3).gameObject.SetActive(false);
         }
         
     }

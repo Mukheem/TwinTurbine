@@ -5,7 +5,7 @@ using Photon.Pun;
 
 public class AudioController : MonoBehaviour
 {
-    AudioSource audioSource;
+    public AudioSource audioSource;
     public AudioClip audioNarration_1;
     public AudioClip audioNarration_2;
     PhotonView photonView;
@@ -55,6 +55,8 @@ public class AudioController : MonoBehaviour
     {
         yield return new WaitForSeconds(0.0f);
         audioSource.PlayOneShot(audioNarration_2);
+        yield return new WaitForSeconds(audioNarration_2.length+2.0f);
+        audioSource.gameObject.SetActive(false);
     }
 
    
