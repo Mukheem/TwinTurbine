@@ -66,7 +66,7 @@ public class API : MonoBehaviourPunCallbacks, IPunObservable
         //TestFromJsonToData();
         //EmergencyButtonClick();
         photonView = PhotonView.Get(this);
-        photonView.RPC("RPC_EmergencyButtonClick", RpcTarget.All);
+        photonView.RPC("RPC_EmergencyButtonClick", RpcTarget.All,false,0.0f);
 
         
     }
@@ -97,11 +97,16 @@ public class API : MonoBehaviourPunCallbacks, IPunObservable
         audioControllerScript.fn_call_AudioNarration2();
         Debug.Log("Button is Clicked");
     }
-
+    public void emergencyButtonClick()
+    {
+        photonView = PhotonView.Get(this);
+        photonView.RPC("RPC_EmergencyButtonClick", RpcTarget.All, false, 0.0f);
+    }
     [PunRPC]
-    public void RPC_EmergencyButtonClick()
+    public void RPC_EmergencyButtonClick(bool isButtonPressedVal, float latestWS_val)
     {
         isButtonPressed = false;
+        webSocketControllerScript.ws.Close();
         loc.SetText("----");
         windDirValue.SetText("----");
         temperatureValue.SetText("----");
@@ -187,19 +192,14 @@ public void ExtractDataFromJson(string json)
     public void RPC_GreenButtonClick(String windDirection,String locationTemperature,String location,String windSpeed,bool turn_WT_on_Y_Axis_val,float latestWD_val, float latestWS_val)
     {
         
-        latestWD = latestWD_val;
-        latestWS = latestWS_val;
-        Debug.Log("Latest WS is - " + windSpeed);
+        latestWD = latestWD_val; // Just for RPC purposes
+        latestWS = latestWS_val; // Just for RPC purposes
         windDirValue.SetText(windDirection);
         temperatureValue.SetText(locationTemperature);
         loc.SetText(location);
         windSpeedValue.SetText(windSpeed);
         turn_WT_on_Y_Axis = turn_WT_on_Y_Axis_val; // flag set to true so that WT can rotate on it's Y axis.
-
-
-        Debug.Log("Flag value to turn the Y Axis:" + turn_WT_on_Y_Axis);
         
-        //windTurbineControllerScript.WT_TurnOnIts_Y_Axis();
     }
     [PunRPC]
     public void RPC_VoltageUpdate(String voltageGenerated)
