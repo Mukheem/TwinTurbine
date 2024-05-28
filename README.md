@@ -25,56 +25,44 @@ The five-dimension DT model consists of five essential components that work toge
 ### 1.3. The rationale behind this project:
 The proposed solution is valuable for effective remote monitoring, controlling, and improving the turbine's performance. Moreover, it offers an immersive learning experience for students and professionals to understand and interact hands-on with digital twin technology and wind turbine operations.
 
+
 ## 2. Design Process
 This project aims to develop a digital twin of a wind turbine in MR, allowing multiple users to interact simultaneously and immersively. The design process includes brainstorming, interactions, testing different technologies, creating a Unity scene, creating a collaboration for various users, testing with users, solving the issues, making improvements, and showing the final project. 
 
 ### 2.1. Brainstorming:
 During some brainstorming, we came up with some ideas for different stages:
-
 - In the first step, we discussed the physical and virtual entities, their connection, and the services and functions we wanted to implement.
 <p align="center">
     <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/3eac9f71-99c6-40f7-a458-84a681f37e00" alt="TwinTurbine Components" style="max-width:12%;" height="auto">
     <br>
     <i>TwinTurbine Components</i>
 </p>
-
+-  Next, we gathered as a team to brainstorm ideas for the primary sketch.
 <p align="center">
     <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/f3a21469-3eeb-4d80-88a2-3b411f554682" alt="Primary Sketch" style="max-width:12%;" height="auto">
     <br>
     <i>Primary Sketch</i>
 </p>
-  
-- Finally, we focused on the way we want to make the connection between ESP32 and Unity
+ 
+- We also focused on the way we want to make the connection between different technical components.
 <p align="center">
-    <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/02ff04c7-eef5-45a5-9264-c03f95653dda" alt="Connecting Unity to Arduino" style="max-width:12%;" height="auto">
+    <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/02ff04c7-eef5-45a5-9264-c03f95653dda" alt="Connection Between Different Technical Components" style="max-width:12%;" height="auto">
     <br>
-    <i>Connecting Unity to Arduino</i>
+    <i>Connection Between Different Technical Components</i>
 </p>
 
-- In terms of the GUI, we brainstormed the best methods to visualize our real-time data.
+- Regarding the GUI, we brainstormed the best methods to visualize our real-time data.
 <p align="center">
     <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/6db0450f-5bfb-4332-a2bb-1e77574ada5e" alt="GUI Prototype" style="max-width:12%;" height="auto">
     <br>
     <i>GUI Prototype</i>
 </p>
 
-
-
 ### 2.2. User Persona:
-The leading target group includes LinkedIn enterprises that are interested in immersive technology. Moreover, other target users are engineers and technicians working with wind energy systems and educational institutions where the simulator can be used for training. The user persona details are as follows:
+The target users of TwinTurbine are engineers and technicians engaged in wind energy systems and educational institutions utilizing the model for training purposes. The user persona details are as follows:
 
-1. **LinkedIn Enterprises:**
-- Industry: Various industries interested in immersive technology, such as renewable energy, manufacturing, and engineering.
-- Company Size: Small to large enterprises active on LinkedIn.
-- Needs: Comprehensive support and resources for successfully adopting and utilizing immersive technologies within their organizations.
-- Goals: Improve operational efficiency and competitiveness by using immersive technologies for workforce training and skill development and integrate immersive technology solutions seamlessly into existing workflows and operations.
-
-2. **Engineers and Technicians:**	
-- Age: 25-50
-- Occupation: Wind energy engineers and maintenance technicians.
-- Skills: Familiarity with wind turbine operations and experience with VR/AR environments.
-- Needs: Tools for remote monitoring, maintenance, and access to real-time feedback on turbine operations.
-- Goals: Enhance understanding of turbine performance through immersive simulations and monitor and manage the physical turbine within the virtual model for different sites by multiple users.
+**Engineers and Technicians:**	
+- Needs: These professionals require sophisticated tools to remotely monitor wind turbine operations. Remote monitoring capabilities enable them to keep track of generated voltage and visualize parameters such as wind direction, and temperature of the turbine's location, ensuring that the turbines operate efficiently. Additionally, real-time feedback offers immediate updates on the turbine's status. Furthermore, multi-user collaboration from different sites enhances communication and coordination among team members, facilitating efficient management of turbine operations.
 
 ### 2.3. Pre-User Journey:
 We prepared some initial stages beforehand to avoid requiring users to complete these extra steps. Initially, two team members wear headsets and observe the below menu; after pressing **Anchor Sharing Demo**, One team member creates a room that the other can join.
