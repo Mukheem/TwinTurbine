@@ -180,14 +180,14 @@ public void ExtractDataFromJson(string json)
             }
         }
         photonView = PhotonView.Get(this);
-        photonView.RPC("RPC_GreenButtonClick", RpcTarget.All,windDirectionInDirectionTerms,LatestT+" C","Kista",latestWS+" m/s",true);
+        photonView.RPC("RPC_GreenButtonClick", RpcTarget.All,windDirectionInDirectionTerms,LatestT+" C","Kista",latestWS+" m/s",true,latestWD,latestWS);
     }
 
     [PunRPC]
-    public void RPC_GreenButtonClick(String windDirection,String locationTemperature,String location,String windSpeed,bool turn_WT_on_Y_Axis_val)
+    public void RPC_GreenButtonClick(String windDirection,String locationTemperature,String location,String windSpeed,bool turn_WT_on_Y_Axis_val,float latestWD_val, float latestWS_val)
     {
-        latestWD = float.Parse(windDirection);
-        latestWS = float.Parse(windSpeed);
+        latestWD = latestWD_val;
+        latestWS = latestWS_val;
         Debug.Log("Latest WS is - " + windSpeed);
         windDirValue.SetText(windDirection);
         temperatureValue.SetText(locationTemperature);
