@@ -186,6 +186,7 @@ public void ExtractDataFromJson(string json)
     [PunRPC]
     public void RPC_GreenButtonClick(String windDirection,String locationTemperature,String location,String windSpeed,bool turn_WT_on_Y_Axis_val,float latestWD_val, float latestWS_val)
     {
+        
         latestWD = latestWD_val;
         latestWS = latestWS_val;
         Debug.Log("Latest WS is - " + windSpeed);
