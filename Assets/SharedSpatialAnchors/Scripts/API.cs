@@ -96,7 +96,7 @@ public class API : MonoBehaviourPunCallbacks, IPunObservable
             }
             photonView = PhotonView.Get(this);
             photonView.RPC("RPC_VoltageUpdate", RpcTarget.All, webSocketControllerScript.voltageValue.ToString());
-            videoPlayer.Play();
+            
         }
 
         if (audioControllerScript.audioSource.isActiveAndEnabled && !audioControllerScript.audioSource.isPlaying)
@@ -230,7 +230,7 @@ public void ExtractDataFromJson(string json)
         loc.SetText(location);
         windSpeedValue.SetText(windSpeed);
         turn_WT_on_Y_Axis = turn_WT_on_Y_Axis_val; // flag set to true so that WT can rotate on it's Y axis.
-        
+        videoPlayer.Play();
     }
     [PunRPC]
     public void RPC_VoltageUpdate(String voltageGenerated)
