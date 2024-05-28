@@ -2,10 +2,11 @@
 This is a group Academic Project for **DCDC** course at Stockholm University, designed to experience a **digital twin** project in immersive technology.
 
 <p align="center">
-    <img src="(https://github.com/Mukheem/TwinTurbine/assets/145973209/3151e18a-b165-4e07-842a-8eb138e83aa3)" alt="Team Logo" width="40%";" height="auto">
+    <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/1884a74f-4e91-4f04-bb66-80734ae570e6" alt="Team Logo" width="40%";" height="auto">
     <br>
     <i>Team Logo</i>
 </p>
+
 
 ## 1. Introduction
 
