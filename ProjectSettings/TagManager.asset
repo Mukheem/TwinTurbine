@@ -12,6 +12,7 @@ TagManager:
   - Wind_Turbine_withMap
   - EB
   - SB
+  - Quad
   layers:
   - Default
   - TransparentFX

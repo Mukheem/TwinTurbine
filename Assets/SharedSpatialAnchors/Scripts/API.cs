@@ -8,6 +8,8 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
 using WebSocketSharp;
+using UnityEngine.Video;
+using UnityEngine.Playables;
 
 //https://github.com/GlitchEnzo/NuGetForUnity
 // Creating the data structure according to the expected Json
@@ -58,7 +60,8 @@ public class API : MonoBehaviourPunCallbacks, IPunObservable
     private AudioController audioControllerScript;
     public bool turn_WT_on_Y_Axis = false;
 
-  
+    GameObject videoPlayerQuad;
+    VideoPlayer videoPlayer;
 
     void Start()
     {
@@ -76,6 +79,9 @@ public class API : MonoBehaviourPunCallbacks, IPunObservable
         // Turning on both the buttons on GUI when something is playing
         transform.GetChild(1).gameObject.SetActive(false);
         transform.GetChild(3).gameObject.SetActive(false);
+
+        videoPlayerQuad = avatar.transform.GetChild(2).gameObject;
+        videoPlayer = videoPlayerQuad.GetComponent<VideoPlayer>();
     }
 
     void Update()
@@ -90,7 +96,7 @@ public class API : MonoBehaviourPunCallbacks, IPunObservable
             }
             photonView = PhotonView.Get(this);
             photonView.RPC("RPC_VoltageUpdate", RpcTarget.All, webSocketControllerScript.voltageValue.ToString());
-           
+            
         }
 
         if (audioControllerScript.audioSource.isActiveAndEnabled && !audioControllerScript.audioSource.isPlaying)
@@ -98,6 +104,7 @@ public class API : MonoBehaviourPunCallbacks, IPunObservable
             // Turning off both the buttons on GUI when something is playing
             transform.GetChild(1).gameObject.SetActive(true);
             transform.GetChild(3).gameObject.SetActive(true);
+            videoPlayer.Pause();
         }
        
     }
@@ -223,7 +230,7 @@ public void ExtractDataFromJson(string json)
         loc.SetText(location);
         windSpeedValue.SetText(windSpeed);
         turn_WT_on_Y_Axis = turn_WT_on_Y_Axis_val; // flag set to true so that WT can rotate on it's Y axis.
-        
+        videoPlayer.Play();
     }
     [PunRPC]
     public void RPC_VoltageUpdate(String voltageGenerated)
