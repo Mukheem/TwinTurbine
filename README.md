@@ -70,6 +70,9 @@ The target users of TwinTurbine are engineers and technicians engaged in wind en
 **Engineers and Technicians:**	
 - Needs: These professionals require sophisticated tools to remotely monitor wind turbine operations. Remote monitoring capabilities enable them to keep track of generated voltage and visualize parameters such as wind direction, and temperature of the turbine's location, ensuring that the turbines operate efficiently. Additionally, real-time feedback offers immediate updates on the turbine's status. Furthermore, multi-user collaboration from different sites enhances communication and coordination among team members, facilitating efficient management of turbine operations.
 
+**Educators and Students:**
+- Needs: In an educational setting, there is a need for interactive and immersive tools to teach and learn about wind energy systems. Students benefit from hands-on interaction with digital twin technology, providing a practical understanding of wind turbine operations. Educators require tools that can simulate real-world scenarios, enhance engagement, and provide detailed data analysis to support the learning process. The TwinTurbine model serves as an effective educational aid, offering a comprehensive learning experience in a mixed reality environment
+
 ### 2.3. Pre-User Journey:
 We prepared some initial stages beforehand to avoid requiring users to complete these extra steps. Initially, two team members wear headsets and observe the below menu; after pressing **Anchor Sharing Demo**, One team member creates a room that the other can join.
 
@@ -87,16 +90,14 @@ We prepared some initial stages beforehand to avoid requiring users to complete 
 </p>
 
 The next stage involves spawning the avatar, turbine, and menus simultaneously using **Create New Anchor**and **Sharing Anchor**; after that, the other member can **Align Anchor**, which allows them to observe the virtual objects in the same place and the collaboration would be enabled.
-At this point, the user journey begins.
-
-
+At this point, the user journey begins.p
 
 ### 2.3. User Journey:
 The user journey starts with audio narration that welcomes users and provides an informative project overview. They would observe a virtual wind turbine, which is a replica of the physical wind turbine placed on the table nearby.  They can interact with the prototype by pressing the green button, enabling it to start working. This prototype receives wind direction data from the Swedish Meteorological and Hydrological Institute (SMHI) and aligns the direction of both the physical and virtual turbines accordingly to optimize performance. When the wind flows at a certain speed, the physical wind turbine generates electricity. Then the generated voltage from the turbine would be displayed on the menu to show how much voltage is produced by the wind speed. If they press the red button for an emergency, the wind turbine would be shut down. They can walk around the environment, collaborate with each other, and see the latest state of the turbine.
 
 
 ### 2.4. Wireframes and Prototypes:
-Since this experience is in a mixed reality (MR) environment, it includes objects the user can interact with in the virtual and physical environment. Virtual entities act as simulators for physical entities, allowing for seamless interaction. Moreover, the experience is designed for multiple users, enabling them to visualize and modify settings while observing changes made by others. To understand which technologies would fulfill the experience, the team members tried various technologies and tools to see which works best for achieving the project's goals.
+Since this experience is in a mixed reality (MR) environment, it includes objects the user can interact with in the virtual and physical environment. Virtual entities act as simulators for physical entities, allowing for seamless interaction. Moreover, the experience is designed for multiple users, enabling them to visualize and modify settings while observing changes made by others. To determine the most effective technologies for our project, the team experimented with a variety of tools and methods. This included evaluating different physical wind turbines available for purchase, testing various virtual wind turbine assets, and comparing multiple servo motors. Additionally, we assessed the performance of the project using different VR headsets, specifically the Meta Quest and Varjo, to identify which platform best meets our goals.
 
 #### 2.4.1 Organizing physical entities: 
 organizing tangible items is an important part of this project. To understand how to rotate the physical wind turbine, the team members tried various strategies and tools to see which was more appropriate for the project.
