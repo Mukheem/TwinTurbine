@@ -1,5 +1,5 @@
 # TwinTurbine
-This is a group Academic Project for **DCDC** course at Stockholm University, designed to experience a **digital twin** project in immersive technology.
+This is a group academic project, involving four participants, is part of the **Design for Complex and Dynamic Contexts (DCDC)** course at Stockholm University. Our project aims to create a digital twin prototype within an immersive environment. Utilizing Meta's Spatial Anchors, we aim to provide a collaborative experience, enhanced by IoT integration for tangible interactions.
 
 <p align="center">
     <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/1884a74f-4e91-4f04-bb66-80734ae570e6" alt="Team Logo" width="40%";" height="auto">
