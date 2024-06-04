@@ -73,12 +73,28 @@ This prototype, **TwinTurbine** caters to several user groups, with a primary fo
 
 This group comprises individuals responsible for engineering wind turbines for efficiency, innovation, and environmental sustainability, as well as technicians tasked with fixing issues at physical wind turbine sites.
 
-_Engineers and technicians_ require advanced tools for monitoring and controlling wind turbines. Traditional wind turbine monitoring and control rely on physical site visits, to identify and address both functional and cosmetic issues, posing logistical challenges and safety risks. For instance, in cases of extreme weather conditions exceeding a turbine's operational capacity, technicians typically need to conduct emergency shutdowns on-site. However, such visits become less frequent with TwinTurbine's **_XR (Extended Reality)_** capabilities. During emergencies or routine inspections, the immersive features of TwinTurbine assist in rapid problem diagnosis and solution implementation, minimising downtime and operational costs.
+_Engineers and Technicians_ require advanced tools for monitoring and controlling wind turbines. Traditional wind turbine monitoring and control rely on physical site visits, to identify and address both functional and cosmetic issues, <ins>posing logistical challenges and safety risks</ins>. For instance, in cases of extreme weather conditions exceeding a turbine's operational capacity, technicians typically need to conduct emergency shutdowns on-site. However, such visits become less frequent with TwinTurbine's **_XR (Extended Reality)_** capabilities. During emergencies or routine inspections, the immersive features of TwinTurbine assist in <ins>**rapid problem diagnosis**</ins> and <ins>**solution implementation**</ins>, <ins>**minimising downtime and operational costs**</ins>.
 
-Engineers designing _novel wind turbines_ can leverage the prototype for virtual troubleshooting, eliminating the need for physical fixes. XR's immersive environment allows them to observe turbine behaviour under various conditions, manipulate the digital model, and test feasibility before real-world implementation. This surpasses the limitations of traditional 3D displays. .This immersive experience facilitates **collaboration** and **discussion**, enabling comprehensive analysis and **proactive issue identification**.
+Engineers designing _novel wind turbines_ can leverage the prototype for virtual troubleshooting, eliminating the need for physical fixes. XR's immersive environment allows them to observe turbine behaviour under various conditions, manipulate the digital model, and test feasibility before real-world implementation. This surpasses the <ins>limitations of 3D displays</ins> in several aspects. The immersive experience facilitates <ins>**collaboration**</ins> and <ins>**discussion**</ins>, enabling <ins>**comprehensive analysis**</ins> and <ins>**proactive issue identification**</ins>.
+
+---
 
 **Educators and Students:**
-- Needs: In an educational setting, there is a need for interactive and immersive tools to teach and learn about wind energy systems. Students benefit from hands-on interaction with digital twin technology, providing a practical understanding of wind turbine operations. Educators require tools that can simulate real-world scenarios, enhance engagement, and provide detailed data analysis to support the learning process. The TwinTurbine model serves as an effective educational aid, offering a comprehensive learning experience in a mixed reality environment
+
+This group comprises instructors developing and delivering educational programs, and students seeking knowledge and practical skills in this rapidly growing field.
+
+Traditional methods relying on textbooks and static visuals can be dry and lack real-world context. Educators and students alike require engaging tools to promote active participation and a deeper understanding of wind turbine technology.While 3D screens or projections offer some improvement over traditional methods by addressing dryness, they still lack interactivity.
+
+However, traditional classrooms often lack opportunities for <ins>hands-on exploration</ins> due to safety concerns. Visiting a physical turbine site <ins>poses risks</ins>, and <ins>visualizing abstract concepts</ins> like component interactions and real-time data can be challenging. 
+
+TwinTurbine addresses these issues by providing a safe and controlled virtual environment with Mixed Reality (MR). Here, students can explore the intricacies of wind turbine operations without physical risks. The MR environment allows them to <ins>**visualize real-time data**</ins> superimposed on a physical model, fostering a deeper understanding of the <ins>**relationship between data and physical turbine behavior**</ins>. This combination of safety, visualization, and interactivity makes TwinTurbine a valuable tool for educators and students. Additionally, students gain insights into the broader concept of digital twins while exploring wind turbine technology.
+
+---
+**General Users:**
+
+This broad user group encompasses everyone curious about _Wind energy_, _Digital twin_ technology, or _Extended reality (XR)_ – from professionals to the general public. It includes first-time viewers and encompasses the aforementioned target user groups.
+
+Understanding a novel prototype can be challenging with traditional methods. To address this, TwinTurbine utilizes an <ins>**avatar**</ins> alongside <ins>**video**</ins> and <ins>**audio narration**</ins>. This user-friendly approach guides first-time viewers through the prototype's components and functionalities, ensuring a smooth and hassle-free onboarding experience. Additionally, the engaging nature of the avatar and narration fosters interest and encourages users to explore how TwinTurbine can address their needs.
 
 ### 2.3. Pre-User Journey:
 We prepared some initial stages beforehand to avoid requiring users to complete these extra steps. Initially, two team members wear headsets and observe the below menu; after pressing **Anchor Sharing Demo**, One team member creates a room that the other can join.
