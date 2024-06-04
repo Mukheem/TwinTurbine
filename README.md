@@ -69,7 +69,7 @@ The brainstorming phase involves generating and refining ideas to establish the 
 ### 2.2. User Persona:
 This prototype, **TwinTurbine** caters to several user groups, with a primary focus on **three key personas** during the design and development of the prototype.
 
-**Engineers and Technicians:**	
+**1. Engineers and Technicians:**	
 
 This group comprises individuals responsible for engineering wind turbines for efficiency, innovation, and environmental sustainability, as well as technicians tasked with fixing issues at physical wind turbine sites.
 
@@ -77,9 +77,9 @@ _Engineers and Technicians_ require advanced tools for monitoring and controllin
 
 Engineers designing _novel wind turbines_ can leverage the prototype for virtual troubleshooting, eliminating the need for physical fixes. XR's immersive environment allows them to observe turbine behaviour under various conditions, manipulate the digital model, and test feasibility before real-world implementation. This surpasses the <ins>limitations of 3D displays</ins> in several aspects. The immersive experience facilitates <ins>**collaboration**</ins> and <ins>**discussion**</ins>, enabling <ins>**comprehensive analysis**</ins> and <ins>**proactive issue identification**</ins>.
 
----
 
-**Educators and Students:**
+
+**2. Educators and Students:**
 
 This group comprises instructors developing and delivering educational programs, and students seeking knowledge and practical skills in this rapidly growing field.
 
@@ -89,8 +89,7 @@ However, traditional classrooms often lack opportunities for <ins>hands-on explo
 
 TwinTurbine addresses these issues by providing a safe and controlled virtual environment with Mixed Reality (MR). Here, students can explore the intricacies of wind turbine operations without physical risks. The MR environment allows them to <ins>**visualize real-time data**</ins> superimposed on a physical model, fostering a deeper understanding of the <ins>**relationship between data and physical turbine behavior**</ins>. This combination of safety, visualization, and interactivity makes TwinTurbine a valuable tool for educators and students. Additionally, students gain insights into the broader concept of digital twins while exploring wind turbine technology.
 
----
-**General Users:**
+**3.General Users:**
 
 This broad user group encompasses everyone curious about _Wind energy_, _Digital twin_ technology, or _Extended reality (XR)_ – from professionals to the general public. It includes first-time viewers and encompasses the aforementioned target user groups.
 
