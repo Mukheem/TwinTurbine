@@ -4,7 +4,7 @@ This group academic project, involving four participants, is part of the **Desig
 <p align="center">
     <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/1884a74f-4e91-4f04-bb66-80734ae570e6" alt="Team Logo" width="40%";" height="auto">
     <br>
-    <i>Team Logo</i>
+    <i>TwinTurbine Logo</i>
 </p>
 
 
