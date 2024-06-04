@@ -190,20 +190,20 @@ This 3D-printed adapter serves two crucial functions:
 1. It bridges the physical gap between the servo motor and the wind turbine, ensuring a secure and stable connection.
 2. The adapter's design facilitates the precise alignment of the wind turbine with the servo motor's rotational axis, enabling accurate control based on wind direction data.
 
-The provided template below, created using Fusion 360, illustrates the design of the custom adapter. 
+The provided template below, created using **Fusion 360**, illustrates the design of the custom adapter. 
 
 <p align="center">
     <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/b018dd51-b98a-4405-b659-f78bf3902b92" alt="WT3D" style="max-width:12%;" height="auto">
     <br>
-    <i>WT 3D printing prototype </i>
+    <i>3D Printed adapter</i>
 </p>
 
 #### 2.5 Graphical User Interface (GUI): 
-- Initially, we designed a single GUI to display all variables together in one single GUI:
+The best way to showcase the values which are obtained from 
 <p align="center">
     <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/a3136ca9-b3c2-498e-929e-a6d611939381" alt="First GUI" style="max-width:12%;" height="auto">
     <br>
-    <i>First GUI</i>
+    <i>Initial GUI</i>
 </p>
 
 We received feedback recommending that we separate the voltage data collected from the physical turbine from the other values obtained from the API for better clarity.
