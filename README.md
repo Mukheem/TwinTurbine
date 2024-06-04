@@ -111,7 +111,22 @@ The next steps involve spawning of the Avatar, Turbine, GUI simultaneously trigg
 
 
 ### 2.3. User Journey:
-The user journey starts with audio narration that welcomes users and provides an informative project overview. They would observe a virtual wind turbine, which is a replica of the physical wind turbine placed on the table nearby.  They can interact with the prototype by pressing the green button, enabling it to start working. This prototype receives wind direction data from the Swedish Meteorological and Hydrological Institute (SMHI) and aligns the direction of both the physical and virtual turbines accordingly to optimize performance. When the wind flows at a certain speed, the physical wind turbine generates electricity. Then the generated voltage from the turbine would be displayed on the menu to show how much voltage is produced by the wind speed. If they press the red button for an emergency, the wind turbine would be shut down. They can walk around the environment, collaborate with each other, and see the latest state of the turbine.
+The user experience begins with a welcoming narration delivered by a virtual avatar. Accompanying the narration are relevant video clips that provide a clear project overview. Users are then presented with a virtual wind turbine, a digital twin of the physical model placed nearby.
+
+The avatar guides the user through interaction with the prototype. Pressing the green button initiates the system.
+
+Upon activation, the prototype retrieves wind direction data from the Swedish Meteorological and Hydrological Institute (SMHI) in real-time. This data is used to adjust the alignment of both the physical and virtual turbines, ensuring optimal performance based on actual wind conditions.
+
+As wind flows at a certain speed, the scaled physical wind turbine generates electricity, illuminating a light. The light's intensity is measured by a photoresistor sensor. This sensor reading is then converted into voltage, which is displayed on a menu to provide users with real-time feedback on the energy being produced.
+
+The user experience fosters a sense of immersion. Users can freely walk around the virtual space, collaborate with others, and observe the latest operational state of the wind turbine. This interactive environment enhances user engagement and understanding.
+
+A detailed walkthrough video is available below for further exploration.
+
+
+https://github.com/Mukheem/TwinTurbine/assets/19348206/a229755e-d4e0-48be-b5b3-d74f64afa169
+
+
 
 
 ### 2.4. Wireframes and Prototypes:
