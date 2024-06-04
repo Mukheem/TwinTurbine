@@ -195,7 +195,7 @@ The provided template below, created using **Fusion 360**, illustrates the desig
 <p align="center">
     <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/b018dd51-b98a-4405-b659-f78bf3902b92" alt="WT3D" style="max-width:12%;" height="auto">
     <br>
-    <i>3D Printed adapter</i>
+    <i>3D Printed adapter design</i>
 </p>
 
 #### 2.5 Graphical User Interface (GUI): 
