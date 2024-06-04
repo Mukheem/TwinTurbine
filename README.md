@@ -99,23 +99,16 @@ This broad user group encompasses everyone curious about _Wind energy_, _Digital
 Understanding a novel prototype can be challenging with traditional methods. To address this, TwinTurbine utilizes an <ins>**avatar**</ins> alongside <ins>**video**</ins> and <ins>**audio narration**</ins>. This user-friendly approach guides first-time viewers through the prototype's components and functionalities, ensuring a smooth and hassle-free onboarding experience. Additionally, the engaging nature of the avatar and narration fosters interest and encourages users to explore how TwinTurbine can address their needs.
 
 ### 2.3. Pre-User Journey:
-We prepared some initial stages beforehand to avoid requiring users to complete these extra steps. Initially, two team members wear headsets and observe the below menu; after pressing **Anchor Sharing Demo**, One team member creates a room that the other can join.
+Before users begin interacting with the prototype, several crucial steps are taken to ensure a seamless experience. Our team members meticulously prepare the environment to guarantee smooth operation.
 
-<p align="center">
-    <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/52db79a8-0086-426b-ba05-bd0457223f8a" alt="Anchor Sharing Demo" style="max-width:12%;" height="auto">
-    <br>
-    <i>Anchor Sharing Demo</i>
-</p>
+One team member takes the role of the "host," while the other is as the "client." Both participants utilize the same application version.
 
+The host initiates the process by launching the "Anchor Sharing Demo" from the menu and creating a room. The application leverages a unique app ID for network authentication, restricting unauthorized users from joining the room. The client receives a notification upon the room's creation and proceeds to join. The client patiently awaits the host to create, align with, and share an anchor.A brief delay (approximately two seconds) occurs before the shared spatial anchor becomes visible to the client. Upon successful visualization, the client aligns themself with the anchor, ensuring both participants share the same virtual space with accurate virtual coordinates. The video below provides a quick overview of the aforementioned steps
 
-<p align="center">
-    <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/377f490c-b36b-4a3e-897c-dc083e62ab73" alt="Creating Room" style="max-width:8%;" height="auto">
-    <br>
-    <i>Creating Room</i>
-</p>
+https://github.com/Mukheem/TwinTurbine/assets/19348206/00bda476-ee94-4509-b6ef-2a3ed65e25c1
 
-The next stage involves spawning the avatar, turbine, and menus simultaneously using **Create New Anchor**and **Sharing Anchor**; after that, the other member can **Align Anchor**, which allows them to observe the virtual objects in the same place and the collaboration would be enabled.
-At this point, the user journey begins.p
+The next steps involve spawning of the Avatar, Turbine, GUI simultaneously triggering a start to user's journey.
+
 
 ### 2.3. User Journey:
 The user journey starts with audio narration that welcomes users and provides an informative project overview. They would observe a virtual wind turbine, which is a replica of the physical wind turbine placed on the table nearby.  They can interact with the prototype by pressing the green button, enabling it to start working. This prototype receives wind direction data from the Swedish Meteorological and Hydrological Institute (SMHI) and aligns the direction of both the physical and virtual turbines accordingly to optimize performance. When the wind flows at a certain speed, the physical wind turbine generates electricity. Then the generated voltage from the turbine would be displayed on the menu to show how much voltage is produced by the wind speed. If they press the red button for an emergency, the wind turbine would be shut down. They can walk around the environment, collaborate with each other, and see the latest state of the turbine.
