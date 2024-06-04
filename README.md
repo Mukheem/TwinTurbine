@@ -11,7 +11,7 @@ This group academic project, involving four participants, is part of the **Desig
 ## 1. Introduction
 Welcome to **_TwinTurbine_**, a cutting-edge **digital twin** project designed to let you experience the operation of a wind turbine in a mixed reality (MR) environment. MR enables multi-user collaboration, allowing multiple users to monitor and control the wind turbine's operations from remote locations. By leveraging MR, users can visualize the wind turbine and its real-time data in a Mixed reality environment, receive immediate feedback, and interact dynamically with the physical turbine throughout the experience. As accessing a real physical turbine was not feasible, we used a **scaled physical turbine** model to accurately emulate the behavior of a real wind turbine.
 
-### 1.1. **_Digital Twin (DT)_ description**
+### 1.1. **_Digital Twin (DT)_:**
 A Digital Twin is a virtual replica of a physical object, system, or process. This digital model is designed to accurately reflect the physical counterpart, capturing its characteristics, behaviors, and states. Digital twins are used to simulate, analyze, and monitor real-world objects or systems in real-time, allowing for improved decision-making, predictive maintenance, and optimization.
 
 In simple terms, a digital twin is like having a detailed, interactive 3D model of a machine, building, or even an entire city that you can use to see how it works, predict problems before they happen, and find ways to improve it. This entire concept operates on the basis of five components: the physical entity, the virtual entity, services,data, and the connection between the physical and digital worlds.
