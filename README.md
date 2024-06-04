@@ -67,10 +67,15 @@ The brainstorming phase involves generating and refining ideas to establish the 
 
 
 ### 2.2. User Persona:
-The target users of TwinTurbine are engineers and technicians engaged in wind energy systems and educational institutions utilizing the model for training purposes. The user persona details are as follows:
+This prototype, **TwinTurbine** caters to several user groups, with a primary focus on **three key personas** during the design and development of the prototype.
 
 **Engineers and Technicians:**	
-- Needs: These professionals require sophisticated tools to remotely monitor wind turbine operations. Remote monitoring capabilities enable them to keep track of generated voltage and visualize parameters such as wind direction, and temperature of the turbine's location, ensuring that the turbines operate efficiently. Additionally, real-time feedback offers immediate updates on the turbine's status. Furthermore, multi-user collaboration from different sites enhances communication and coordination among team members, facilitating efficient management of turbine operations.
+
+This group comprises individuals responsible for engineering wind turbines for efficiency, innovation, and environmental sustainability, as well as technicians tasked with fixing issues at physical wind turbine sites.
+
+_Engineers and technicians_ require advanced tools for monitoring and controlling wind turbines. Traditional wind turbine monitoring and control rely on physical site visits, to identify and address both functional and cosmetic issues, posing logistical challenges and safety risks. For instance, in cases of extreme weather conditions exceeding a turbine's operational capacity, technicians typically need to conduct emergency shutdowns on-site. However, such visits become less frequent with TwinTurbine's **_XR (Extended Reality)_** capabilities. During emergencies or routine inspections, the immersive features of TwinTurbine assist in rapid problem diagnosis and solution implementation, minimising downtime and operational costs.
+
+Engineers designing _novel wind turbines_ can leverage the prototype for virtual troubleshooting, eliminating the need for physical fixes. XR's immersive environment allows them to observe turbine behaviour under various conditions, manipulate the digital model, and test feasibility before real-world implementation. This surpasses the limitations of traditional 3D displays. .This immersive experience facilitates **collaboration** and **discussion**, enabling comprehensive analysis and **proactive issue identification**.
 
 **Educators and Students:**
 - Needs: In an educational setting, there is a need for interactive and immersive tools to teach and learn about wind energy systems. Students benefit from hands-on interaction with digital twin technology, providing a practical understanding of wind turbine operations. Educators require tools that can simulate real-world scenarios, enhance engagement, and provide detailed data analysis to support the learning process. The TwinTurbine model serves as an effective educational aid, offering a comprehensive learning experience in a mixed reality environment
