@@ -353,10 +353,15 @@ Deploy the corresponding code to Arduino and ESP micro controllers and then turn
 - In Unity, go to File > Open Project.
 - Navigate to the extracted folder containing the TwinTurbine project files and select the project folder.
 - Click "Open" to import the TwinTurbine project into Unity.
-- Install Oculus XR Plugin, XR Interaction Toolkit from asset store, A [NuGet](https://github.com/GlitchEnzo/NuGetForUnity.git?path=/src/NuGetForUnity) Package Manager for Unity using github url and [websocket-sharp](https://github.com/sta/websocket-sharp) libraries.
+- Install Oculus Meta XR SDK from asset store, A [NuGet](https://github.com/GlitchEnzo/NuGetForUnity.git?path=/src/NuGetForUnity) Package Manager for Unity using github url and [websocket-sharp](https://github.com/sta/websocket-sharp) libraries.
 - Inside Unity, in the Toolbar, select “Oculus” → “Platform” → “Edit Settings”. Under “Application ID”→ “Meta Quest/2/Pro” paste the App ID, you just got from the Meta Quest Developer Website
 - Inside Unity, Navigate to “Window” → “Photon Unity Networking” → “Highlight Server Settings”.In your “Project” tab you should see a file called “PhotonServerSettings” pop up, click it.Inside “PhotonServerSettings” → “App Id PUN”.
 
+**Executing/Building the project:**
+- When everything is configured and connected, you can connect your headset to your computer through Meta quest link and then run the project in unity.
+- User should be able to see the menu to select the sample and then create a room.
+- If you want to test multi user experience, you need to Go to File > Build Settings and select 'Android' as the target platform. Click 'Switch Platform' to confirm
+- With your project configured, Click 'Build' and choose a name and location for the generated APK file.
 
 ## Usage
 To use WindTurbine and interact with its features, follow the guidelines below:
