@@ -390,6 +390,15 @@ A user-friendly Graphical User Interface (GUI) within the virtual environment di
 ## References
 **Code base:**
 - [Unity-SharedSpatialAnchors](https://github.com/oculus-samples/Unity-SharedSpatialAnchors) - Boilerplate to start the development
+
+**Mixed Reality:**
+- [Passthrough](https://developer.oculus.com/documentation/unity/unity-passthrough/) - To facilitate Mixed reality experience
+
+**Scene:**
+- [Scene API](https://developer.oculus.com/documentation/unity/unity-scene-overview/) - To cater Mixed reality experience with a better understanding of surroundings
+
+**Spatial Anchors:**
+- [Oculus Spatial Anchors](https://developer.oculus.com/documentation/unity/unity-spatial-anchors-overview/) - Spatial Alignment for multi-user experience
   
 **Networking:**
 - [Photon](https://doc.photonengine.com/pun/current/demos-and-tutorials/pun-basics-tutorial/intro)  - Networking for multi-user experience
