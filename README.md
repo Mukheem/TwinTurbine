@@ -336,7 +336,7 @@ _Requirements:_
 </p>
 
 **Microcontroller Code:**
-You can find the Arduino Code in the file [sketch_VoltageUnity]([TangibleSketches/ESP32/ESP32_sketch_copy_20240512144341/sketch_VoltageUnity.ino](https://github.com/Mukheem/TwinTurbine/blob/Zeinab_ReadmeUpdates/TangibleSketches/Arduino/Arduino_Sketch_copy_20240512144111/Arduino_Sketch_copy_20240512144111.ino)) and ESP32 code in the file
+You can find the Arduino Code in the file [sketch_VoltageUnity](https://github.com/Mukheem/TwinTurbine/blob/Zeinab_ReadmeUpdates/TangibleSketches/Arduino/Arduino_Sketch_copy_20240512144111/Arduino_Sketch_copy_20240512144111.ino)) and ESP32 code in the file
 [Esp32_Client_test.ino](https://github.com/Mukheem/TwinTurbine/blob/Zeinab_ReadmeUpdates/TangibleSketches/ESP32/ESP32_sketch_copy_20240512144341/sketch_VoltageUnity/sketch_VoltageUnity.ino)
 
 > **_Note:_** In the ESP32 code, you have to change the <ins>Wifi User name and Password</ins> as per your network configuration.
