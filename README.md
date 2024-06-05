@@ -410,10 +410,17 @@ A user-friendly Graphical User Interface (GUI) within the virtual environment di
 **Assets:**
 - [Unity Asset Store](https://assetstore.unity.com/account/assets) - Wind Turbine 3D Model (Link to specific asset page)
 - [Mixamo](https://www.mixamo.com/) - 3D Avatar
+- [Physical asset](https://www.amazon.se/4M-403378-Build-Your-Turbine/dp/B01MUF38B7/ref=asc_df_B01MUF38B7/?tag=shpngadsglesm-21&linkCode=df0&hvadid=476589397185&hvpos=&hvnetw=g&hvrand=2337181895634853544&hvpone=&hvptwo=&hvqmt=&hvdev=m&hvdvcmdl=&hvlocint=&hvlocphy=9062468&hvtargid=pla-481604503847&psc=1&mcid=8ef39e64cec73039901a5f2d5da5eb98) - A Scaled physical turbine
+- [Charles Windlin](https://www.linkedin.com/in/ff6600/) ( A Stockholm University Professor & Co-ordinator) - 3D Adapter designer in Fusion 360.
   
 **Audio:**
 - Elisa K. (A Stockholm University Student) - Audio Narration
 
+**Teaching Assistants:**
+- [António Braga](https://www.linkedin.com/in/antoniopinheirobraga/)
+- [Karan Dudeja](https://www.linkedin.com/in/karandudeja/)
+  
+We'd like to give a big shout-out to our Teachers, [António Braga](https://www.linkedin.com/in/antoniopinheirobraga/) and [Karan Dudeja](https://www.linkedin.com/in/karandudeja/). Their up-to-date knowledge of Unity, Spatial Anchors and related designing concepts was a huge help in getting this project off the ground. They were always willing to share their experience and insights, which made a big difference in our understanding and the overall success of the project.
 
 ## Contributors
 [Abdul Mukheem Shaik](https://www.linkedin.com/in/abdul-mukheem-shaik?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app) , 
