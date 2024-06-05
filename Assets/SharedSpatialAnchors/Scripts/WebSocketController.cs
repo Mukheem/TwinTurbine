@@ -19,7 +19,7 @@ public class WebSocketController : MonoBehaviour
     public String voltageValue = "0.0f";
 
     public void Start(){
-        ConnectWithESP32();
+        //ConnectWithESP32();
         //narrationController.GetComponent<NarrationController>();
     }
 
@@ -42,10 +42,10 @@ public class WebSocketController : MonoBehaviour
         };
         ws.OnMessage += (sender, e) =>
         {
-            Debug.Log("Received message: " + e.Data);
+            //Debug.Log("Received message: " + e.Data);
             //Debug.Log();
             voltageValue = e.Data.Split(':')[1].ToString();
-            Debug.Log(voltageValue);
+           // Debug.Log(voltageValue);
             //Voltage:180.0
             if (e.Data.Equals("Start Narration", StringComparison.OrdinalIgnoreCase)){
                // narrationControllerScript.startNarration = true;
@@ -54,6 +54,7 @@ public class WebSocketController : MonoBehaviour
         };
         ws.Connect();
         Debug.Log("Websocket state - " + ws.ReadyState);
+        
     }
 
 

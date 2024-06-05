@@ -5,6 +5,14 @@ TagManager:
   serializedVersion: 2
   tags:
   - WebController
+  - WindTurbine
+  - GUIData
+  - Avatar
+  - map
+  - Wind_Turbine_withMap
+  - EB
+  - SB
+  - Quad
   layers:
   - Default
   - TransparentFX

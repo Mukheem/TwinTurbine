@@ -7,6 +7,10 @@ using System.Security.Cryptography;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
+using WebSocketSharp;
+using UnityEngine.Video;
+using UnityEngine.Playables;
+
 //https://github.com/GlitchEnzo/NuGetForUnity
 // Creating the data structure according to the expected Json
 [Serializable]
@@ -36,7 +40,7 @@ public class ApiResponse
 }
   
 
-public class API : MonoBehaviour
+public class API : MonoBehaviourPunCallbacks, IPunObservable
 {
     public TextMeshProUGUI voltageValue;
     public TextMeshProUGUI windDirValue;
@@ -44,15 +48,20 @@ public class API : MonoBehaviour
     public TextMeshProUGUI loc;
     public TextMeshProUGUI windSpeedValue;
     private float LatestT;
-    private float latestWD;
-    private float latestWS;
+    public float latestWD = 0.0f;
+    public float latestWS = 0.01f;
     private String windDirectionInDirectionTerms;
     private string unit;
     private GameObject webSocketController;
     private WebSocketController webSocketControllerScript;
     public bool isButtonPressed = false; // Boolean to keep voltage updated as long as the turbine is rotating
     PhotonView photonView;
+    private GameObject avatar;
+    private AudioController audioControllerScript;
+    public bool turn_WT_on_Y_Axis = false;
 
+    GameObject videoPlayerQuad;
+    VideoPlayer videoPlayer;
 
     void Start()
     {
@@ -60,36 +69,80 @@ public class API : MonoBehaviour
         //TestFromJsonToData();
         //EmergencyButtonClick();
         photonView = PhotonView.Get(this);
-        photonView.RPC("RPC_EmergencyButtonClick", RpcTarget.All);
+        photonView.RPC("RPC_EmergencyButtonClick", RpcTarget.All,false,0.0f);
 
+
+        avatar = GameObject.FindGameObjectWithTag("Avatar");
+        audioControllerScript = avatar.GetComponent<AudioController>();
+
+
+        // Turning on both the buttons on GUI when something is playing
+        transform.GetChild(1).gameObject.SetActive(false);
+        transform.GetChild(3).gameObject.SetActive(false);
+
+        videoPlayerQuad = avatar.transform.GetChild(2).gameObject;
+        videoPlayer = videoPlayerQuad.GetComponent<VideoPlayer>();
     }
 
     void Update()
     {
         if (isButtonPressed)
         {
+            webSocketController = GameObject.FindGameObjectWithTag("WebController");
+            webSocketControllerScript = webSocketController.GetComponent<WebSocketController>();
+            if (webSocketControllerScript.ws.ReadyState != WebSocketState.Open)
+            {
+                webSocketControllerScript.ws.Connect();
+            }
             photonView = PhotonView.Get(this);
             photonView.RPC("RPC_VoltageUpdate", RpcTarget.All, webSocketControllerScript.voltageValue.ToString());
-           
+            
         }
+
+        if (audioControllerScript.audioSource.isActiveAndEnabled && !audioControllerScript.audioSource.isPlaying)
+        {
+            // Turning off both the buttons on GUI when something is playing
+            transform.GetChild(1).gameObject.SetActive(true);
+            transform.GetChild(3).gameObject.SetActive(true);
+            videoPlayer.Pause();
+        }
+       
     }
 
     public void OnButtonClick()
     {
-        webSocketController = GameObject.FindGameObjectWithTag("WebController");
-        webSocketControllerScript = webSocketController.GetComponent<WebSocketController>();
-        StartCoroutine(GetText());
-    }
+        if (!isButtonPressed)
+        {
+            webSocketController = GameObject.FindGameObjectWithTag("WebController");
+            webSocketControllerScript = webSocketController.GetComponent<WebSocketController>();
+            webSocketControllerScript.ConnectWithESP32();
+            StartCoroutine(GetText());
 
-    [PunRPC]
-    public void RPC_EmergencyButtonClick()
+            
+            audioControllerScript.fn_call_AudioNarration2();
+            Debug.Log("Button is Clicked");
+            transform.GetChild(1).gameObject.SetActive(false);
+            transform.GetChild(3).gameObject.SetActive(false);
+        }
+        
+    }
+    public void emergencyButtonClick()
     {
-        isButtonPressed = false;
+        photonView = PhotonView.Get(this);
+        photonView.RPC("RPC_EmergencyButtonClick", RpcTarget.All, false, 0.0f);
+    }
+    [PunRPC]
+    public void RPC_EmergencyButtonClick(bool isButtonPressedVal, float latestWS_val)
+    {
+        isButtonPressed = isButtonPressedVal;
+        latestWS = latestWS_val;
+        
         loc.SetText("----");
         windDirValue.SetText("----");
         temperatureValue.SetText("----");
         voltageValue.SetText("----");
         windSpeedValue.SetText("----");
+        
     }
     IEnumerator GetText()
     {
@@ -105,7 +158,7 @@ public class API : MonoBehaviour
         {
             Debug.Log("Received data" + www.downloadHandler.text);
             ExtractDataFromJson(www.downloadHandler.text);
-            isButtonPressed = true; // Boolean to keep voltage updated as long as the turbine is rotating
+           
         }
     }
 
@@ -143,7 +196,12 @@ public void ExtractDataFromJson(string json)
                 latestWD = point.values[0];
                 windDirectionInDirectionTerms = GetWindDirection(latestWD);
                 //windDirValue.SetText(latestWD.ToString());
+                if (webSocketControllerScript.ws.ReadyState != WebSocketState.Open)
+                {
+                    webSocketControllerScript.ws.Connect();
+                }
                 webSocketControllerScript.ws.Send(latestWD.ToString()+":take input");
+                Debug.Log(latestWD.ToString()+" - Degrees sent to ESP");
             }
             if (point.name == "t")
             {
@@ -158,22 +216,26 @@ public void ExtractDataFromJson(string json)
             }
         }
         photonView = PhotonView.Get(this);
-        photonView.RPC("RPC_GreenButtonClick", RpcTarget.All,windDirectionInDirectionTerms,LatestT+" C","Kista",latestWS+" m/s");
+        photonView.RPC("RPC_GreenButtonClick", RpcTarget.All,windDirectionInDirectionTerms,LatestT+" C","Kista",latestWS+" m/s",true,latestWD,latestWS, true);
     }
 
     [PunRPC]
-    public void RPC_GreenButtonClick(String windDirection,String locationTemperature,String location,String windSpeed)
+    public void RPC_GreenButtonClick(String windDirection,String locationTemperature,String location,String windSpeed,bool turn_WT_on_Y_Axis_val,float latestWD_val, float latestWS_val,bool isButtonPressed_val)
     {
-        Debug.Log("Latest WS is - " + windSpeed);
+        isButtonPressed = isButtonPressed_val;
+        latestWD = latestWD_val; // Just for RPC purposes
+        latestWS = latestWS_val; // Just for RPC purposes
         windDirValue.SetText(windDirection);
         temperatureValue.SetText(locationTemperature);
         loc.SetText(location);
         windSpeedValue.SetText(windSpeed);
+        turn_WT_on_Y_Axis = turn_WT_on_Y_Axis_val; // flag set to true so that WT can rotate on it's Y axis.
+        videoPlayer.Play();
     }
     [PunRPC]
     public void RPC_VoltageUpdate(String voltageGenerated)
     {
-        Debug.Log("Voltge generated is - " + voltageGenerated);
+        //Debug.Log("Voltge generated is - " + voltageGenerated);
         voltageValue.text = voltageGenerated;
     }
     public string GetWindDirection(float degrees)
@@ -184,5 +246,20 @@ public void ExtractDataFromJson(string json)
         string[] directions = { "N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW" };
         int index = (int)Math.Floor((degrees + 11.25) / 22.5);
         return directions[index];
+    }
+   
+
+    void IPunObservable.OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if (stream.IsWriting)
+        {
+            stream.SendNext(turn_WT_on_Y_Axis);
+            stream.SendNext(isButtonPressed);
+        }
+        else
+        {
+            turn_WT_on_Y_Axis = (bool)stream.ReceiveNext();
+            isButtonPressed = (bool)stream.ReceiveNext();
+        }
     }
 }
