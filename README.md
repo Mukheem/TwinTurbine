@@ -262,7 +262,7 @@ TwinTurbine is an interactive learning platform designed to create an immersive 
 A scaled physical wind turbine serves as the foundation, mimicking the behavior of a real-world turbine. Sensors capture real-time data on factors like wind speed and direction, voltage output, and potentially temperature (depending on future integration).
 
 **2. Immersive Virtual Environment:**
-Participants are immersed in a virtual world featuring a realistic wind turbine model. An avatar guides users and provides informative narrations, explaining the concepts of digital twins and the project's functionalities.
+Participants are immersed in a virtual world featuring a realistic wind turbine model. An avatar guides users and provides informative narrations, explaining the concepts of digital twins and the project's functionalities. <br>
 ![ScreenRecording2024-06-05at11 34 41AM-ezgif com-video-to-gif-converter](https://github.com/Mukheem/TwinTurbine/assets/19348206/d8f7e6c5-b6c0-4faa-960e-c8e6d1975cf4)
 
 **3. Collaborative Multi-User Experience:**
