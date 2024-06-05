@@ -407,18 +407,7 @@ A user-friendly Graphical User Interface (GUI) within the virtual environment di
 
 
 ## Contributors
-Abdul Mukheem Shaik
-<br/> mukheemuddin@gmail.com
-<br/> [LinkedIn](https://www.linkedin.com/in/abdul-mukheem-shaik?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
-
-Masoomeh Advand
-<br/> Masoomeh.advand@gmail.com
-<br/> [LinkedIn](https://www.linkedin.com/in/masoomeh-advand-3259442aa/)
-
-Mina Maddahi 
-<br/> mima4938@student.su.se
-<br/> [LinkedIn](http:///www.linkedin.com/in/mina-maddahi-9b90b5264)
-
-Zeinab Bagheri Fard
-<br/> bagherifard.zeinab@gmail.com
-<br/> [LinkedIn](https://www.linkedin.com/in/zeinab-bagherifard-b6458b272/)
+[Abdul Mukheem Shaik](https://www.linkedin.com/in/abdul-mukheem-shaik?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app) , 
+ [Masoomeh Advand](https://www.linkedin.com/in/masoomeh-advand-3259442aa/), 
+ [Mina Maddahi](http:///www.linkedin.com/in/mina-maddahi-9b90b5264) , 
+[Zeinab Bagheri Fard](https://www.linkedin.com/in/zeinab-bagherifard-b6458b272/)
