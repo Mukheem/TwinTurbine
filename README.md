@@ -7,6 +7,11 @@ This group academic project, involving four participants, is part of the **Desig
     <i>TwinTurbine Logo</i>
 </p>
 
+<p align="center">
+    <img src="https://github.com/dalarna2022/TwinTurbine/blob/main/Portfolio%26Poster/Draft%20poster.jpeg" alt="Poster" style="max-width:10%;" height="auto">
+    <br>
+    <i>Poster</i>
+</p>
 
 ## 1. Introduction
 Welcome to **_TwinTurbine_**, a cutting-edge **digital twin** project designed to let you experience the operation of a wind turbine in a mixed reality (MR) environment. MR enables multi-user collaboration, allowing multiple users to monitor and control the wind turbine's operations from remote locations. By leveraging MR, users can visualize the wind turbine and its real-time data in a Mixed reality environment, receive immediate feedback, and interact dynamically with the physical turbine throughout the experience. As accessing a real physical turbine was not feasible, we used a **scaled physical turbine** model to accurately emulate the behavior of a real wind turbine.
@@ -277,42 +282,81 @@ Users can leverage intuitive poke gestures to control buttons within the virtual
 Want to experience TwinTurbine firsthand? Watch the  [demo video](https://youtu.be/tg5tRyCmQH8) made in collaboration 
 </p>
 
-## Installation
-To install and run WindTurbine on your platform or device, follow the instructions below:
-- The experience is possible using Meta Oculus Quest 3 or Pro
-- Unity version 2021.3.32f1
+## Setting Up the Development Environment:
 
-You also need to install the following dependencies or libraries for your project:
-- Oculus XR Plugin
-- XR Interaction Toolkit
-- A NuGet Package Manager for Unity: https://github.com/GlitchEnzo/NuGetForUnity.git?path=/src/NuGetForUnity
+This guide outlines the installation process for the TwinTurbine project, designed for users with basic knowledge of Unity,C#, Internet of Things (IoT), and verified Meta developer accounts.
 
+**1.Software and Hardware Requirements:**
+<br><p>
+**Software:**
+- Unity Hub (latest stable version recommended)
+- Unity (2021.3.32f1)
+- Arduino IDE (latest stable version recommended)
+- Additional libraries for Arduino and Unity (details provided in later steps)
+- Meta developer account (verified)
+- Meta Quest Link
+- Meta Quest Developer Hub
+- [Photon](https://dashboard.photonengine.com/) account and App id for your application to be connected over network. This is mandatory so that multi-user experience is facilitated.
 
-## Circuit Board
-Please follow the following circuit board representation to setup the physical buttons. 
-Requirements: 
+**Hardware:**
+- Computer(Operating System: Windows 10 (64-bit)) with Unity installed (2021.3.32f)
+- Meta Quest VR headset ( Quest 3 or Quest 2 Pro)
+- ESP microcontroller (ESP32-S2-Thing Plus)
+- Arduino Uno microcontroller
+- Additional hardware items mentioned below.
+</p>
+
+**2.Configuring the Development Environment:**
+<br><p>
+**Configuring Meta Quest VR Headset:**
+- (Optional) If you could be the admin of the VR headset, things might get easier
+- Follow the official Meta Quest setup [guide](https://www.meta.com/help/quest/articles/accounts/account-settings-and-management/set-up-meta-account-meta-quest/) to ensure your VR headset is properly connected and configured for development purposes with your verified Meta developer account.
+- Create an Organization from this [link](https://developer.oculus.com/manage/organizations/create/) and add the users who would use the project. Ensure that there should be atleast two users one being the host and the other being the client.
+
+**Circuit:**
+For accurate configuration of connections between the various components, please refer to the provided circuit board schematic. This schematic visually depicts the proper connections between the physical wind turbine model's sensors, the ESP microcontroller board, and the Arduino Uno microcontroller board. Following this schematic meticulously is crucial to ensure the functionality and proper data exchange between these tangible assets within the TwinTurbine system.
+
+_Requirements:_ 
 - ESP32-S2 ThingPlus Sparkfun
 - Arduino Uno
 - Breadboards
 - Photoresistor
 - Servo motor
 - Jumper wires
-- Transistor
-  Please be informed that the LED is the symbol of the physical wind turbine.
+- PhotoTransistor
+- 10k Ohm Resistor
+- _Please be informed that the LED is the symbol of the physical wind turbine._
+- Install WebSockets2_Generic.h library for ESP32 Microcontroller
+- Install Servo.h for Arduino Uno Microcontroller
 
  <p align="center">
     <img src="https://github.com/Mukheem/TwinTurbine/assets/145973209/4dac81fc-cbeb-4fa0-b48c-9a699dc97de7" alt="Circuit Board" style="max-width:20%;" height="auto">
     <br>
-    <i>Circuit Board</i>
+    <i>Circuit Schematics</i>
 </p>
 
-### Arduino Code
-You can find the Arduino Code in the following file: sketch_VoltageUnity
-[Esp32_Client_test.ino](TangibleSketches/ESP32/ESP32_sketch_copy_20240512144341/sketch_VoltageUnity.ino)
+**Microcontroller Code:**
+You can find the Arduino Code in the file [sketch_VoltageUnity]([TangibleSketches/ESP32/ESP32_sketch_copy_20240512144341/sketch_VoltageUnity.ino](https://github.com/Mukheem/TwinTurbine/blob/Zeinab_ReadmeUpdates/TangibleSketches/Arduino/Arduino_Sketch_copy_20240512144111/Arduino_Sketch_copy_20240512144111.ino)) and ESP32 code in the file
+[Esp32_Client_test.ino](https://github.com/Mukheem/TwinTurbine/blob/Zeinab_ReadmeUpdates/TangibleSketches/ESP32/ESP32_sketch_copy_20240512144341/sketch_VoltageUnity/sketch_VoltageUnity.ino)
 
-### Server 
-We have a Photon server enabling collaboration between multiple users. It is accessible from the following site address:
-https://dashboard.photonengine.com/
+**_Note:_** In the ESP32 code, you have to change the <ins>Wifi User name and Password</ins> as per your network configuration.
+
+Deploy the corresponding code to Arduino and ESP micro controllers and then turn them on respectively. 
+
+**Unity Project from GitHub:**
+
+- You will need the GitHub repository [URL](https://github.com/Mukheem/TwinTurbine/tree/main) for the TwinTurbine project files.
+- Open a web browser and navigate to the provided GitHub URL.
+- Click the green "Code" button and then select "Download ZIP". This will download a compressed file containing the project files.
+- Extract the downloaded ZIP file to a convenient location on your computer.
+- Launch Unity from Unity Hub.
+- In Unity, go to File > Open Project.
+- Navigate to the extracted folder containing the TwinTurbine project files and select the project folder.
+- Click "Open" to import the TwinTurbine project into Unity.
+- Install Oculus XR Plugin, XR Interaction Toolkit from asset store, A [NuGet](https://github.com/GlitchEnzo/NuGetForUnity.git?path=/src/NuGetForUnity) Package Manager for Unity using github url and [websocket-sharp](https://github.com/sta/websocket-sharp) libraries.
+- Inside Unity, in the Toolbar, select “Oculus” → “Platform” → “Edit Settings”. Under “Application ID”→ “Meta Quest/2/Pro” paste the App ID, you just got from the Meta Quest Developer Website
+- Inside Unity, Navigate to “Window” → “Photon Unity Networking” → “Highlight Server Settings”.In your “Project” tab you should see a file called “PhotonServerSettings” pop up, click it.Inside “PhotonServerSettings” → “App Id PUN”.
+
 
 ## Usage
 To use WindTurbine and interact with its features, follow the guidelines below:
@@ -328,12 +372,7 @@ To use WindTurbine and interact with its features, follow the guidelines below:
 
 
 
-## Draft Poster
-<p align="center">
-    <img src="https://github.com/dalarna2022/TwinTurbine/blob/main/Portfolio%26Poster/Draft%20poster.jpeg" alt="Poster" style="max-width:10%;" height="auto">
-    <br>
-    <i>Poster</i>
-</p>
+
 
 ## References
 
