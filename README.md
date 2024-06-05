@@ -408,7 +408,7 @@ A user-friendly Graphical User Interface (GUI) within the virtual environment di
 - [Luis Quintero](https://www.linkedin.com/in/luisqtr/) ( A Stockholm University Professor) - GUI interface contribution
   
 **Assets:**
-- [Unity Asset Store](https://assetstore.unity.com/account/assets) - Wind Turbine 3D Model (Link to specific asset page)
+- [Unity Asset Store](https://assetstore.unity.com/account/assets) - Wind Turbine 3D Model
 - [Mixamo](https://www.mixamo.com/) - 3D Avatar
 - [Physical asset](https://www.amazon.se/4M-403378-Build-Your-Turbine/dp/B01MUF38B7/ref=asc_df_B01MUF38B7/?tag=shpngadsglesm-21&linkCode=df0&hvadid=476589397185&hvpos=&hvnetw=g&hvrand=2337181895634853544&hvpone=&hvptwo=&hvqmt=&hvdev=m&hvdvcmdl=&hvlocint=&hvlocphy=9062468&hvtargid=pla-481604503847&psc=1&mcid=8ef39e64cec73039901a5f2d5da5eb98) - A Scaled physical turbine
 - [Charles Windlin](https://www.linkedin.com/in/ff6600/) ( A Stockholm University Professor & Co-ordinator) - 3D Adapter designer in Fusion 360.
